@@ -12,10 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('create');
+    return view('print');
 });
-Route::get('index/form', 'testing@form')->name('index.form');
-Route::post('index', 'testing@index')->name('index.create');
-
-Route::get('/print', 'testing@print')->name('pages.print');
-Route::view('/test', 'pages.test')->name('pages.test');
