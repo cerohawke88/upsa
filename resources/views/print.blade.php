@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-			<form class="form-vertical" id="form-up-sa" method="POST" action="a.php">
+			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ url('/print') }}">
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
 			<div class="pos">
@@ -420,6 +420,7 @@
 			</div>
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
+			<a href="{{ url('/print') }}">Print PDF</a>
 		</form>
 		</div>
 	</body>

@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('print');
-});
+Route::get('/', 'FormController@form')->name('form');
+
+Route::get('/print', 'FormController@print')->name('print');
