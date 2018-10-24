@@ -18,7 +18,6 @@ class CreateAccomodationTable extends Migration
             $table->boolean('accomodation_help');
             $table->string('address')->nullable();
             $table->string('contact_person')->nullable();
-            $table->unsignedInteger('phone')->nullable();
             $table->timestamps();
         });
     }

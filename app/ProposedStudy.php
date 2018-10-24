@@ -13,4 +13,8 @@ class ProposedStudy extends Model
 	{
 		return $this->belongsTo('App\PersonalDetails');
 	}
+
+	public function course() {
+		return $this->hasMany('App\Course');
+	}
 }

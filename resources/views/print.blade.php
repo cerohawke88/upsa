@@ -7,6 +7,7 @@
 	<body>
 		<div>
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}">
+				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
 			<div class="pos">
@@ -77,7 +78,7 @@
 				    <td><b>City</b><hr>
 				    <input placeholder="Your City" type="text" name="city" size="20"/></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="number" name="postal" size="20"/></td>
+				    <input placeholder="ZIP Code" type="text" name="postal" size="20"/></td>
 				  </tr>
 				  
 				  <tr>
@@ -382,8 +383,8 @@
 					</tr>
 						<td><b>Address</b><hr>
 							<input placeholder="Fill The Adress" type="text" name="adress_acc" size=50"></td>
-						<td><b>Contact Person</b><hr>
-							<input placeholder="Name &  Phone" type="text" name="cp_acc" size="25"></td>
+						<td><b>Contact Person (Name/Phone)</b><hr>
+							<input placeholder="Name & Phone" type="text" name="cp_acc" size="25"></td>
 
 				</table>
 

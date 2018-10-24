@@ -14,10 +14,11 @@ class CreateCourseTable extends Migration
     public function up()
     {
         Schema::create('course', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('no');
             $table->string('course_title');
             $table->integer('credit');
             $table->timestamps();
+            // $table->foreign('no')->references('id')->on('proposed_study');
         });
     }
 
