@@ -100,7 +100,7 @@ class FormController extends Controller
     		// English Test Result
     		'toefl' => 'required|string',
     		'score_toefl' => 'required|numeric',
-    		'place_toefl' => 'required|string',
+    		'place_toefl' => 'required|string',	 
     		'date_toefl' => 'required|string',
     		'ielts' => 'required|string',
     		'score_ielts' => 'required|numeric',
@@ -123,7 +123,7 @@ class FormController extends Controller
 
     		// Contact of Emergency
     		'emergency_name' => 'required|string',
-    		'relationsip' => 'required|string',
+    		'relationship' => 'required|string',
     		'address_emergency' => 'required|string',
     		'emergency_phone' => 'required|string',
     		'emergency_mobile' => 'required|string',
@@ -170,13 +170,66 @@ class FormController extends Controller
     		'gpa' =>  $request->input('gpa'),
     	]);
 
-    	// ProposedStudy::create([
-    	// 	'duration' => 'required|in:Semester I (Aug-Jan),Semester II (Feb-Jun)',
-    	// 	'faculty' => 'required|string',
-    	// 	'department' => 'required|string',
-    	// 	'spesific_period' => 'required|string',
-    	// 	'start_date' => 'required|string',
-    	// 	'end_date' => 'required|string',
-    	// ]);
+    	ProposedStudy::create([
+    		'duration' => $request->input('duration'),
+    		'faculty' => $request->input('faculty'),
+    		'department' => $request->input('department'),
+    		'spesific_period' => $request->input('spesific_period'),
+    		'start_date' => $request->input('start_date'),
+    		'end_date' => $request->input('end_date'),
+    	]);
+
+    	Course::create([
+    		'course_1' => $request->input('course_1'),
+    		'credit_1' => $request->input('credit_1'),
+    		'course_2' => $request->input('course_2'),
+    		'credit_2' => $request->input('credit_2'),
+    		'course_3' => $request->input('course_3'),
+    		'credit_3' => $request->input('credit_3'),
+    		'course_4' => $request->input('course_4'),
+    		'credit_4' => $request->input('credit_4'),
+    		'course_5' => $request->input('course_5'),
+    		'credit_5' => $request->input('credit_5'),
+    		'course_6' => $request->input('course_6'),
+    		'credit_6' => $request->input('credit_6'),
+    		'course_7' => $request->input('course_7'),
+    		'credit_7' => $request->input('credit_7'),
+    	]);
+
+    	EnglishTestResult::create([
+    		'toefl' => $request->input('toefl'),
+    		'score_toefl' => $request->input('score_toefl'),
+    		'place_toefl' => $request->input('place_toefl'),	 
+    		'date_toefl' => $request->input('date_toefl'),
+    		'ielts' => $request->input('ielts'),
+    		'score_ielts' => $request->input('score_ielts'),
+    		'place_ielts' => $request->input('place_ielts'),
+    		'date_ielts' => $request->input('date_ielts'),
+    		'others' => $request->input('others'),
+    		'score_others' => $request->input('score_others'),
+    		'place_others' => $request->input('place_others'),
+    		'date_others' => $request->input('date_others'),
+    	]);
+
+    	Insurance::create([
+    		'insurance' => $request->input('insurance'),
+    		'valid_date' => $request->input('valid_date'),
+    		'cover' => $request->input('cover'),
+    	]);
+
+    	Accomodation::create([
+    		'opt_acc' => $request->input('opt_acc'),
+    		'adress_acc' => $request->input('adress_acc'),
+    		'cp_acc' => $request->input('cp_acc'),
+    	]);
+
+    	Accomodation::create([
+    		'emergency_name' => $request->input('emergency_name'),
+    		'relationship' => $request->input('relationship'),
+    		'address_emergency' => $request->input('address_emergency'),
+    		'emergency_phone' => $request->input('emergency_phone'),
+    		'emergency_mobile' => $request->input('emergency_mobile'),
+    		'emergency_email' => $request->input('emergency_email'),
+    	]);
     }
 }

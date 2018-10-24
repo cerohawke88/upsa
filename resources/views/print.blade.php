@@ -401,7 +401,7 @@
 					    <td><b>Full Name</b><hr>
 					    <input placeholder="Name" type="text" name="emergency_name" size="20"/></td>
 					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationsip" size="20"/></td>
+					    <input placeholder="Relationship" type="text" name="relationship" size="20"/></td>
 					</tr>
 				</table>
 	  				
