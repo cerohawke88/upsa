@@ -19,4 +19,4 @@ Route::get('/test', 'FormController@test')->name('test');
 
 Route::get('/test-print', 'FormController@testPrint')->name('testPrint');
 
-Route::get('/submit', 'FormController@submit')->name('submit');
+Route::post('/submit', 'FormController@submit')->name('submit');

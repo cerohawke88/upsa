@@ -35,7 +35,7 @@ class FormController extends Controller
     	return $pdf->download('test.pdf');
     }
 
-    public function submit() {
+    public function submit(Request $request) {
 
     	$request->validate([
     		// Personal Details

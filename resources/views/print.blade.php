@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-			<form class="form-vertical" id="form-up-sa" method="GET" action="{{ route('submit') }}">
+			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}">
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
 			<div class="pos">
