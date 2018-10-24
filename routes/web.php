@@ -18,3 +18,5 @@ Route::get('/print', 'FormController@print')->name('print');
 Route::get('/test', 'FormController@test')->name('test');
 
 Route::get('/test-print', 'FormController@testPrint')->name('testPrint');
+
+Route::get('/submit', 'FormController@submit')->name('submit');
