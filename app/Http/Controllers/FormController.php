@@ -223,7 +223,7 @@ class FormController extends Controller
     		'cp_acc' => $request->input('cp_acc'),
     	]);
 
-    	Accomodation::create([
+    	EmergencyContact::create([
     		'emergency_name' => $request->input('emergency_name'),
     		'relationship' => $request->input('relationship'),
     		'address_emergency' => $request->input('address_emergency'),
