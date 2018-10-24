@@ -231,5 +231,7 @@ class FormController extends Controller
     		'emergency_mobile' => $request->input('emergency_mobile'),
     		'emergency_email' => $request->input('emergency_email'),
     	]);
+
+    	return back()-> with('success', 'Berhasil submit!');
     }
 }
