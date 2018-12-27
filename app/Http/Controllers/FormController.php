@@ -21,9 +21,10 @@ class FormController extends Controller
 	}
 
     public function print() {
-    	$pdf = PDF::loadView('print');
-    	return $pdf->download('Form UP-SA.pdf');
-    	set_time_limit(12000);
+    	// $pdf = PDF::loadView('print');
+    	// return $pdf->download('Form UP-SA.pdf');
+    	// set_time_limit(12000);
+        echo "<script> window.print(); </script>";
     }
 
     public function test() {

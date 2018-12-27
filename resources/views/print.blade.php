@@ -43,26 +43,26 @@
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input type="text" name="passport" size="20"/></td>
+				    	<input placeholder="Your Pasport Number" type="text" name="passport" size="20"/></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
-				    	<input type="text" name="is_country" size="20"/></td>
+				    	<input placeholder="Your Issuing Country" type="text" name="is_country" size="20"/></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Date of Issue (dd/mm/yy)</b><hr>
-				    	<input type="text" name="doi" size="20"/></td>
+				    	<input placeholder="Date of Issue" type="text" name="doi" size="20"/></td>
 				    
 				    <td><b>Date of Expiry (dd/mm/yy)</b><hr>
-				    	<input type="text" name="doe" size="20"/></td>
+				    	<input placeholder="Date of Expiry" type="text" name="doe" size="20"/></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Blood Type</b><hr>
-				    	<input type="text" name="blood" maxlength="2" /></td>
+				    	<input placeholder="Your Blood Type" type="text" name="blood" maxlength="2" /></td>
 				    
-				    <td><b>Maritial Status</b><hr>
-				    	<input type="text" name="maritial" size="20"/></td>
+				    <td><b>Marital Status</b><hr>
+				    	<input placeholder="Your Marital Status" type="text" name="marital" size="20"/></td>
 				   </tr>
 				</table>
 
@@ -449,7 +449,8 @@
 			</div>
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-			<a href="{{ url('/print') }}">Print PDF</a>
+			<!-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> -->
+			<a href="{{ url('/print') }}" download>Print PDF</a>
 		</form>
 		</div>
 	</body>
