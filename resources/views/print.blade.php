@@ -382,7 +382,7 @@
 						<td><input type="radio" name="opt_acc" size="20"/> NO</td>
 					</tr>
 						<td><b>Address</b><hr>
-							<input placeholder="Fill The Adress" type="text" name="adress_acc" size=50"></td>
+							<input placeholder="Adress" type="text" name="adress_acc" size=50"></td>
 						<td><b>Contact Person (Name/Phone)</b><hr>
 							<input placeholder="Name & Phone" type="text" name="cp_acc" size="25"></td>
 
@@ -416,10 +416,10 @@
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="phone" type="text" name="emergency_phone" size="20"/></td>
+					    <input placeholder="Phone" type="text" name="emergency_phone" size="20"/></td>
 					    
 					    <td><b>Mobile</b><hr>
-					    <input placeholder="mobile" type="text" name="emergency_mobile" size="20"/></td>
+					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20"/></td>
 						
 						<td><b>Email</b><hr>
 					    <input placeholder="Email" type="email" name="emergency_email" size="20"/></td>
@@ -450,7 +450,7 @@
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
 			<!-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> -->
-			<a href="{{ url('/print') }}" download>Print PDF</a>
+			<a href="{{ url('/print') }}">Print PDF</a>
 		</form>
 		</div>
 	</body>
