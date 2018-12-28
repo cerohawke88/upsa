@@ -23,6 +23,13 @@
 			<div>
 				<p>Please read The Guidelines of The Student Exchange Program prior to completing this form. Type or print in block letters in English.</p>
 				
+				@if (session('success'))
+        <div class="alert alert-success alert-dismissable" style="align-items: center; float: left; margin-top: -200px; margin-left: 230px">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ session('success') }}
+        </div>
+        @endif
+				
 				<h4><b>PERSONAL DETAILS</b></h4>
 
 				<table>
@@ -43,7 +50,7 @@
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Pasport Number" type="text" name="passport" size="20"/></td>
+				    	<input placeholder="Your Passport Number" type="text" name="passport" size="20"/></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
 				    	<input placeholder="Your Issuing Country" type="text" name="is_country" size="20"/></td>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use PDF;
+use DB;
 use App\Accomodation;
 use App\Course;
 use App\EmergencyContact;
@@ -28,16 +29,17 @@ class FormController extends Controller
     }
 
     public function test() {
-    	return view('test');
+		return view('test');
     }
-
+	
     public function testPrint() {
-    	$pdf = PDF::loadView('test');
+		$pdf = PDF::loadView('test');
     	return $pdf->download('test.pdf');
     }
-
+	
     public function submit(Request $request) {
-
+		
+		// dd($request->all());
     	$request->validate([
     		// Personal Details
     		'fullname' => 'required|string',
@@ -63,7 +65,7 @@ class FormController extends Controller
     		'province2' => 'nullable|string',
     		'country2' => 'nullable|string',
     		'phone2' => 'nullable|string',
-    		'contact_name' => 'required|string',
+    		'contact_name' => 'nullable|string',
 
     		// Home Institution
     		'name' => 'required|string',
@@ -139,7 +141,8 @@ class FormController extends Controller
     		'country2' => $request->input('country2'),
     		'phone2' => $request->input('phone2'),
     		'contact_name' => $request->input('contact_name'),
-    	]);
+		]);
+		
 
     	HomeInstitution::create([
     		'name' =>  $request->input('institution'),
@@ -195,6 +198,6 @@ class FormController extends Controller
     		'email' => $request->input('emergency_email'),
     	]);
 
-    	// return back()-> with('success', 'Berhasil submit!');
+    	return back()-> with('success', 'Berhasil submit!');
     }
 }

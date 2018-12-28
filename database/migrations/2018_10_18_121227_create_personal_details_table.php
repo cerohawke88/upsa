@@ -37,7 +37,7 @@ class CreatePersonalDetailsTable extends Migration
             $table->string('province2')->nullable();
             $table->string('country2')->nullable();
             $table->unsignedInteger('phone2')->nullable();
-            $table->string('contact_name');
+            $table->string('contact_name')->nullable();
             $table->timestamps();
         });
     }
