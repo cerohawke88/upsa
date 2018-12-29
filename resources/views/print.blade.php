@@ -6,6 +6,24 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
+
+			@if ($errors->any())
+			<div class="alert alert-danger">
+					<ul>
+							@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+							@endforeach
+					</ul>
+			</div>
+			@endif
+
+			@if (session('success'))
+			<div class="alert alert-success alert-dismissable" style="align-items: center; float: left; margin-top: -200px; margin-left: 230px">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					{{ session('success') }}
+			</div>
+			@endif
+
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}">
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
@@ -23,12 +41,6 @@
 			<div>
 				<p>Please read The Guidelines of The Student Exchange Program prior to completing this form. Type or print in block letters in English.</p>
 				
-				@if (session('success'))
-        <div class="alert alert-success alert-dismissable" style="align-items: center; float: left; margin-top: -200px; margin-left: 230px">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            {{ session('success') }}
-        </div>
-        @endif
 				
 				<h4><b>PERSONAL DETAILS</b></h4>
 
