@@ -17,7 +17,7 @@ class CreatePersonalDetailsTable extends Migration
             $table->increments('id');
             $table->string('fullname');
             $table->string('date_of_birth');
-            $table->unsignedInteger('passport_number');
+            $table->string('passport_number');
             $table->string('issuing_country');
             $table->date('date_of_issue');
             $table->date('date_of_expiry');

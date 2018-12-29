@@ -44,11 +44,11 @@ class FormController extends Controller
     		// Personal Details
     		'fullname' => 'required|string',
     		'nationality' => 'required|string',
-    		'date_of_birth' => 'required|string',
+    		'date_of_birth' => 'required|date',
     		'passport_number' => 'required|string',
     		'issuing_country' => 'required|string',
-    		'date_of_issue' => 'required|string',
-    		'date_of_expiry' => 'required|string',
+    		'date_of_issue' => 'required|date',
+    		'date_of_expiry' => 'required|date',
     		'blood_type' => 'required|string',
     		'marital_status' => 'required|string',
     		'address' => 'required|string',
@@ -83,8 +83,8 @@ class FormController extends Controller
     		'faculty' => 'required|string',
     		'department' => 'required|string',
     		'study_period' => 'required|string',
-    		'start_date' => 'required|string',
-    		'end_date' => 'required|string',
+    		'start_date' => 'required|date',
+    		'end_date' => 'required|date',
     		// Course
     		'course_title' => 'required|string',
     		'credit' => 'required|string',
@@ -93,11 +93,11 @@ class FormController extends Controller
     		'test' => 'required|string',
     		'score' => 'required|numeric',
     		'test_center' => 'required|string',	 
-    		'date_tested' => 'required|string',
+    		'date_tested' => 'required|date',
 
     		// Insurance
     		'insurance_name' => 'required|string',
-    		'validity' => 'required|string',
+    		'validity' => 'required|date',
     		'cover' => 'required|string',
 
     		// Accomodation

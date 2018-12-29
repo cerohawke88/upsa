@@ -15,7 +15,7 @@ class AddUniqueType extends Migration
     {
         Schema::table('personal_details', function (Blueprint $table) {
             $table->string('fullname')->unique()->change();
-            $table->unsignedInteger('passport_number')->unique()->change();
+            $table->string('passport_number')->unique()->change();
         });
     }
 

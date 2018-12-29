@@ -58,10 +58,10 @@
 
 				   <tr>
 				    <td><b>Date of Issue (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Issue" type="text" name="doi" size="20"/></td>
+				    	<input placeholder="Date of Issue" type="date" name="doi" size="20"/></td>
 				    
 				    <td><b>Date of Expiry (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Expiry" type="text" name="doe" size="20"/></td>
+				    	<input placeholder="Date of Expiry" type="date" name="doe" size="20"/></td>
 				   </tr>
 
 				   <tr>
@@ -228,10 +228,10 @@
 					    <input placeholder="Spesific Study Period" type="text" name="spesific_period" size="20"/></td>
 					    
 					    <td><b>Start Date (dd/mm/yyyy)</b><hr>
-					    <input placeholder="Start Date" type="text" name="start_date"/></td>
+					    <input placeholder="Start Date" type="date" name="start_date"/></td>
 					    
 					    <td><b>End Date (dd/mm/yyyy)</b><hr>
-					    <input placeholder="End Date" type="text" name="end_date"/></td>
+					    <input placeholder="End Date" type="date" name="end_date"/></td>
 					</tr>
 				</table>
 
@@ -325,21 +325,21 @@
 					   <td><input type="text" name="toefl" value="TOEFL" class="test"></td>
 					   <td><input type="number" name="score_toefl" size="20"/></td>
 					   <td><input type="name" name="place_toefl" size="50"/></td>
-					   <td><input type="text" name="date_toefl" size="20"/></td>
+					   <td><input type="date" name="date_toefl" size="20"/></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="ielts" value="IELTS" class="test"></td>
 					   <td><input type="number" name="score_ielts" size="20"/></td>
 					   <td><input type="name" name="place_ielts" size="50"/></td>
-					   <td><input type="text" name="date_ielts" size="20"/></td>
+					   <td><input type="date" name="date_ielts" size="20"/></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="others" size="20" placeholder="OTHERS" /></td>
 					   <td><input type="number" name="score_others" size="20"/></td>
 					   <td><input type="name" name="place_others" size="50"/></td>
-					   <td><input type="text" name="date_other" size="20"/></td>
+					   <td><input type="date" name="date_other" size="20"/></td>
 					</tr>
 				</table>
 			</div>
@@ -358,7 +358,7 @@
 				<table>
 					<tr>
 					    <td><b>Validity</b><hr>
-					    <input placeholder="Valid date until" type="text" name="valid_date" size="20"/></td>
+					    <input placeholder="Valid date until" type="date" name="valid_date" size="20"/></td>
 					    <td><b>Cover</b><hr>
 					    <input placeholder="" type="text" name="cover" size="20"/></td>
 					</tr>
