@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class EnglishTestResult extends Model
 {
     protected $table = 'english_test_result';
-    protected $guarded = ['id'];
+    protected $fillable = ['name_id', 'test','score','test_center','date_tested'];
+    public $incrementing = false;
 
     public function user()
 	{

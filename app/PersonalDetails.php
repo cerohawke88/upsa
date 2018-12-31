@@ -8,45 +8,39 @@ class PersonalDetails extends Model
 {
     protected $table = 'personal_details';
     protected $guarded = ['id'];
-    // protected $fillable = [
-	// 	'fullname', 'nationality', 'date_of_birth','passport_number','issuing_country','date_of_issue',
-	// 	'date_of_expiry','blood_type','marital_status','address','city','postal_code','province','country',
-	// 	'phone','mobile','email','address2','city2','postal_code2','province2','country2','phone2','contact_name'
-		
-	// ];
 	
     public function accomodation()
 	{
-		return $this->hasOne('App\Accomodation');
+		return $this->hasOne('App\Accomodation', 'name_id');
 	}
 
 	public function course()
 	{
-		return $this->hasOne('App\Course');
+		return $this->hasOne('App\Course', 'name_id');
 	}
 
 	public function proposedStudy()
 	{
-		return $this->hasOne('App\ProposedStudy');
+		return $this->hasOne('App\ProposedStudy', 'name_id');
 	}
 
 	public function emergencyContact()
 	{
-		return $this->hasOne('App\EmergencyContact');
+		return $this->hasOne('App\EmergencyContact', 'name_id');
 	}
 
 	public function englishTestResult()
 	{
-		return $this->hasOne('App\EnglishTestResult');
+		return $this->hasOne('App\EnglishTestResult', 'name_id');
 	}
 
 	public function homeInstitution()
 	{
-		return $this->hasOne('App\HomeInstitution');
+		return $this->hasOne('App\HomeInstitution', 'name_id');
 	}
 
 	public function insurance()
 	{
-		return $this->hasOne('App\Insurance');
+		return $this->hasOne('App\Insurance', 'name_id');
 	}
 }

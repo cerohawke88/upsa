@@ -16,8 +16,9 @@ class CreatePersonalDetailsTable extends Migration
         Schema::create('personal_details', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fullname');
+            $table->string('nationality');
             $table->string('date_of_birth');
-            $table->string('passport_number');
+            $table->string('passport_number')->unique();
             $table->string('issuing_country');
             $table->date('date_of_issue');
             $table->date('date_of_expiry');
@@ -28,15 +29,15 @@ class CreatePersonalDetailsTable extends Migration
             $table->unsignedInteger('postal_code');
             $table->string('province');
             $table->string('country');
-            $table->unsignedInteger('phone');
-            $table->unsignedInteger('mobile');
+            $table->string('phone');
+            $table->string('mobile');
             $table->string('email')->unique();
             $table->string('address2')->nullable();
             $table->string('city2')->nullable();
             $table->unsignedInteger('postal_code2')->nullable();
             $table->string('province2')->nullable();
             $table->string('country2')->nullable();
-            $table->unsignedInteger('phone2')->nullable();
+            $table->string('phone2')->nullable();
             $table->string('contact_name')->nullable();
             $table->timestamps();
         });

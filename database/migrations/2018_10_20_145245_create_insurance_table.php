@@ -14,11 +14,15 @@ class CreateInsuranceTable extends Migration
     public function up()
     {
         Schema::create('insurance', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('name_id')->unsigned();
             $table->string('insurance_name');
             $table->date('validity');
             $table->string('cover');
             $table->timestamps();
+        });
+
+        Schema::table('insurance', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

@@ -14,11 +14,15 @@ class CreateAccomodationTable extends Migration
     public function up()
     {
         Schema::create('accomodation', function (Blueprint $table) {
-            $table->increments('id');
-            $table->boolean('accomodation_help');
+            $table->integer('name_id')->unsigned();
+            $table->string('accomodation_help');
             $table->string('address')->nullable();
             $table->string('contact_person')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('accomodation', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

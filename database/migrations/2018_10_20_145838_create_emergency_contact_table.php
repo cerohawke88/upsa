@@ -14,14 +14,18 @@ class CreateEmergencyContactTable extends Migration
     public function up()
     {
         Schema::create('emergency_contact', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('name_id')->unsigned();
             $table->string('fullname');
             $table->string('relationship');
             $table->string('address');
-            $table->unsignedInteger('phone');
-            $table->unsignedInteger('mobile');
+            $table->string('phone');
+            $table->string('mobile');
             $table->string('email');
             $table->timestamps();
+        });
+
+        Schema::table('emergency_contact', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

@@ -14,11 +14,15 @@ class CreateCourseTable extends Migration
     public function up()
     {
         Schema::create('course', function (Blueprint $table) {
-            $table->integer('no');
-            $table->string('course_title');
-            $table->integer('credit');
+            $table->integer('name_id')->unsigned();
+            $table->string('course_title')->nullable();
+            $table->integer('credit')->nullable();
             $table->timestamps();
             // $table->foreign('no')->references('id')->on('proposed_study');
+        });
+
+        Schema::table('course', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

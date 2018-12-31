@@ -17,12 +17,6 @@
 			</div>
 			@endif
 
-			@if (session('success'))
-			<div class="alert alert-success alert-dismissable" style="align-items: center; float: left; margin-top: -200px; margin-left: 230px">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					{{ session('success') }}
-			</div>
-			@endif
 
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}">
 				@csrf
@@ -42,6 +36,12 @@
 				<p>Please read The Guidelines of The Student Exchange Program prior to completing this form. Type or print in block letters in English.</p>
 				
 				
+			@if (session('success'))
+			<div class="alert alert-success alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					{{ session('success') }}
+			</div>
+			@endif
 				<h4><b>PERSONAL DETAILS</b></h4>
 
 				<table>
@@ -57,31 +57,31 @@
 				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20"/></td>
 				    
 				    <td><b>Place, Date of Birth (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Birth" type="text" name="dob" size="20"/></td>
+				    	<input placeholder="Date of Birth" type="text" name="date_of_birth" size="20"/></td>
 				    </tr>
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport" size="20"/></td>
+				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="20"/></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
-				    	<input placeholder="Your Issuing Country" type="text" name="is_country" size="20"/></td>
+				    	<input placeholder="Your Issuing Country" type="text" name="issuing_country" size="20"/></td>
 				   </tr>
 
 				   <tr>
-				    <td><b>Date of Issue (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Issue" type="date" name="doi" size="20"/></td>
+				    <td><b>Date of Issue</b><hr>
+				    	<input placeholder="Date of Issue" type="date" name="date_of_issue" size="20"/></td>
 				    
-				    <td><b>Date of Expiry (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Expiry" type="date" name="doe" size="20"/></td>
+				    <td><b>Date of Expiry</b><hr>
+				    	<input placeholder="Date of Expiry" type="date" name="date_of_expiry" size="20"/></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Blood Type</b><hr>
-				    	<input placeholder="Your Blood Type" type="text" name="blood" maxlength="2" /></td>
+				    	<input placeholder="Your Blood Type" type="text" name="blood_type" maxlength="2" /></td>
 				    
 				    <td><b>Marital Status</b><hr>
-				    	<input placeholder="Your Marital Status" type="text" name="marital" size="20"/></td>
+				    	<input placeholder="Your Marital Status" type="text" name="marital_status" size="20"/></td>
 				   </tr>
 				</table>
 
@@ -97,12 +97,12 @@
 				    <td><b>City</b><hr>
 				    <input placeholder="Your City" type="text" name="city" size="20"/></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="text" name="postal" size="20"/></td>
+				    <input placeholder="ZIP Code" type="text" name="postal_code" size="20"/></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-				    <input placeholder="Your State" type="text" name="state" size="20"/></td>
+				    <input placeholder="Your State" type="text" name="province" size="20"/></td>
 				    <td><b>Country</b><hr>
 				    <input placeholder="Your Country" type="text" name="country" size="20"/></td>
 				  </tr>
@@ -134,12 +134,12 @@
 				    <td><b>City</b><hr>
 				    <input placeholder="Your City" type="text" name="city2" size="20"/></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="text" name="postal2" size="20"/></td>
+				    <input placeholder="ZIP Code" type="text" name="postal_code2" size="20"/></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-				    <input placeholder="Your State" type="text" name="state2" size="20"/></td>
+				    <input placeholder="Your State" type="text" name="province2" size="20"/></td>
 				    <td><b>Country</b><hr>
 				    <input placeholder="Your Country" type="text" name="country2" size="20"/></td>
 				  </tr>
@@ -168,24 +168,24 @@
 				<table>
 				  <tr>
 				    <td><b>Address</b><hr>
-				    <input placeholder="Your Address" type="text" name="i_address" size="50"/></td>
+				    <input placeholder="Your Address" type="text" name="institution_address" size="50"/></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone Number" type="text" name="i_phone" size="20"/></td>
+					    <input placeholder="Phone Number" type="text" name="institution_phone" size="20"/></td>
 					    
 					    <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="i_email" size="20"/></td>
+					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20"/></td>
 				  	</tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Website</b><hr>
-				    <input placeholder="Your Instance's Website" type="text" name="web" size="50"/></td>
+				    <input placeholder="Your Instance's Website" type="text" name="institution_web" size="50"/></td>
 				  </tr>
 				</table>
 
@@ -199,7 +199,7 @@
 				<table>
 					<tr>
 					    <td><b>Starting Year in University</b><hr>
-					    <input placeholder="Start Year" type="text" name="s_year" size="20"/></td>
+					    <input placeholder="Start Year" type="text" name="start_year" size="20"/></td>
 					
 					    <td><b>Cumulative GPA</b><hr>
 					    <input placeholder="Your GPA" type="text" name="gpa" size="20"/></td>
@@ -214,13 +214,13 @@
 				
 				<table>
 					<tr>
-						<td><input type="radio" name="duration" />
+						<td><input type="radio" name="duration" value="Semester I (Aug-Jan)"/>
 						<b>Semester I (Aug-Jan)</b><hr>
 						
-						<input type="radio" name="duration" />
+						<input type="radio" name="duration" value="Semester II (Feb-Jun)"/>
 						<b>Semester II (Feb-Jun)</b>
 
-						<h5><b>Academic Year 20 <input type="text" name="f_year" maxlength="2" placeholder="____" />/20 <input type="text" name="l_year" maxlength="2"  placeholder="____"/></b></h5></td>
+						<h5><b>Academic Year 20 <input type="text" name="year1" maxlength="2" placeholder="____" size="1"/>/20 <input type="text" name="year2" maxlength="2"  placeholder="____"/></b></h5></td>
 					</tr>
 				</table>
 
@@ -237,12 +237,12 @@
 				<table>
 					<tr>
 						<td><b>Spesific Study Period</b><hr>
-					    <input placeholder="Spesific Study Period" type="text" name="spesific_period" size="20"/></td>
+					    <input placeholder="Spesific Study Period" type="text" name="study_period" size="20"/></td>
 					    
-					    <td><b>Start Date (dd/mm/yyyy)</b><hr>
+					    <td><b>Start Date</b><hr>
 					    <input placeholder="Start Date" type="date" name="start_date"/></td>
 					    
-					    <td><b>End Date (dd/mm/yyyy)</b><hr>
+					    <td><b>End Date</b><hr>
 					    <input placeholder="End Date" type="date" name="end_date"/></td>
 					</tr>
 				</table>
@@ -273,48 +273,48 @@
 				<table>
 					<tr>
 						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="course_2"></td>
-						<td><input type="text" name="credit_2"></td>
+						<td><input type="text" name="course_2" placeholder="Course"></td>
+						<td><input type="text" name="credit_2" placeholder="Credit"></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="course_3"></td>
-						<td><input type="text" name="credit_3"></td>
+						<td><input type="text" name="course_3" placeholder="Course"></td>
+						<td><input type="text" name="credit_3" placeholder="Credit"></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>4.</b></h6></td>
-						<td><input type="text" name="course_4"></td>
-						<td><input type="text" name="credit_4"></td>
+						<td><input type="text" name="course_4" placeholder="Course"></td>
+						<td><input type="text" name="credit_4" placeholder="Credit"></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>5.</b></h6></td>
-						<td><input type="text" name="course_5"></td>
-						<td><input type="text" name="credit_5"></td>
+						<td><input type="text" name="course_5" placeholder="Course"></td>
+						<td><input type="text" name="credit_5" placeholder="Credit"></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>6.</b></h6></td>
-						<td><input type="text" name="course_6"></td>
-						<td><input type="text" name="credit_6"></td>
+						<td><input type="text" name="course_6" placeholder="Course"></td>
+						<td><input type="text" name="credit_6" placeholder="Credit"></td>
 					</tr>
 				</table>
 				
 				<table>
 					<tr>
 						<td><h6><b>7.</b></h6></td>
-						<td><input type="text" name="course_7"></td>
-						<td><input type="text" name="credit_7"></td>
+						<td><input type="text" name="course_7" placeholder="Course"></td>
+						<td><input type="text" name="credit_7" placeholder="Credit"></td>
 					</tr>
 				</table>
 			
@@ -330,28 +330,28 @@
 				    <td><b>Test</b></td>
 				    <td><b>Score</b></td>
 				    <td><b>Test Center</b></td>
-				    <td><b>Date Tested (dd/mm/yyyy)</b></td>
+				    <td><b>Date Tested</b></td>
 				  </tr>
 
 					<tr>
 					   <td><input type="text" name="toefl" value="TOEFL" class="test"></td>
-					   <td><input type="number" name="score_toefl" size="20"/></td>
+					   <td><input type="text" name="score_toefl" size="20"/></td>
 					   <td><input type="name" name="place_toefl" size="50"/></td>
 					   <td><input type="date" name="date_toefl" size="20"/></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="ielts" value="IELTS" class="test"></td>
-					   <td><input type="number" name="score_ielts" size="20"/></td>
+					   <td><input type="text" name="score_ielts" size="20"/></td>
 					   <td><input type="name" name="place_ielts" size="50"/></td>
 					   <td><input type="date" name="date_ielts" size="20"/></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="others" size="20" placeholder="OTHERS" /></td>
-					   <td><input type="number" name="score_others" size="20"/></td>
+					   <td><input type="text" name="score_others" size="20"/></td>
 					   <td><input type="name" name="place_others" size="50"/></td>
-					   <td><input type="date" name="date_other" size="20"/></td>
+					   <td><input type="date" name="date_others" size="20"/></td>
 					</tr>
 				</table>
 			</div>
@@ -372,7 +372,7 @@
 					    <td><b>Validity</b><hr>
 					    <input placeholder="Valid date until" type="date" name="valid_date" size="20"/></td>
 					    <td><b>Cover</b><hr>
-					    <input placeholder="" type="text" name="cover" size="20"/></td>
+					    <input type="text" name="cover" size="20"/></td>
 					</tr>
 				</table>			
 			</div>
@@ -393,15 +393,15 @@
 
 					<tr>
 					    <td><b>If yes, student agree to the accommodation prepared by International Office</b></td>
-						<td><input  type="radio" name="opt_acc" size="20"/> YES</td>
+						<td><input  type="radio" name="opt_acc" size="20" value="YES"/> YES</td>
 					</tr>
 
 					<tr>
 						<td><b>If no, please state where you plan to stay in Indonesia:</b></td>
-						<td><input type="radio" name="opt_acc" size="20"/> NO</td>
+						<td><input type="radio" name="opt_acc" size="20" value="NO"/> NO</td>
 					</tr>
 						<td><b>Address</b><hr>
-							<input placeholder="Adress" type="text" name="adress_acc" size=50"></td>
+							<input placeholder="Address" type="text" name="address_acc" size=50"></td>
 						<td><b>Contact Person (Name/Phone)</b><hr>
 							<input placeholder="Name & Phone" type="text" name="cp_acc" size="25"></td>
 
@@ -428,7 +428,7 @@
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="address_emergency" size="50"/></td>
+					    <input placeholder="Address" type="text" name="emergency_address" size="50"/></td>
 				  	</tr>		
 				</table>
 

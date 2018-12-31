@@ -25,9 +25,9 @@ class FormsRequest extends FormRequest
     {
         return [
             // Personal Details
-    		'fullname' => 'required|string',
+    		'name' => 'required|string',
     		'nationality' => 'required|string',
-    		'date_of_birth' => 'required|date',
+    		'date_of_birth' => 'required|string',
     		'passport_number' => 'required|string',
     		'issuing_country' => 'required|string',
     		'date_of_issue' => 'required|date',
@@ -51,50 +51,72 @@ class FormsRequest extends FormRequest
     		'contact_name' => 'nullable|string',
 
     		// Home Institution
-    		'name' => 'required|string',
-    		'address' => 'required|string',
-    		'phone' => 'required|string',
-    		'email' => 'required|email',
-    		'website' => 'required|string',
-    		'faculty_dep' => 'required|string',
+    		'institution' => 'required|string',
+    		'institution_address' => 'required|string',
+    		'institution_phone' => 'required|string',
+    		'institution_email' => 'required|email',
+    		'institution_web' => 'required|string',
+    		'faculty_dept' => 'required|string',
     		'start_year' => 'required|string',
     		'gpa' => 'required|string',
 
     		// Proposed Study
-    		'semester' => 'required|in:Semester I (Aug-Jan),Semester II (Feb-Jun)',
-    		'academic_year' => 'required|string',
+    		'duration' => 'required|in:Semester I (Aug-Jan),Semester II (Feb-Jun)',
+    		'year1' => 'required|string',
+    		'year2' => 'required|string',
     		'faculty' => 'required|string',
     		'department' => 'required|string',
     		'study_period' => 'required|string',
     		'start_date' => 'required|date',
-    		'end_date' => 'required|date',
+			'end_date' => 'required|date',
+			
     		// Course
-    		'course_title' => 'required|string',
-    		'credit' => 'required|string',
+    		'course_1' => 'required|string',
+    		'credit_1' => 'required|string',
+    		'course_2' => 'nullable|string',
+    		'credit_2' => 'nullable|string',
+    		'course_3' => 'nullable|string',
+    		'credit_3' => 'nullable|string',
+    		'course_4' => 'nullable|string',
+    		'credit_4' => 'nullable|string',
+    		'course_5' => 'nullable|string',
+    		'credit_5' => 'nullable|string',
+    		'course_6' => 'nullable|string',
+    		'credit_6' => 'nullable|string',
+    		'course_7' => 'nullable|string',
+    		'credit_7' => 'nullable|string',
 
     		// English Test Result
-    		'test' => 'required|string',
-    		'score' => 'required|numeric',
-    		'test_center' => 'required|string',	 
-    		'date_tested' => 'required|date',
+    		'toefl' => 'required|string',
+    		'score_toefl' => 'required|numeric',
+    		'place_toefl' => 'required|string',	 
+    		'date_toefl' => 'required|date',
+    		'ielts' => 'required|string',
+    		'score_ielts' => 'required|numeric',
+    		'place_ielts' => 'required|string',	 
+    		'date_ielts' => 'required|date',
+    		'others' => 'nullable|string',
+    		'score_others' => 'nullable|numeric',
+    		'place_others' => 'nullable|string',	 
+    		'date_others' => 'nullable|date',
 
     		// Insurance
-    		'insurance_name' => 'required|string',
-    		'validity' => 'required|date',
+    		'insurance' => 'required|string',
+    		'valid_date' => 'required|date',
     		'cover' => 'required|string',
 
     		// Accomodation
-    		'accomodation_help' => 'required|in:YES,NO',
-    		'adress' => 'required|string',
-    		'contact_person' => 'required|string',
+    		'opt_acc' => 'required|in:YES,NO',
+    		'address_acc' => 'sometimes|nullable|required_if:opt_acc,NO|string',
+        	'cp_acc' => 'sometimes|nullable|required_if:opt_acc,NO|string',
 
     		// Contact of Emergency
-    		'fullname' => 'required|string',
+    		'emergency_name' => 'required|string',
     		'relationship' => 'required|string',
-    		'address' => 'required|string',
-    		'phone' => 'required|string',
-    		'mobile' => 'required|string',
-    		'email' => 'required|email'
+    		'emergency_address' => 'required|string',
+    		'emergency_phone' => 'required|string',
+    		'emergency_mobile' => 'required|string',
+    		'emergency_email' => 'required|email'
         ];
     }
 

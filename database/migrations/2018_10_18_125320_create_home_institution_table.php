@@ -14,16 +14,20 @@ class CreateHomeInstitutionTable extends Migration
     public function up()
     {
         Schema::create('home_institution', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('name_id')->unsigned();
             $table->string('name');
             $table->string('address');
-            $table->unsignedInteger('phone');
-            $table->string('email')->unique();
+            $table->unsignedBigInteger('phone');
+            $table->string('email');
             $table->string('website');
             $table->string('faculty_dep');
             $table->integer('start_year');
             $table->string('gpa');
             $table->timestamps();
+        });
+
+        Schema::table('home_institution', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

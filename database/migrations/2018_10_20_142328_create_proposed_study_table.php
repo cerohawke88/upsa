@@ -14,15 +14,19 @@ class CreateProposedStudyTable extends Migration
     public function up()
     {
         Schema::create('proposed_study', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('name_id')->unsigned();
             $table->string('semester');
-            $table->integer('academic_year');
+            $table->string('academic_year');
             $table->string('faculty');
             $table->string('department');
             $table->string('study_period');
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();
+        });
+
+        Schema::table('proposed_study', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

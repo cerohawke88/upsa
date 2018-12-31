@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class EmergencyContact extends Model
 {
     protected $table = 'emergency_contact';
-    protected $guarded = ['id'];
+    protected $fillable = ['name_id', 'fullname','relationship','address','phone','mobile','email'];
+    public $incrementing = false;
 
     public function user()
 	{

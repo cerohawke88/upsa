@@ -14,12 +14,16 @@ class CreateEnglishTestResultTable extends Migration
     public function up()
     {
         Schema::create('english_test_result', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('test');
-            $table->integer('score');
-            $table->string('test_center');
-            $table->date('date_tested');
+            $table->integer('name_id')->unsigned();
+            $table->string('test')->nullable();
+            $table->string('score')->nullable();
+            $table->string('test_center')->nullable();
+            $table->date('date_tested')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('english_test_result', function (Blueprint $table) {
+            $table->foreign('name_id')->references('id')->on('personal_details');
         });
     }
 

@@ -44,87 +44,102 @@ class FormController extends Controller
 
 		$validated = $request->validated();
 
-    	PersonalDetails::create([
+    	$personalDetails =  PersonalDetails::create([
     		'fullname' => $request->input('name'),
     		'nationality' => $request->input('nationality'),
-    		'date_of_birth' => $request->input('dob'),
-    		'passport_number' => $request->input('passport'),
-    		'issuing_country' => $request->input('is_country'),
-    		'date_of_issue' => $request->input('doi'),
-    		'date_of_expiry' => $request->input('doe'),
-    		'blood_type' => $request->input('blood'),
-    		'marital_status' => $request->input('maritial'),
+    		'date_of_birth' => $request->input('date_of_birth'),
+    		'passport_number' => $request->input('passport_number'),
+    		'issuing_country' => $request->input('issuing_country'),
+    		'date_of_issue' => $request->input('date_of_issue'),
+    		'date_of_expiry' => $request->input('date_of_expiry'),
+    		'blood_type' => $request->input('blood_type'),
+    		'marital_status' => $request->input('marital_status'),
     		'address' => $request->input('address'),
     		'city' => $request->input('city'),
-    		'postal_code' => $request->input('postal'),
-    		'province' => $request->input('state'),
+    		'postal_code' => $request->input('postal_code'),
+    		'province' => $request->input('province'),
     		'country' => $request->input('country'),
     		'phone' => $request->input('phone'),
     		'mobile' => $request->input('mobile'),
     		'email' => $request->input('email'),
     		'address2' => $request->input('address2'),
     		'city2' => $request->input('city2'),
-    		'postal_code2' => $request->input('postal2'),
-    		'province2' => $request->input('state2'),
+    		'postal_code2' => $request->input('postal_code2'),
+    		'province2' => $request->input('province2'),
     		'country2' => $request->input('country2'),
     		'phone2' => $request->input('phone2'),
     		'contact_name' => $request->input('contact_name'),
 		]);
 		
-
-    	HomeInstitution::create([
-    		'name' =>  $request->input('institution'),
-    		'address' =>  $request->input('i_address'),
-    		'phone' =>  $request->input('i_phone'),
-    		'email' =>  $request->input('i_email'),
-    		'website' =>  $request->input('web'),
+		$personalDetails->homeInstitution()->create([
+			'name' =>  $request->input('institution'),
+			'address' =>  $request->input('institution_address'),
+    		'phone' =>  $request->input('institution_phone'),
+    		'email' =>  $request->input('institution_email'),
+    		'website' =>  $request->input('institution_web'),
     		'faculty_dep' =>  $request->input('faculty_dept'),
-    		'start_year' =>  $request->input('s_year'),
+    		'start_year' =>  $request->input('start_year'),
     		'gpa' =>  $request->input('gpa'),
-    	]);
+		]);
 
-    	ProposedStudy::create([
-    		'semester' => $request->input('duration'),
-    		'academic_year' => $request->input('f_year') . '/' . $request->input('l_year'),
+		$personalDetails->proposedStudy()->create([
+			'semester' => $request->input('duration'),
+    		'academic_year' => '20' . $request->input('year1') . '/' . '20' . $request->input('year2'),
     		'faculty' => $request->input('faculty'),
     		'department' => $request->input('department'),
-    		'study_period' => $request->input('spesific_period'),
+    		'study_period' => $request->input('study_period'),
     		'start_date' => $request->input('start_date'),
     		'end_date' => $request->input('end_date'),
-    	]);
+		]);
 
-    	Course::create([
-    		'course_title' => $request->input('course_1'),
-    		'credit' => $request->input('credit_1'),
-    	]);
+		for ($i=1; $i<=7; $i++) {
+			$personalDetails->course()->create([
+				'course_title' => $request->input('course_' . $i),
+				'credit' => $request->input('credit_' . $i),
+			]);
+		}
 
-    	EnglishTestResult::create([
-    		'test' => $request->input('toefl'),
+		$personalDetails->englishTestResult()->create([
+			'test' => $request->input('toefl'),
     		'score' => $request->input('score_toefl'),
     		'test_center' => $request->input('place_toefl'),	 
     		'date_tested' => $request->input('date_toefl'),
-    	]);
+		]);
 
-    	Insurance::create([
-    		'insurance_name' => $request->input('insurance'),
+		$personalDetails->englishTestResult()->create([
+    		'test' => $request->input('ielts'),
+    		'score' => $request->input('score_ielts'),
+    		'test_center' => $request->input('place_ielts'),	 
+    		'date_tested' => $request->input('date_ielts'),
+		]);
+
+		$personalDetails->englishTestResult()->create([
+    		'test' => $request->input('others'),
+    		'score' => $request->input('score_others'),
+    		'test_center' => $request->input('place_others'),	 
+    		'date_tested' => $request->input('date_others'),
+		]);
+
+		$personalDetails->insurance()->create([
+			'insurance_name' => $request->input('insurance'),
     		'validity' => $request->input('valid_date'),
     		'cover' => $request->input('cover'),
-    	]);
+		]);
 
-    	Accomodation::create([
-    		'accomodation_help' => $request->input('opt_acc'),
-    		'adress' => $request->input('adress_acc'),
+		$personalDetails->accomodation()->create([
+			'accomodation_help' => $request->input('opt_acc'),
+    		'address' => $request->input('address_acc'),
     		'contact_person' => $request->input('cp_acc'),
-    	]);
+		]);
 
-    	EmergencyContact::create([
-    		'fullname' => $request->input('emergency_name'),
+		$personalDetails->emergencyContact()->create([
+			'fullname' => $request->input('emergency_name'),
     		'relationship' => $request->input('relationship'),
-    		'address' => $request->input('address_emergency'),
+    		'address' => $request->input('emergency_address'),
     		'phone' => $request->input('emergency_phone'),
     		'mobile' => $request->input('emergency_mobile'),
     		'email' => $request->input('emergency_email'),
-    	]);
+		]);
 
     	return back()-> with('success', 'Berhasil submit!');
     }

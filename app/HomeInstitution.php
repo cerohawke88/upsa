@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class HomeInstitution extends Model
 {
     protected $table = 'home_institution';
-    protected $guarded = ['id'];
+    protected $fillable = ['name_id','name','address','phone','email','website','faculty_dep','start_year','gpa'];
+    public $incrementing = false;
 
     public function user()
 	{

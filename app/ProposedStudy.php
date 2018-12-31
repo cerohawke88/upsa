@@ -7,14 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class ProposedStudy extends Model
 {
     protected $table = 'proposed_study';
-    protected $guarded = ['id'];
+    protected $fillable = ['name_id', 'semester','academic_year','faculty','department','study_period','start_date','end_date'];
+    public $incrementing = false;
 
     public function user()
 	{
 		return $this->belongsTo('App\PersonalDetails');
-	}
-
-	public function course() {
-		return $this->hasMany('App\Course');
 	}
 }
