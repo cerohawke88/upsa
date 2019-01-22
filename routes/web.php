@@ -17,9 +17,7 @@ Route::get('/print', 'FormController@print')->name('print');
 
 Route::post('/submit', 'FormController@submit')->name('submit');
 
-<<<<<<< HEAD
 Route::get('/pdf', 'FormController@pdf')->name('pdf');
-=======
 
 // login,auth
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -35,4 +33,3 @@ ROute::get('/admin/detail-table', 'PostController@detail')->name('admin.tabelDet
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 
 Auth::routes();
->>>>>>> fa8076fb4555c927a123c2674b9fd9dcfa5bebac
