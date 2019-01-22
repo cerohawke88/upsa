@@ -13,7 +13,7 @@ use App\HomeInstitution;
 use App\Insurance;
 use App\PersonalDetails;
 use App\ProposedStudy;
-
+use Validator;
 class FormController extends Controller
 {
 	
