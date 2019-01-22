@@ -20,3 +20,19 @@ Route::get('/test', 'FormController@test')->name('test');
 Route::get('/test-print', 'FormController@testPrint')->name('testPrint');
 
 Route::post('/submit', 'FormController@submit')->name('submit');
+
+
+// login,auth
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// AdminPAge
+ROute::get('/admin/homePage', 'PostController@index')->name('admin.home');
+ROute::get('/admin/detail-table', 'PostController@detail')->name('admin.tabelDetail');
+Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
+
+Auth::routes();

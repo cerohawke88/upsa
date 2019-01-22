@@ -8,6 +8,7 @@ class PersonalDetails extends Model
 {
     protected $table = 'personal_details';
     protected $guarded = ['id'];
+    
 	
     public function accomodation()
 	{
