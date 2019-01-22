@@ -15,8 +15,6 @@ Route::get('/', 'FormController@form')->name('form');
 
 Route::get('/print', 'FormController@print')->name('print');
 
-Route::get('/test', 'FormController@test')->name('test');
-
-Route::get('/test-print', 'FormController@testPrint')->name('testPrint');
-
 Route::post('/submit', 'FormController@submit')->name('submit');
+
+Route::get('/pdf', 'FormController@pdf')->name('pdf');

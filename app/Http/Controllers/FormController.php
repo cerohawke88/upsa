@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\FormsRequest;
 use PDF;
-use DB;
 use App\Accomodation;
 use App\Course;
 use App\EmergencyContact;
@@ -17,25 +16,20 @@ use App\ProposedStudy;
 
 class FormController extends Controller
 {
-
+	
 	public function form() {
-		return view('print');
+		return view('form');
+	}
+	
+	public function pdf() {
+		return view('pdf');
 	}
 
     public function print() {
-    	// $pdf = PDF::loadView('print');
-    	// return $pdf->download('Form UP-SA.pdf');
+    	$pdf = PDF::loadView('pdf');
+    	return $pdf->setWarnings(false)->download('Form UP-SA.pdf');
     	// set_time_limit(12000);
-        echo "<script> window.print(); </script>";
-    }
-
-    public function test() {
-		return view('test');
-    }
-	
-    public function testPrint() {
-		$pdf = PDF::loadView('test');
-    	return $pdf->download('test.pdf');
+        // echo "<script> window.print(); </script>";
     }
 	
     public function submit(FormsRequest $request) {
