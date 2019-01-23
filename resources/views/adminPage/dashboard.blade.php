@@ -31,11 +31,7 @@
                         <td>{{ $p_detail->created_at }}</td>
                         <td>
 
-                          <form method="get" action="#">
-                            <input type="hidden" name="post" value="#">
-
                           <form method="get" action="{{ route('admin.tabelDetail', ['personalDetails' => $p_detail->id]) }}">
-
                             <button type="submit" class="btn btn-success btn-sm">Detail</button>
                           </form>
                         </td>
