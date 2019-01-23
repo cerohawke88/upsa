@@ -29,7 +29,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // AdminPAge
 ROute::get('/admin/homePage', 'PostController@index')->name('admin.home');
-ROute::get('/admin/detail-table', 'PostController@detail')->name('admin.tabelDetail');
+ROute::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 
 Auth::routes();
