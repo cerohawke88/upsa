@@ -18,7 +18,7 @@
 			@endif
 
 
-			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}">
+			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" onsubmit="return false">
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			

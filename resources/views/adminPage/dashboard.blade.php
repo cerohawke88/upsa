@@ -32,7 +32,7 @@
                         <td>{{ $p_detail->fullname }}</td>
                         <td>{{ $p_detail->created_at }}</td>
                         <td>
-                          <form method="get" action="{{route('admin.tabelDetail')}}">
+                          <form method="get" action="#">
                             <input type="hidden" name="post" value="#">
                             <button type="submit" class="btn btn-success btn-sm">Detail</button>
                           </form>
