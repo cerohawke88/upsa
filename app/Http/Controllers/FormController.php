@@ -26,10 +26,8 @@ class FormController extends Controller
 	}
 
     public function print() {
-
-        $pdf = PDF::loadView('pdf.customers', $data);
-        $pdf->save(storage_path().'Form UP-SA.pdf');
-        return $pdf->download('Form UP-SA.pdf');
+		$pdf = PDF::loadView('pdf');
+    	return $pdf->setWarnings(false)->download('Form UP-SA.pdf');
     }
 	
     public function submit(FormsRequest $request) {
