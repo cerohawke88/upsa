@@ -24,23 +24,23 @@
                         <td>{{ $p_detail->id }}</td>
 
                         <td>
-                          @foreach ( $homeInstitution as $h_institution )
-                              {{ $h_institution->name }}
-                          @endforeach
+                         {{$p_detail->homeInstitution->name}}
                         </td>
                         <td>{{ $p_detail->passport_number }}</td>
                         <td>{{ $p_detail->fullname }}</td>
                         <td>{{ $p_detail->created_at }}</td>
                         <td>
+
                           <form method="get" action="#">
                             <input type="hidden" name="post" value="#">
+
+                          <form method="get" action="{{ route('admin.tabelDetail', ['personalDetails' => $p_detail->id]) }}">
+
                             <button type="submit" class="btn btn-success btn-sm">Detail</button>
                           </form>
                         </td>
                         <td>
                           <form method="post" action="#">
-                            
-                            <input type="hidden" name="post" value="#">
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                           </form>
                         </td>
