@@ -13,14 +13,14 @@
                       <h5 class="widget-user-desc">Laki-laki</h5>
                     </div>
                     <div class="widget-user-image">
-                      <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
+                      <img class="img-circle" src="{{asset('img/user.png')}}" alt="User Avatar">
                     </div>
                     <div class="box-footer">
                       <div class="row">
                         <div class="col-sm-4 border-right">
                           <div class="description-block">
                             <h5 class="description-header">10526059</h5>
-                            <span class="description-text">Nomor Induk Mahasiswa(NIM)</span>
+                            <span class="description-text">Nomor Passport</span>
                           </div>
                           <!-- /.description-block -->
                         </div>
