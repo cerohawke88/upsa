@@ -46,6 +46,7 @@
               </div>
               <!-- /.box-body -->
             </div>
+          <span>{{$toefl}}</span>
             <!-- /.box -->
           </div>
         </div>

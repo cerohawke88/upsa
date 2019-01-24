@@ -21,6 +21,8 @@ Route::get('/test-print', 'FormController@testPrint')->name('testPrint');
 
 Route::post('/submit', 'FormController@submit')->name('submit');
 
+Route::get('/pdf', 'FormController@pdf')->name('pdf');
+
 
 // login,auth
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

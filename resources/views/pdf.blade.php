@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
 	<style>
 		:root {
@@ -171,11 +172,11 @@
 		}
 
 		.tr_no{
-			width:24px;
+			width:110px;
 		}
 
 		.tr_nos{
-			width:263px;
+			width:579px;
 		}
 
 		.test {
@@ -212,108 +213,108 @@
 				<table>
 				  <tr>
 				    <td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
-				    <input placeholder="Your Fullname"type="text" name="name" size="30"/></td>
+				    <span>asdasd</span> </td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20"/></td>
+				    	<span>asdasd</span></td>
 				    
 				    <td><b>Place, Date of Birth (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Birth" type="text" name="date_of_birth" size="20"/></td>
+				    	<span>asdasd</span></td>
 				    </tr>
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="20"/></td>
+				    	<span>asdasd</span></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
-				    	<input placeholder="Your Issuing Country" type="text" name="issuing_country" size="20"/></td>
+				    	<span>asdasd</span></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Date of Issue</b><hr>
-				    	<input placeholder="Date of Issue" type="date" name="date_of_issue" size="20"/></td>
+				    	<span>asdasd</span></td>
 				    
 				    <td><b>Date of Expiry</b><hr>
-				    	<input placeholder="Date of Expiry" type="date" name="date_of_expiry" size="20"/></td>
+				    	<span>asdasd</span></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Blood Type</b><hr>
-				    	<input placeholder="Your Blood Type" type="text" name="blood_type" maxlength="2" /></td>
+				    	<span>asdasd</span></td>
 				    
 				    <td><b>Marital Status</b><hr>
-				    	<input placeholder="Your Marital Status" type="text" name="marital_status" size="20"/></td>
+				    	<span>asdasd</span></td>
 				   </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Permanent/Home Address</b><hr>
-				    <input placeholder="Your Address" type="text" name="address" size="50"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 				
 				<table>
 				  <tr>
 				    <td style="text-align: left"><b>City</b><hr>
-				    <input placeholder="Your City" type="text" name="city" size="20"/></td>
+						<span>asdasd</span></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="text" name="postal_code" size="20"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-				    <input placeholder="Your State" type="text" name="province" size="20"/></td>
+						<span>asdasd</span></td>
 				    <td><b>Country</b><hr>
-				    <input placeholder="Your Country" type="text" name="country" size="20"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Phone</b><hr>
-				    <input placeholder="Phone Number" type="text" name="phone" size="20"/></td>
+						<span>asdasd</span></td>
 				    <td><b>Mobile</b><hr>
-				    <input placeholder="Mobile Number" type="text" name="mobile" size="20"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Email</b><hr>
-				    <input placeholder="Your Email Address" type="email" name="email" size="50"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Mailing Address (if different from above)</b><hr>
-				    <input placeholder="Your Alternate Address" type="text" name="address2" size="50"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>City</b><hr>
-				    <input placeholder="Your City" type="text" name="city2" size="20"/></td>
+						<span>asdasd</span></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="text" name="postal_code2" size="20"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-				    <input placeholder="Your State" type="text" name="province2" size="20"/></td>
+						<span>asdasd</span></td>
 				    <td><b>Country</b><hr>
-				    <input placeholder="Your Country" type="text" name="country2" size="20"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Phone</b><hr>
-				    <input placeholder="Phone Number" type="text" name="phone2" size="20"/></td>
+						<span>asdasd</span></td>
 				    <td><b>Contact Name</b><hr>
-				    <input placeholder="Contact Name" type="text" name="contact_name" size="20"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
@@ -326,48 +327,48 @@
 				<table>
 				  <tr>
 				    <td><b>Name of Institution</b><hr>
-				    <input placeholder="Your Institution" type="instance" name="institution" size="50"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Address</b><hr>
-				    <input placeholder="Your Address" type="text" name="institution_address" size="50"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone Number" type="text" name="institution_phone" size="20"/></td>
+							<span>asdasd</span></td>
 					    
 					    <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20"/></td>
+							<span>asdasd</span></td>
 				  	</tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Website</b><hr>
-				    <input placeholder="Your Instance's Website" type="text" name="institution_web" size="50"/></td>
+				    <span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Faculty/Department</b><hr>
-				    <input placeholder="Faculty" type="text" name="faculty_dept" size="50"/></td>
+						<span>asdasd</span></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Starting Year in University</b><hr>
-					    <input placeholder="Start Year" type="text" name="start_year" size="20"/></td>
+							<span>asdasd</span></td>
 					
 					    <td><b>Cumulative GPA</b><hr>
-					    <input placeholder="Your GPA" type="text" name="gpa" size="20"/></td>
+							<span>asdasd</span></td>
 				  	</tr>
 				</table>
 			</div>
@@ -392,23 +393,23 @@
 				<table>
 					<tr>
 						<td><b>Faculty</b><hr>
-					    <input placeholder="Your Faculty" type="text" name="faculty" size="20"/></td>
+							<span>asdasd</span></td>
 					    
 					    <td><b>Department</b><hr>
-					    <input placeholder="Your Department" type="text" name="department" size="20"/></td>
+							<span>asdasd</span></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><b>Spesific Study Period</b><hr>
-					    <input placeholder="Spesific Study Period" type="text" name="study_period" size="20"/></td>
+							<span>asdasd</span></td>
 					    
 					    <td><b>Start Date</b><hr>
-					    <input placeholder="Start Date" type="date" name="start_date"/></td>
+							<span>asdasd</span></td>
 					    
 					    <td><b>End Date</b><hr>
-					    <input placeholder="End Date" type="date" name="end_date"/></td>
+							<span>asdasd</span></td>
 					</tr>
 				</table>
 
@@ -429,8 +430,8 @@
 				<table>
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="course_1" placeholder="Course"></td>
-						<td><input type="text" name="credit_1" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				
 				</table>
@@ -438,48 +439,48 @@
 				<table>
 					<tr>
 						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="course_2" placeholder="Course"></td>
-						<td><input type="text" name="credit_2" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="course_3" placeholder="Course"></td>
-						<td><input type="text" name="credit_3" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>4.</b></h6></td>
-						<td><input type="text" name="course_4" placeholder="Course"></td>
-						<td><input type="text" name="credit_4" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>5.</b></h6></td>
-						<td><input type="text" name="course_5" placeholder="Course"></td>
-						<td><input type="text" name="credit_5" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><h6><b>6.</b></h6></td>
-						<td><input type="text" name="course_6" placeholder="Course"></td>
-						<td><input type="text" name="credit_6" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				</table>
 				
 				<table>
 					<tr>
 						<td><h6><b>7.</b></h6></td>
-						<td><input type="text" name="course_7" placeholder="Course"></td>
-						<td><input type="text" name="credit_7" placeholder="Credit"></td>
+						<td><span>asdasd</span></td>
+						<td><span>asdasd</span></td>
 					</tr>
 				</table>
 			
@@ -500,23 +501,23 @@
 
 					<tr>
 					   <td><input type="text" name="toefl" value="TOEFL" class="test"></td>
-					   <td><input type="text" name="score_toefl" size="20"/></td>
-					   <td><input type="name" name="place_toefl" size="50"/></td>
-					   <td><input type="date" name="date_toefl" size="20"/></td>
+					   <td><span>asdasd</span></td>
+					   <td><span>asdasd</span></td>
+					   <td><span>asdasd</span></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="ielts" value="IELTS" class="test"></td>
-					   <td><input type="text" name="score_ielts" size="20"/></td>
-					   <td><input type="name" name="place_ielts" size="50"/></td>
-					   <td><input type="date" name="date_ielts" size="20"/></td>
+					   <td><span>asdasd</span></td>
+					   <td><span>asdasd</span></td>
+					   <td><span>asdasd</span></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="others" size="20" placeholder="OTHERS" /></td>
-					   <td><input type="text" name="score_others" size="20"/></td>
-					   <td><input type="name" name="place_others" size="50"/></td>
-					   <td><input type="date" name="date_others" size="20"/></td>
+					   <td><span>asdasd</span></td>
+					   <td><span>asdasd</span></td>
+					   <td><span>asdasd</span></td>
 					</tr>
 				</table>
 			</div>
@@ -529,15 +530,15 @@
 				<table>
 					<tr>
 						<td><b>Health Insurance Name</b><hr>
-					    <input placeholder="Your Insurance Name" type="text" name="insurance" size="20"/></td>
+							<span>asdasd</span></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
 					    <td><b>Validity</b><hr>
-					    <input placeholder="Valid date until" type="date" name="valid_date" size="20"/></td>
+							<span>asdasd</span></td>
 					    <td><b>Cover</b><hr>
-					    <input type="text" name="cover" size="20"/></td>
+							<span>asdasd</span></td>
 					</tr>
 				</table>			
 			</div>
@@ -566,9 +567,9 @@
 						<td><input type="radio" name="opt_acc" size="20" value="NO"/> NO</td>
 					</tr>
 						<td><b>Address</b><hr>
-							<input placeholder="Address" type="text" name="address_acc" size=50"></td>
+							<span>asdasd</span></td>
 						<td><b>Contact Person (Name/Phone)</b><hr>
-							<input placeholder="Name & Phone" type="text" name="cp_acc" size="25"></td>
+							<span>asdasd</span></td>
 
 				</table>
 
@@ -584,29 +585,29 @@
 				<table>
 					<tr>
 					    <td><b>Full Name</b><hr>
-					    <input placeholder="Name" type="text" name="emergency_name" size="20"/></td>
+							<span>asdasd</span></td>
 					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationship" size="20"/></td>
+							<span>asdasd</span></td>
 					</tr>
 				</table>
 	  				
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="emergency_address" size="50"/></td>
+							<span>asdasd</span></td>
 				  	</tr>		
 				</table>
 
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone" type="text" name="emergency_phone" size="20"/></td>
+							<span>asdasd</span></td>
 					    
 					    <td><b>Mobile</b><hr>
-					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20"/></td>
+							<span>asdasd</span></td>
 						
 						<td><b>Email</b><hr>
-					    <input placeholder="Email" type="email" name="emergency_email" size="20"/></td>
+							<span>asdasd</span></td>
 					</tr>
 				</table>			
 			</div>

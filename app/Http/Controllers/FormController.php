@@ -22,12 +22,16 @@ class FormController extends Controller
 	}
 	
 	public function pdf() {
-		return view('pdf');
+		$personalDetails = PersonalDetails::all();
+
+		return view('pdf', [
+			'personalDetails' => $personalDetails,
+		]);
 	}
 
     public function print() {
 		$pdf = PDF::loadView('pdf');
-    	return $pdf->setWarnings(false)->download('Form UP-SA.pdf');
+    	return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA.pdf');
     }
 	
     public function submit(FormsRequest $request) {

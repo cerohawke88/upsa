@@ -17,17 +17,20 @@ class PostController extends Controller
     	$personalDetails = PersonalDetails::all();
     	$homeInstitution = HomeInstitution::all();
 
+        $toefl = EnglishTestResult::where('test', 'TOEFL')->get();
     	return view ('adminPage.dashboard', [
     		'personalDetails' => $personalDetails,
     		'homeInstitution' => $homeInstitution,
+            'toefl' => $toefl,
     	]);
+        echo $toefl;
     }
 
     public function detail(PersonalDetails $personalDetails)
     {
-
         return view ('adminPage.detail', [
             'personalDetails' => $personalDetails,
         ]);
+
     }
 }
