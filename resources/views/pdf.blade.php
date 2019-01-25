@@ -213,57 +213,57 @@
 				<table>
 				  <tr>
 				    <td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
-				    <span>asdasd</span> </td>
+				    <span>Cleoputra Goldi</span> </td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>Indoensia</span></td>
 				    
 				    <td><b>Place, Date of Birth (dd/mm/yy)</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>Jakarta, 22/07/1998</span></td>
 				    </tr>
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>31730622Ju09</span></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>China</span></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Date of Issue</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>31-03-2019</span></td>
 				    
 				    <td><b>Date of Expiry</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>31-03-2024</span></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Blood Type</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>AB</span></td>
 				    
 				    <td><b>Marital Status</b><hr>
-				    	<span>asdasd</span></td>
+				    	<span>Single</span></td>
 				   </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Permanent/Home Address</b><hr>
-						<span>asdasd</span></td>
+						<span>Taman Semanan Indah blok D5 no. 11</span></td>
 				  </tr>
 				</table>
 				
 				<table>
 				  <tr>
 				    <td style="text-align: left"><b>City</b><hr>
-						<span>asdasd</span></td>
+						<span>Jakarta</span></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-						<span>asdasd</span></td>
+						<span>11850</span></td>
 				  </tr>
 				  
 				  <tr>
@@ -275,16 +275,16 @@
 				  
 				  <tr>
 				    <td><b>Phone</b><hr>
-						<span>asdasd</span></td>
+						<span>5446604</span></td>
 				    <td><b>Mobile</b><hr>
-						<span>asdasd</span></td>
+						<span>087880086722</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Email</b><hr>
-						<span>asdasd</span></td>
+						<span>acesam222@gmail.com</span></td>
 				  </tr>
 				</table>
 
@@ -327,14 +327,14 @@
 				<table>
 				  <tr>
 				    <td><b>Name of Institution</b><hr>
-						<span>asdasd</span></td>
+						<span>Universitas Pertamina</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Address</b><hr>
-						<span>asdasd</span></td>
+						<span>Jl. SImprug Raya no. 54</span></td>
 				  </tr>
 				</table>
 
@@ -351,24 +351,24 @@
 				<table>
 				  <tr>
 				    <td><b>Website</b><hr>
-				    <span>asdasd</span></td>
+				    <span>universitaspertamina.ac.id</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Faculty/Department</b><hr>
-						<span>asdasd</span></td>
+						<span>Sains dan Komputer</span></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Starting Year in University</b><hr>
-							<span>asdasd</span></td>
+							<span>2016</span></td>
 					
 					    <td><b>Cumulative GPA</b><hr>
-							<span>asdasd</span></td>
+							<span>3.45</span></td>
 				  	</tr>
 				</table>
 			</div>

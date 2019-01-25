@@ -8,18 +8,18 @@
                 <div class="col-md-12">
                   <div class="box box-widget widget-user">
                     <!-- Add the bg color to the header using any of the bg-* classes -->
-                    <div class="widget-user-header bg-aqua-active">
+                    <div class="widget-user-header bg-green-active">
                       <h3 class="widget-user-username">{{$personalDetails->fullname}}</h3>
                       <h5 class="widget-user-desc">Laki-laki</h5>
                     </div>
                     <div class="widget-user-image">
-                      <img class="img-circle" src="{{asset('img/user.png')}}" alt="User Avatar">
+                      <img class="img-circle" src="{{asset('img/admin.png')}}" alt="User Avatar">
                     </div>
                     <div class="box-footer">
                       <div class="row">
                         <div class="col-sm-4 border-right">
                           <div class="description-block">
-                            <h5 class="description-header">10526059</h5>
+                            <h5 class="description-header">{{ $personalDetails->passport_number }}</h5>
                             <span class="description-text">Nomor Passport</span>
                           </div>
                           <!-- /.description-block -->

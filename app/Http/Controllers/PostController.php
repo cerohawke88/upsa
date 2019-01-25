@@ -38,4 +38,11 @@ class PostController extends Controller
         ]);
 
     }
+
+    public function delete(PersonalDetails $personalDetails)
+    {
+        $personalDetails = App\PersonalDetails::find(1);
+        $personalDetails->delete();
+        return redirect()->route('adminPage.dashboard');
+    }
 }
