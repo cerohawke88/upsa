@@ -27,7 +27,7 @@
 				
 				
 			@if (session('success'))
-			<div class="alert alert-success alert-dismissable">
+			<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
 					{{ session('success') }}
 			</div>

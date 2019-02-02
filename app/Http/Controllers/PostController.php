@@ -28,7 +28,6 @@ class PostController extends Controller
     		'homeInstitution' => $homeInstitution,
             'toefl' => $toefl,
     	]);
-        echo $toefl;
     }
 
     public function detail(PersonalDetails $personalDetails)
