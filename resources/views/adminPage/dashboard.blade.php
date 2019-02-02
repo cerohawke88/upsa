@@ -43,7 +43,7 @@
                         </td>
                         
                         <td>
-                          <form method="post" action="#">
+                          <form method="post" action="{{ route('admin.deletePost') }}">
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                           </form>
                         </td>
@@ -53,8 +53,7 @@
               </div>
               <!-- /.box-body -->
             </div>
-          <span>{{$toefl}}</span>
-            <!-- /.box -->
+          
           </div>
         </div>
     </section>

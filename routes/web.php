@@ -31,6 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // AdminPAge
 Route::get('/admin/homePage', 'PostController@index')->name('admin.home');
 Route::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
+Route::post('/admin/deletePost', 'PostController@delete')->name('admin.deletePost');
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 
 Auth::routes();
