@@ -29,11 +29,18 @@
                         <td>{{ $p_detail->passport_number }}</td>
                         <td>{{ $p_detail->fullname }}</td>
                         <td>{{ $p_detail->created_at }}</td>
-                        <td>
 
+                        <td>
                           <form method="get" action="{{ route('admin.tabelDetail', ['personalDetails' => $p_detail->id]) }}">
                             <button type="submit" class="btn btn-success btn-sm">Detail</button>
                           </form>
+                        </td>
+
+                        <td>
+                          <form method="get" action="{{ route('pdf', ['id' => $p_detail->id]) }}">
+                            <button type="submit" class="btn btn-primary btn-sm">Print Detail</button>
+                          </form>
+                        </td>
                         
                         <td>
                           <form method="post" action="{{ route('admin.deletePost') }}">

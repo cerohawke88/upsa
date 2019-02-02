@@ -210,111 +210,112 @@
 				
 				<h4><b>PERSONAL DETAILS</b></h4>
 
+					
 				<table>
-				  <tr>
-				    <td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
-				    <span>Cleoputra Goldi</span> </td>
-				  </tr>
+					<tr>
+						<td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
+							<span>{{$personalDetails->fullname}}</span> </td>
+						</tr>
 				</table>
-				  
+					
 				<table>
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<span>Indoensia</span></td>
+				    	<span>{{$personalDetails->nationality}}</span></td>
 				    
 				    <td><b>Place, Date of Birth (dd/mm/yy)</b><hr>
-				    	<span>Jakarta, 22/07/1998</span></td>
+				    	<span>{{$personalDetails->date_of_birth}}</span></td>
 				    </tr>
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<span>31730622Ju09</span></td>
+				    	<span>{{$personalDetails->passport_number}}</span></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
-				    	<span>China</span></td>
+				    	<span>{{$personalDetails->issuing_country}}</span></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Date of Issue</b><hr>
-				    	<span>31-03-2019</span></td>
+				    	<span>{{$personalDetails->date_of_issue}}</span></td>
 				    
 				    <td><b>Date of Expiry</b><hr>
-				    	<span>31-03-2024</span></td>
+				    	<span>{{$personalDetails->date_of_expiry}}</span></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Blood Type</b><hr>
-				    	<span>AB</span></td>
+				    	<span>{{$personalDetails->blood_type}}</span></td>
 				    
 				    <td><b>Marital Status</b><hr>
-				    	<span>Single</span></td>
+				    	<span>{{$personalDetails->marital_status}}</span></td>
 				   </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Permanent/Home Address</b><hr>
-						<span>Taman Semanan Indah blok D5 no. 11</span></td>
+						<span>{{$personalDetails->address}}</span></td>
 				  </tr>
 				</table>
 				
 				<table>
 				  <tr>
 				    <td style="text-align: left"><b>City</b><hr>
-						<span>Jakarta</span></td>
+						<span>{{$personalDetails->city}}</span></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-						<span>11850</span></td>
+						<span>{{$personalDetails->postal_code}}</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->province}}</span></td>
 				    <td><b>Country</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->country}}</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Phone</b><hr>
-						<span>5446604</span></td>
+						<span>{{$personalDetails->phone}}</span></td>
 				    <td><b>Mobile</b><hr>
-						<span>087880086722</span></td>
+						<span>{{$personalDetails->mobile}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Email</b><hr>
-						<span>acesam222@gmail.com</span></td>
+						<span>{{$personalDetails->email}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Mailing Address (if different from above)</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->address2}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>City</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->city2}}</span></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->postal_code2}}</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->province2}}</span></td>
 				    <td><b>Country</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->country2}}</span></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Phone</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->phone2}}</span></td>
 				    <td><b>Contact Name</b><hr>
-						<span>asdasd</span></td>
+						<span>{{$personalDetails->contact_name}}</span></td>
 				  </tr>
 				</table>
 
@@ -327,48 +328,48 @@
 				<table>
 				  <tr>
 				    <td><b>Name of Institution</b><hr>
-						<span>Universitas Pertamina</span></td>
+						<span>{{$homeInstitution->name}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Address</b><hr>
-						<span>Jl. SImprug Raya no. 54</span></td>
+						<span>{{$homeInstitution->address}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Phone</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$homeInstitution->phone}}</span></td>
 					    
 					    <td><b>Email</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$homeInstitution->email}}</span></td>
 				  	</tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Website</b><hr>
-				    <span>universitaspertamina.ac.id</span></td>
+				    <span>{{$homeInstitution->website}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Faculty/Department</b><hr>
-						<span>Sains dan Komputer</span></td>
+						<span>{{$homeInstitution->faculty_dep}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Starting Year in University</b><hr>
-							<span>2016</span></td>
+							<span>{{$homeInstitution->start_year}}</span></td>
 					
 					    <td><b>Cumulative GPA</b><hr>
-							<span>3.45</span></td>
+							<span>{{$homeInstitution->gpa}}</span></td>
 				  	</tr>
 				</table>
 			</div>
@@ -379,37 +380,33 @@
 				<h4><b>PROPOSED STUDY AT UNIVERSITAS PERTAMINA (UP)</b></h4>
 				
 				<table>
-					<tr style="width: 5px">
-						<td><input type="radio" name="duration" value="Semester I (Aug-Jan)"/>
-						<b>Semester I (Aug-Jan)</b><hr>
-						
-						<input type="radio" name="duration" value="Semester II (Feb-Jun)"/>
-						<b>Semester II (Feb-Jun)</b>
-
-						<h5><b>Academic Year 20 <input type="text" name="year1" maxlength="2" placeholder="____" size="1"/>/20 <input type="text" name="year2" maxlength="2"  placeholder="____"/></b></h5></td>
+					<tr>
+					<td><span><b>{{$proposedStudy->semester}}</b></span>
+					<hr>
+					<h5><b>Academic Year {{$proposedStudy->academic_year}}</b></h5></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><b>Faculty</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$proposedStudy->faculty}}</span></td>
 					    
 					    <td><b>Department</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$proposedStudy->department}}</span></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><b>Spesific Study Period</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$proposedStudy->study_period}}</span></td>
 					    
 					    <td><b>Start Date</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$proposedStudy->start_date}}</span></td>
 					    
 					    <td><b>End Date</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$proposedStudy->end_date}}</span></td>
 					</tr>
 				</table>
 
@@ -421,75 +418,26 @@
 
 				<table>
 					<tr>
-						<td class="tr_no"><h6><b>No.</b></h6></td>
 						<td class="tr_nos"><h6><b>Course Title</b></h6></td>
 						<td><h6><b>Credit</b></h6></td>
 					</tr>
 				</table>
 
-				<table>
-					<tr>
-						<td><h6><b>1.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				
-				</table>
+				@foreach ($course as $c)
+					<table>
+						<tr>
+							<td><span>{{$c->course_title}}</span></td>
+							<td><span>{{$c->credit}}</span></td>
+						</tr>
+					</table>
+				@endforeach
 
-				<table>
-					<tr>
-						<td><h6><b>2.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>3.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>4.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>5.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>6.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				</table>
-				
-				<table>
-					<tr>
-						<td><h6><b>7.</b></h6></td>
-						<td><span>asdasd</span></td>
-						<td><span>asdasd</span></td>
-					</tr>
-				</table>
-			
 			</div>
 
 			<br><br>
 
 			<div>
-				<h4><b>ENGLISH TEST RESULT(if English is not your first language)</b></h4>	
+				<h4><b>ENGLISH TEST RESULT (if English is not your first language)</b></h4>	
 
 				<table>
 				  <tr>
@@ -499,26 +447,15 @@
 				    <td><b>Date Tested</b></td>
 				  </tr>
 
+				@foreach ($englishTestResult as $etr)
 					<tr>
-					   <td><input type="text" name="toefl" value="TOEFL" class="test"></td>
-					   <td><span>asdasd</span></td>
-					   <td><span>asdasd</span></td>
-					   <td><span>asdasd</span></td>
+						<td><span class="test">{{$etr->test}}</span></td>
+						<td><span>{{$etr->score}}</span></td>
+						<td><span>{{$etr->test_center}}</span></td>
+						<td><span>{{$etr->date_tested}}</span></td>
 					</tr>
+				@endforeach
 
-					<tr>
-					   <td><input type="text" name="ielts" value="IELTS" class="test"></td>
-					   <td><span>asdasd</span></td>
-					   <td><span>asdasd</span></td>
-					   <td><span>asdasd</span></td>
-					</tr>
-
-					<tr>
-					   <td><input type="text" name="others" size="20" placeholder="OTHERS" /></td>
-					   <td><span>asdasd</span></td>
-					   <td><span>asdasd</span></td>
-					   <td><span>asdasd</span></td>
-					</tr>
 				</table>
 			</div>
 
@@ -530,15 +467,15 @@
 				<table>
 					<tr>
 						<td><b>Health Insurance Name</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$insurance->insurance_name}}</span></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
 					    <td><b>Validity</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$insurance->validity}}</span></td>
 					    <td><b>Cover</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$insurance->cover}}</span></td>
 					</tr>
 				</table>			
 			</div>
@@ -558,18 +495,26 @@
 				<table>
 
 					<tr>
-					    <td><b>If yes, student agree to the accommodation prepared by International Office</b></td>
-						<td><input  type="radio" name="opt_acc" size="20" value="YES"/> YES</td>
+						<td><b>If yes, student agree to the accommodation prepared by International Office</b></td>
+						<td>
+							@if (($accomodation->accomodation_help) == "YES")
+								<span>{{$accomodation->accomodation_help}}</span>
+						</td>
 					</tr>
-
-					<tr>
-						<td><b>If no, please state where you plan to stay in Indonesia:</b></td>
-						<td><input type="radio" name="opt_acc" size="20" value="NO"/> NO</td>
+						
+						
+						<tr>
+							<td><b>If no, please state where you plan to stay in Indonesia:</b></td>
+						<td>
+							@else
+								<span>{{$accomodation->accomodation_help}}</span>
+						</td>
 					</tr>
+							@endif
 						<td><b>Address</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$accomodation->address}}</span></td>
 						<td><b>Contact Person (Name/Phone)</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$accomodation->contact_person}}</span></td>
 
 				</table>
 
@@ -585,29 +530,29 @@
 				<table>
 					<tr>
 					    <td><b>Full Name</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$emergencyContact->fullname}}</span></td>
 					    <td><b>Relationship</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$emergencyContact->relationship}}</span></td>
 					</tr>
 				</table>
 	  				
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$emergencyContact->address}}</span></td>
 				  	</tr>		
 				</table>
 
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$emergencyContact->phone}}</span></td>
 					    
 					    <td><b>Mobile</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$emergencyContact->mobile}}</span></td>
 						
 						<td><b>Email</b><hr>
-							<span>asdasd</span></td>
+							<span>{{$emergencyContact->email}}</span></td>
 					</tr>
 				</table>			
 			</div>
