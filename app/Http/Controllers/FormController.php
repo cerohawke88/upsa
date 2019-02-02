@@ -21,11 +21,26 @@ class FormController extends Controller
 		return view('form');
 	}
 	
-	public function pdf() {
-		$personalDetails = PersonalDetails::all();
+	public function pdf($id) {
+		$personalDetails = PersonalDetails::find($id);
+		$proposedStudy = ProposedStudy::where('name_id', $id)->first();
+		$insurance = Insurance::where('name_id', $id)->first();
+		$homeInstitution = HomeInstitution::where('name_id', $id)->first();
+		$englishTestResult = EnglishTestResult::where('name_id', $id)->get();
+		$emergencyContact = EmergencyContact::where('name_id', $id)->first();
+		$course = Course::where('name_id', $id)->get();
+		$accomodation = Accomodation::where('name_id', $id)->first();
 
 		return view('pdf', [
+			'id' => $id,
 			'personalDetails' => $personalDetails,
+			'proposedStudy' => $proposedStudy,
+			'insurance' => $insurance,
+			'homeInstitution' => $homeInstitution,
+			'englishTestResult' => $englishTestResult,
+			'emergencyContact' => $emergencyContact,
+			'course' => $course,
+			'accomodation' => $accomodation,
 		]);
 	}
 

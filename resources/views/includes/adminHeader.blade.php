@@ -100,7 +100,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">FITUR</li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.home')}}">
             <span>All Applicants</span>
           </a>
         </li>
