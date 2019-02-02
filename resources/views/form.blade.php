@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-@include('partials._messages')
+		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
