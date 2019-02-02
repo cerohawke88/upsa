@@ -1,7 +1,7 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
+|--------------------------------------------------------------------------	
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -39,3 +39,12 @@ Route::post('/admin/deletePost', 'PostController@delete')->name('admin.deletePos
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 
 Auth::routes();
+
+
+Route::get('/files', function() {
+	return view('upload');
+});
+
+Route::post('upload', 'UploadController@upload');
+
+Route::view('/form-outbond', 'formPage.formOut')->name('form.out');
