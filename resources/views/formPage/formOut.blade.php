@@ -6,18 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-
-			@if ($errors->any())
-			<div class="alert alert-danger">
-					<ul>
-							@foreach ($errors->all() as $error)
-							<li>{{ $error }}</li>
-							@endforeach
-					</ul>
-			</div>
-			@endif
-
-
+		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
@@ -47,14 +36,14 @@
 				<table>
 				  <tr>
 				    <td><b>Student ID Number</b><hr>
-				    <input placeholder="Your Student ID Number" type="text" name="student_number" size="30" maxlength="12"/></td>
+				    <input placeholder="Your Student ID Number" type="text" name="student_number" size="30" maxlength="12" required=""/></td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Name</b><hr>
-				    	<input placeholder="Your Fullname" type="text" name="name" size="30"/></td>
+				    	<input placeholder="Your Fullname" type="text" name="name" size="30" required=""/></td>
 				    </tr>
 				</table>
 				
@@ -73,21 +62,21 @@
 				<table>
 				  <tr>
 				    <td><b>Place of Birth</b><hr>
-				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20"/></td>
-				    <td><b>Place, Date of Birth (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20"/></td>
+				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20" required=""/></td>
+				    <td><b>Date of Birth (dd/mm/yy)</b><hr>
+				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20" required=""/></td>
 				    </tr>
 				   
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20"/></td>
+				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required=""/></td>
 				    <td><b>Religion</b><hr>
-				    <input placeholder="Your Religion" type="text" name="religion" maxlength="20" size="20"/></td>
+				    <input placeholder="Your Religion" type="text" name="religion" maxlength="20" size="20" required=""/></td>
 				  </tr>
 				  
 				  <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30"/></td>
+				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30" required=""/></td>
 				    <td><b>Passport Expiration (dd/mm/yy)</b><hr>
 				    	<input type="date" name="expire_of_passport" size="20"/></td>
 				  </tr>
@@ -101,24 +90,24 @@
 				<table>
 				  <tr>
 				   <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20"/></td>
+					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20" required=""/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Mobile Number</b><hr>
-					    <input placeholder="Mobile" type="text" name="mobile_number" size="20"/></td>
+					    <input placeholder="Mobile" type="text" name="mobile_number" size="20" required=""/></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td width="680"><b>Telphone</b><hr>
-					    <input placeholder="Telphone Number" type="text" name="telphone" size="20"/></td>
+					    <input placeholder="Telphone Number" type="text" name="telphone" size="20" required=""/></td>
 					    
 					    <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20"/></td>
+					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20" required=""/></td>
 				  	</tr>
 				</table>
 			</div>
@@ -162,7 +151,7 @@
 				<table>
 					<tr>
 						<td><b>Host University</b><hr>
-					    <input placeholder="Host University" type="text" name="host_univ" size="50"/></td>
+					    <input placeholder="Host University" type="text" name="host_univ" size="50" required=""/></td>
 					</tr>
 				</table>
 
@@ -183,8 +172,8 @@
 				<table>
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="course_1" placeholder="Course"></td>
-						<td><input type="text" name="credit_1" placeholder="Credit"></td>
+						<td><input type="text" name="course_1" placeholder="Course" required=""></td>
+						<td><input type="text" name="credit_1" placeholder="Credit" required=""></td>
 					</tr>
 				
 				</table>
@@ -247,26 +236,26 @@
 				<table>
 				  <tr>
 				    <td><b>Department</b><hr>
-				    	<input placeholder="Your Department" type="text" name="department" size="30"/></td>
+				    	<input placeholder="Your Department" type="text" name="department" size="30" required=""/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Year/Semester</b><hr>
-				    	<input placeholder="Year/Semester" type="text" name="year_sem" size="30"/></td>
+				    	<input placeholder="Year/Semester" type="text" name="year_sem" size="30" required=""/></td>
 				   
 				    <td><b>IPS/IPK</b><hr>
-				    	<input placeholder="IPS/IPK/GPA" type="text" name="ips_ipk" size="30"/></td>
+				    	<input placeholder="IPS/IPK/GPA" type="text" name="ips_ipk" size="30" required=""/></td>
 				  </tr>
 				</table>
 
 				<table>
 				    <td><b>TOEFL/IELTS Score</b><hr>
-				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30"/></td>
+				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30" required=""/></td>
 				  <tr>
 				    <td><b>Test Date(dd/mm/yyyy)</b><hr>
-				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30"/></td>
+				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30" required=""/></td>
 				  </tr>
 
 				</table>
@@ -290,8 +279,8 @@
 				<table> 
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_1" placeholder="Year"></td>
+						<td><input type="text" name="org_1" placeholder="Organzation" required=""></td>
+						<td><input type="text" name="year_org_1" placeholder="Year" required=""></td>
 					</tr>
 				</table>			
 
@@ -327,8 +316,8 @@
 
 				<table> 
 					<tr>
-						<td><input type="text" name="award_1" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_1" placeholder="Name of Institution"></td>
+						<td><input type="text" name="award_1" placeholder="Name of Award" required=""></td>
+						<td><input type="text" name="institut_1" placeholder="Name of Institution" required=""></td>
 						<td><input type="text" name="year_award_1" placeholder="Year"></td>
 					</tr>
 				</table>			
@@ -360,29 +349,29 @@
 				<table>
 					<tr>
 					    <td><b>Full Name</b><hr>
-					    <input placeholder="Name" type="text" name="emergency_name" size="20"/></td>
+					    <input placeholder="Name" type="text" name="emergency_name" size="20" required=""/></td>
 					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationship" size="20"/></td>
+					    <input placeholder="Relationship" type="text" name="relationship" size="20" required=""/></td>
 					</tr>
 				</table>
 	  				
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="emergency_address" size="50"/></td>
+					    <input placeholder="Address" type="text" name="emergency_address" size="50" required=""/></td>
 				  	</tr>		
 				</table>
 
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone" type="text" name="emergency_phone" size="20"/></td>
+					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required=""/></td>
 					    
 					    <td><b>Mobile</b><hr>
-					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20"/></td>
+					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required=""/></td>
 						
 						<td><b>Email</b><hr>
-					    <input placeholder="Email" type="email" name="emergency_email" size="20"/></td>
+					    <input placeholder="Email" type="email" name="emergency_email" size="20" required=""/></td>
 					</tr>
 				</table>			
 			</div>
@@ -395,7 +384,7 @@
 				<h5><b>PURPOSE AND MOTIVATION STATEMENT</b></h5>	
 				<table>
 					<tr>
-						<textarea rows="18" cols="141" placeholder="Your Purpose and Motivation Statements" type="text" name="motivation"></textarea>
+						<textarea rows="18" cols="141" placeholder="Your Purpose and Motivation Statements" type="text" name="motivation" required=""></textarea>
 						
 					</tr>
 				</table>

@@ -151,7 +151,6 @@ class FormController extends Controller
     		'mobile' => $request->input('emergency_mobile'),
     		'email' => $request->input('emergency_email'),
 		]);
-
-    	return back()-> with('success', 'Berhasil submit!');
+    return back()->with('success', 'Berhasil submit!');
     }
 }
