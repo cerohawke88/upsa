@@ -488,7 +488,28 @@
 
 				<table>
 					<tr>
-						<td><b>Do you need help with your accommodation in Indonesia?</b></td>
+						<td><b>Do you need help with your accommodation in Indonesia?</b>
+						@if (($accomodation->accomodation_help) == "YES")
+								<span style="text-align: right"><b><strong>{{$accomodation->accomodation_help}}</strong></b></span>
+							</td>
+						</tr>
+					</table>
+	
+					<table>
+	
+						<tr>
+							<td><b>If yes, student agree to the accommodation prepared by International Office</b></td>
+							<td>
+								
+							</td>
+						</tr>
+						
+						<tr>
+								<td><b>If no, please state where you plan to stay in Indonesia:</b></td>
+						</tr>
+						@else
+							<span style="text-align: right"><b><strong>{{$accomodation->accomodation_help}}</strong></b></span>
+						</td>
 					</tr>
 				</table>
 
@@ -497,18 +518,12 @@
 					<tr>
 						<td><b>If yes, student agree to the accommodation prepared by International Office</b></td>
 						<td>
-							@if (($accomodation->accomodation_help) == "YES")
-								<span>{{$accomodation->accomodation_help}}</span>
+							
 						</td>
 					</tr>
-						
-						
-						<tr>
+					
+					<tr>
 							<td><b>If no, please state where you plan to stay in Indonesia:</b></td>
-						<td>
-							@else
-								<span>{{$accomodation->accomodation_help}}</span>
-						</td>
 					</tr>
 							@endif
 						<td><b>Address</b><hr>
@@ -575,7 +590,9 @@
 
 			<div class="x">
 				<h5>Applicant Signature: </h5>
-				<h5>Date: </h5>
+			</div>
+			<div class="x">
+					<h5 style="text-align:right">Date: {{$personalDetails->created_at}}</h5>
 			</div>
 		</form>
 		</div>

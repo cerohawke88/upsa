@@ -21,7 +21,7 @@ class FormController extends Controller
 		return view('form');
 	}
 	
-	public function pdf($id) {
+	public function pdf(Request $request, $id) {
 		$personalDetails = PersonalDetails::find($id);
 		$proposedStudy = ProposedStudy::where('name_id', $id)->first();
 		$insurance = Insurance::where('name_id', $id)->first();
@@ -31,23 +31,22 @@ class FormController extends Controller
 		$course = Course::where('name_id', $id)->get();
 		$accomodation = Accomodation::where('name_id', $id)->first();
 
-		return view('pdf', [
-			'id' => $id,
-			'personalDetails' => $personalDetails,
-			'proposedStudy' => $proposedStudy,
-			'insurance' => $insurance,
-			'homeInstitution' => $homeInstitution,
-			'englishTestResult' => $englishTestResult,
-			'emergencyContact' => $emergencyContact,
-			'course' => $course,
-			'accomodation' => $accomodation,
-		]);
+		if ($request->id === $id) {
+			$pdf = PDF::loadView('pdf', [
+				'id' => $id,
+				'personalDetails' => $personalDetails,
+				'proposedStudy' => $proposedStudy,
+				'insurance' => $insurance,
+				'homeInstitution' => $homeInstitution,
+				'englishTestResult' => $englishTestResult,
+				'emergencyContact' => $emergencyContact,
+				'course' => $course,
+				'accomodation' => $accomodation,
+			]);
+			return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA.pdf');
+		}
+		
 	}
-
-    public function print() {
-		$pdf = PDF::loadView('pdf');
-    	return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA.pdf');
-    }
 	
     public function submit(FormsRequest $request) {
 		

@@ -13,8 +13,6 @@
 
 Route::get('/', 'FormController@form')->name('form');
 
-Route::get('/print', 'FormController@print')->name('print');
-
 Route::post('/submit', 'FormController@submit')->name('submit');
 
 Route::get('/pdf/{id}', 'FormController@pdf')->name('pdf');
@@ -28,7 +26,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// AdminPAge
+// AdminPage
 Route::get('/admin/homePage', 'PostController@index')->name('admin.home');
 Route::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
 Route::post('/admin/deletePost', 'PostController@delete')->name('admin.deletePost');
