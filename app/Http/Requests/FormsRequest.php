@@ -126,7 +126,7 @@ class FormsRequest extends FormRequest
 			'nomination_letter' => 'required|file|mimes:pdf|max:2048',
 			'transcript' => 'required|file|mimes:pdf|max:2048',
 			'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-			'statement_of_purpose' => 'required|file|mimes:pdfmax:2048',
+			'statement_of_purpose' => 'required|file|mimes:pdf|max:2048',
 			'bank_statement' => 'required|file|mimes:pdf|max:2048',
 			'cv' => 'required|file|mimes:pdf|max:2048',
 			'passport' => 'required|file|mimes:pdf|max:2048',
