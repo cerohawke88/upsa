@@ -16,6 +16,7 @@ use App\ProposedStudy;
 use Validator;
 use DB;
 use Illuminate\View\View;
+use Illuminate\Auth\AuthManager;
 use App\File;
 use Illuminate\Http\RedirectResponse;
 use Storage;
@@ -25,6 +26,7 @@ class FormController extends Controller
 {
 	
 	public function form() {
+		// dd(auth()->check());
 		return view('form');
 	}
 	

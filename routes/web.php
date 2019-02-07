@@ -27,12 +27,6 @@ Route::get('admin/file/{file}/download', 'PostController@download')->name('file.
 Auth::routes();
 
 
-Route::get('/files', function() {
-	return view('upload');
-});
-
-Route::post('upload', 'UploadController@upload');
-
 Route::get('/form-outbond', 'OutFormController@form')->name('form.out');
 Route::post('/submit-outbond', 'OutFormController@submit')->name('submit.out');
 Route::get('/pdf/{id}', 'OutFormController@pdf')->name('out.pdf');
