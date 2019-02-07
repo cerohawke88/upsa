@@ -116,7 +116,21 @@ class FormsRequest extends FormRequest
     		'emergency_address' => 'required|string',
     		'emergency_phone' => 'required|string',
     		'emergency_mobile' => 'required|string',
-    		'emergency_email' => 'required|email'
+			'emergency_email' => 'required|email',
+			
+			// files
+			'certificate_of_health' => 'required|file|mimes:pdf|max:2048',
+			'financial_guarantee' => 'required|file|mimes:pdf|max:2048',
+			'statement_of_legality' => 'required|file|mimes:pdf|max:2048',
+			'certificate_of_enrollment' => 'required|file|mimes:pdf|max:2048',
+			'nomination_letter' => 'required|file|mimes:pdf|max:2048',
+			'transcript' => 'required|file|mimes:pdf|max:2048',
+			'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+			'statement_of_purpose' => 'required|file|mimes:pdf|max:2048',
+			'bank_statement' => 'required|file|mimes:pdf|max:2048',
+			'cv' => 'required|file|mimes:pdf|max:2048',
+			'passport' => 'required|file|mimes:pdf|max:2048',
+			'student_id' => 'required|file|mimes:pdf|max:2048',
         ];
     }
 

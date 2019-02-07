@@ -27,7 +27,7 @@ class CreateHomeInstitutionTable extends Migration
         });
 
         Schema::table('home_institution', function (Blueprint $table) {
-            $table->foreign('name_id')->references('id')->on('personal_details');
+            $table->foreign('name_id')->references('id')->on('personal_details')->onDelete('cascade');
         });
     }
 

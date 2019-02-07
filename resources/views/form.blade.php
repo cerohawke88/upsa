@@ -7,8 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
+<<<<<<< HEAD
 		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
+=======
+@include('partials._messages')
+			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
+>>>>>>> 03e40dc3a26de53835b006848e25a94c49250c04
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
@@ -37,78 +42,78 @@
 				<table>
 				  <tr>
 				    <td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
-				    <input placeholder="Your Fullname" type="text" name="name" size="30" required=""/></td>
+				    <input placeholder="Your Fullname" type="text" name="name" size="30" required="" value="{{ old('name') }}"/></td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required=""/></td>
+				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required="" value="{{ old('nationality') }}"/></td>
 				    
 				    <td width="635"><b>Place, Date of Birth (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Birth" type="text" name="date_of_birth" size="20" required=""/></td>
+				    	<input placeholder="Date of Birth" type="text" name="date_of_birth" size="20" required="" value="{{ old('date_of_birth') }}"/></td>
 				    </tr>
 				   
 				   <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="20" required=""/></td>
+				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="20" required="" value="{{ old('passport_number') }}"/></td>
 				    
 				   	<td><b>Issuing Country</b><hr>
-				    	<input placeholder="Your Issuing Country" type="text" name="issuing_country" size="20" required=""/></td>
+				    	<input placeholder="Your Issuing Country" type="text" name="issuing_country" size="20" required="" value="{{ old('issuing_country') }}"/></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Date of Issue</b><hr>
-				    	<input placeholder="Date of Issue" type="date" name="date_of_issue" size="20" required=""/></td>
+				    	<input placeholder="Date of Issue" type="date" name="date_of_issue" size="20" required="" value="{{ old('date_of_issue') }}"/></td>
 				    
 				    <td><b>Date of Expiry</b><hr>
-				    	<input placeholder="Date of Expiry" type="date" name="date_of_expiry" size="20" required=""/></td>
+				    	<input placeholder="Date of Expiry" type="date" name="date_of_expiry" size="20" required="" value="{{ old('date_of_expiry') }}"/></td>
 				   </tr>
 
 				   <tr>
 				    <td><b>Blood Type</b><hr>
-				    	<input placeholder="Your Blood Type" type="text" name="blood_type" maxlength="2" required=""/></td>
+				    	<input placeholder="Your Blood Type" type="text" name="blood_type" maxlength="2" required="" value="{{ old('blood_type') }}"/></td>
 				    
 				    <td><b>Marital Status</b><hr>
-				    	<input placeholder="Your Marital Status" type="text" name="marital_status" size="20" required=""/></td>
+				    	<input placeholder="Your Marital Status" type="text" name="marital_status" size="20" required="" value="{{ old('marital_status') }}"/></td>
 				   </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Permanent/Home Address</b><hr>
-				    <input placeholder="Your Address" type="text" name="address" size="50" required=""/></td>
+				    <input placeholder="Your Address" type="text" name="address" size="50" required="" value="{{ old('address') }}"/></td>
 				  </tr>
 				</table>
 				
 				<table>
 				  <tr>
 				    <td><b>City</b><hr>
-				    <input placeholder="Your City" type="text" name="city" size="20" required=""/></td>
+				    <input placeholder="Your City" type="text" name="city" size="20" required="" value="{{ old('city') }}"/></td>
 				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="text" name="postal_code" size="20" required=""/></td>
+				    <input placeholder="ZIP Code" type="text" name="postal_code" size="20" required="" value="{{ old('postal_code') }}"/></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Province/State</b><hr>
-				    <input placeholder="Your State" type="text" name="province" size="20" required=""/></td>
+				    <input placeholder="Your State" type="text" name="province" size="20" required="" value="{{ old('province') }}"/></td>
 				    <td><b>Country</b><hr>
-				    <input placeholder="Your Country" type="text" name="country" size="20" required=""/></td>
+				    <input placeholder="Your Country" type="text" name="country" size="20" required="" value="{{ old('country') }}"/></td>
 				  </tr>
 				  
 				  <tr>
 				    <td><b>Phone</b><hr>
-				    <input placeholder="Phone Number" type="text" name="phone" size="20" required=""/></td>
+				    <input placeholder="Phone Number" type="text" name="phone" size="20" required="" value="{{ old('phone') }}"/></td>
 				    <td><b>Mobile</b><hr>
-				    <input placeholder="Mobile Number" type="text" name="mobile" size="20" required=""/></td>
+				    <input placeholder="Mobile Number" type="text" name="mobile" size="20" required="" value="{{ old('mobile') }}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Email</b><hr>
-				    <input placeholder="Your Email Address" type="email" name="email" size="50" required=""/></td>
+				    <input placeholder="Your Email Address" type="email" name="email" size="50" required="" value="{{ old('email') }}"/></td>
 				  </tr>
 				</table>
 
@@ -151,48 +156,48 @@
 				<table>
 				  <tr>
 				    <td><b>Name of Institution</b><hr>
-				    <input placeholder="Your Institution" type="instance" name="institution" size="50" required=""/></td>
+				    <input placeholder="Your Institution" type="instance" name="institution" size="50" required="" value="{{ old('institution') }}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Address</b><hr>
-				    <input placeholder="Your Address" type="text" name="institution_address" size="50" required=""/></td>
+				    <input placeholder="Your Address" type="text" name="institution_address" size="50" required="" value="{{ old('institution_address') }}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone Number" type="text" name="institution_phone" size="20" required=""/></td>
+					    <input placeholder="Phone Number" type="text" name="institution_phone" size="20" required="" value="{{ old('institution_phone') }}"/></td>
 					    
 					    <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20" required=""/></td>
+					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20" required="" value="{{ old('institution_email') }}"/></td>
 				  	</tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Website</b><hr>
-				    <input placeholder="Your Instance's Website" type="text" name="institution_web" size="50" required=""/></td>
+				    <input placeholder="Your Instance's Website" type="text" name="institution_web" size="50" required="" value="{{ old('institution_web') }}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Faculty/Department</b><hr>
-				    <input placeholder="Faculty" type="text" name="faculty_dept" size="50" required=""/></td>
+				    <input placeholder="Faculty" type="text" name="faculty_dept" size="50" required="" value="{{ old('faculty_dept') }}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td><b>Starting Year in University</b><hr>
-					    <input placeholder="Start Year" type="text" name="start_year" size="20" required=""/></td>
+					    <input placeholder="Start Year" type="text" name="start_year" size="20" required="" value="{{ old('start_year') }}"/></td>
 					
 					    <td><b>Cumulative GPA</b><hr>
-					    <input placeholder="Your GPA" type="text" name="gpa" size="20" required=""/></td>
+					    <input placeholder="Your GPA" type="text" name="gpa" size="20" required="" value="{{ old('gpa') }}"/></td>
 				  	</tr>
 				</table>
 			</div>
@@ -204,36 +209,36 @@
 				
 				<table>
 					<tr>
-						<td><input type="radio" name="duration" value="Semester I (Aug-Jan)"/>
+						<td><input type="radio" name="duration" value="Semester I (Aug-Jan)" required="" value="{{ old('Semester I (Aug-Jan)') }}"/>
 						<b>Semester I (Aug-Jan)</b><hr>
 						
-						<input type="radio" name="duration" value="Semester II (Feb-Jun)"/>
+						<input type="radio" name="duration" value="Semester II (Feb-Jun)" required="" value="{{ old('Semester II (Feb-Jun)') }}"/>
 						<b>Semester II (Feb-Jun)</b>
 
-						<h5><b>Academic Year 20 <input type="text" name="year1" maxlength="2" placeholder="____" size="1"/>/20 <input type="text" name="year2" maxlength="2"  placeholder="____" required=""/></b></h5></td>
+						<h5><b>Academic Year 20 <input type="text" name="year1" maxlength="2" placeholder="____" size="1" required="" value="{{ old('year1') }}"/>/20 <input type="text" name="year2" maxlength="2"  placeholder="____" required="" value="{{ old('year2') }}"/></b></h5></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td><b>Faculty</b><hr>
-					    <input placeholder="Your Faculty" type="text" name="faculty" size="20" required=""/></td>
+					    <input placeholder="Your Faculty" type="text" name="faculty" size="20" required="" value="{{ old('faculty') }}"/></td>
 					    
 					    <td><b>Department</b><hr>
-					    <input placeholder="Your Department" type="text" name="department" size="20" required=""/></td>
+					    <input placeholder="Your Department" type="text" name="department" size="20" required="" value="{{ old('department') }}"/></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
 						<td width="634"><b>Spesific Study Period</b><hr>
-					    <input placeholder="Spesific Study Period" type="text" name="study_period" size="20" required=""/></td>
+					    <input placeholder="Spesific Study Period" type="text" name="study_period" size="20" required="" value="{{ old('study_period') }}"/></td>
 					    
 					    <td><b>Start Date</b><hr>
-					    <input placeholder="Start Date" type="date" name="start_date" required=""/></td>
+					    <input placeholder="Start Date" type="date" name="start_date" required="" value="{{ old('start_date') }}"/></td>
 					    
 					    <td><b>End Date</b><hr>
-					    <input placeholder="End Date" type="date" name="end_date" required=""/></td>
+					    <input placeholder="End Date" type="date" name="end_date" required="" value="{{ old('end_date') }}"/></td>
 					</tr>
 				</table>
 
@@ -254,8 +259,8 @@
 				<table>
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="course_1" placeholder="Course" required=""></td>
-						<td><input type="text" name="credit_1" placeholder="Credit" required=""></td>
+						<td><input type="text" name="course_1" placeholder="Course" required="" value="{{ old('course_1') }}"></td>
+						<td><input type="text" name="credit_1" placeholder="Credit" required="" value="{{ old('credit_1') }}"></td>
 					</tr>
 				
 				</table>
@@ -354,13 +359,13 @@
 				<table>
 					<tr>
 						<td><b>Health Insurance Name</b><hr>
-					    <input placeholder="Your Insurance Name" type="text" name="insurance" size="20" required=""/></td>
+					    <input placeholder="Your Insurance Name" type="text" name="insurance" size="20" required="" value="{{ old('insurance') }}"/></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
 					    <td><b>Validity</b><hr>
-					    <input placeholder="Valid date until" type="date" name="valid_date" size="20" required=""/></td>
+					    <input placeholder="Valid date until" type="date" name="valid_date" size="20" required="" value="{{ old('valid_date') }}"/></td>
 					    <td width="725"><b>Cover</b><hr>
 					    <input type="text" name="cover" size="20"/></td>
 					</tr>
@@ -391,9 +396,9 @@
 						<td><input type="radio" name="opt_acc" size="20" value="NO"/> NO</td>
 					</tr>
 						<td><b>Address</b><hr>
-							<input placeholder="Address" type="text" name="address_acc" size=50"></td>
+							<input placeholder="Address" type="text" name="address_acc" size="50" value="{{ old('address_acc') }}"></td>
 						<td><b>Contact Person (Name/Phone)</b><hr>
-							<input placeholder="Name & Phone" type="text" name="cp_acc" size="25"></td>
+							<input placeholder="Name & Phone" type="text" name="cp_acc" size="25" value="{{ old('cp_acc') }}"></td>
 
 				</table>
 
@@ -409,34 +414,105 @@
 				<table>
 					<tr>
 					    <td><b>Full Name</b><hr>
-					    <input placeholder="Name" type="text" name="emergency_name" size="20" required=""/></td>
+					    <input placeholder="Name" type="text" name="emergency_name" size="20" required="" value="{{ old('emergency_name') }}"/></td>
 					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationship" size="20" required=""/></td>
+					    <input placeholder="Relationship" type="text" name="relationship" size="20" required="" value="{{ old('relationship') }}"/></td>
 					</tr>
 				</table>
 	  				
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="emergency_address" size="50" required=""/></td>
+					    <input placeholder="Address" type="text" name="emergency_address" size="50" required="" value="{{ old('emergency_address') }}"/></td>
 				  	</tr>		
 				</table>
 
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required=""/></td>
+					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required="" value="{{ old('emergency_phone') }}"/></td>
 					    
 					    <td><b>Mobile</b><hr>
-					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required=""/></td>
+					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required="" value="{{ old('emergency_mobile') }}"/></td>
 						
 						<td><b>Email</b><hr>
-					    <input placeholder="Email" type="email" name="emergency_email" size="20" required=""/></td>
+					    <input placeholder="Email" type="email" name="emergency_email" size="20" required="" value="{{ old('emergency_email') }}"/></td>
 					</tr>
 				</table>			
 			</div>
 
 			<br><br>
+
+			<div class="panel panel-default">
+					<div class="panel-heading">
+							<h4><b>UPLOAD FILES</b></h4>
+					</div>
+
+					<div class="panel-body">
+
+									<div class="form-group {{ !$errors->has('certificate_of_health') ?: 'has-error' }}">
+											<label>Certificate of Health:</label>
+											<input type="file" name="certificate_of_health" required>
+											<span class="help-block text-danger">{{ $errors->first('certificate_of_health') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('financial_guarantee') ?: 'has-error' }}">
+											<label>Financial Guarantee Form:</label>
+											<input type="file" name="financial_guarantee" required>
+											<span class="help-block text-danger">{{ $errors->first('financial_guarantee') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('statement_of_legality') ?: 'has-error' }}">
+											<label>Statement of Legality Form:</label>
+											<input type="file" name="statement_of_legality" required>
+											<span class="help-block text-danger">{{ $errors->first('statement_of_legality') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('certificate_of_enrollment') ?: 'has-error' }}">
+											<label>Certificate of Enrollment:</label>
+											<input type="file" name="certificate_of_enrollment" required>
+											<span class="help-block text-danger">{{ $errors->first('certificate_of_enrollment') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('nomination_letter') ?: 'has-error' }}">
+											<label>Nomination Letter:</label>
+											<input type="file" name="nomination_letter" required>
+											<span class="help-block text-danger">{{ $errors->first('nomination_letter') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
+											<label>Transcript:</label>
+											<input type="file" name="transcript" required>
+											<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}">
+											<label>Passport Photo:</label>
+											<input type="file" name="photo" required>
+											<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('statement_of_purpose') ?: 'has-error' }}">
+											<label>Statement of Purpose:</label>
+											<input type="file" name="statement_of_purpose" required>
+											<span class="help-block text-danger">{{ $errors->first('statement_of_purpose') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('bank_statement') ?: 'has-error' }}">
+											<label>Bank Statement:</label>
+											<input type="file" name="bank_statement" required>
+											<span class="help-block text-danger">{{ $errors->first('bank_statement') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('cv') ?: 'has-error' }}">
+											<label>CV/Resume:</label>
+											<input type="file" name="cv" required>
+											<span class="help-block text-danger">{{ $errors->first('cv') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('passport') ?: 'has-error' }}">
+											<label>Passport:</label>
+											<input type="file" name="passport" required>
+											<span class="help-block text-danger">{{ $errors->first('passport') }}</span>
+									</div>
+									<div class="form-group {{ !$errors->has('student-id') ?: 'has-error' }}">
+											<label>Student ID Card:</label>
+											<input type="file" name="student-id" required>
+											<span class="help-block text-danger">{{ $errors->first('student-id') }}</span>
+									</div>
+					</div>
+			</div>
+
 
 			<div>
 				<h4><b>DECLARATION</b></h4>
@@ -452,13 +528,12 @@
 
 			<br><br>
 
-			<div class="x">
-				<h5>Applicant Signature: </h5>
-				<h5>Date: </h5>
-			</div>
-
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
+<<<<<<< HEAD
 			
+=======
+			{{-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> --}}
+>>>>>>> 03e40dc3a26de53835b006848e25a94c49250c04
 		</form>
 		</div>
 	</body>

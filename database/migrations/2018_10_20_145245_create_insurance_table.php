@@ -22,7 +22,7 @@ class CreateInsuranceTable extends Migration
         });
 
         Schema::table('insurance', function (Blueprint $table) {
-            $table->foreign('name_id')->references('id')->on('personal_details');
+            $table->foreign('name_id')->references('id')->on('personal_details')->onDelete('cascade');
         });
     }
 

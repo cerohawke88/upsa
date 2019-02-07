@@ -50,3 +50,7 @@ Route::get('/pdf/{id}', 'OutFormController@pdf')->name('out.pdf');
 
 Route::view('/admin/out-homePage', 'adminPage.outDashboard')->name('admin.outHome');
 Route::view('/admin/out-detail', 'adminPage.outDetail')->name('admin.outDetail');
+Route::view('/form-outbond', 'formPage.formOut')->name('form.out');
+
+Route::delete('delete/{personalDetails}', 'PostController@delete')->name('delete');
+

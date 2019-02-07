@@ -44,4 +44,9 @@ class PersonalDetails extends Model
 	{
 		return $this->hasOne('App\Insurance', 'name_id');
 	}
+
+	public function files()
+	{
+		return $this->hasMany('App\File', 'name_id');
+	}
 }

@@ -22,7 +22,7 @@ class CreateCourseTable extends Migration
         });
 
         Schema::table('course', function (Blueprint $table) {
-            $table->foreign('name_id')->references('id')->on('personal_details');
+            $table->foreign('name_id')->references('id')->on('personal_details')->onDelete('cascade');
         });
     }
 
