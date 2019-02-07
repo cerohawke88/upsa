@@ -7,13 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-<<<<<<< HEAD
-
 		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
-=======
->>>>>>> 2c12259c2550d857159b8c02c0f70a53169b8c32
-@include('partials._messages')
 			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
@@ -118,35 +113,7 @@
 				  </tr>
 				</table>
 
-				<table>
-				  <tr>
-				    <td><b>Mailing Address (if different from above)</b><hr>
-				    <input placeholder="Your Alternate Address" type="text" name="address2" size="50"/></td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td><b>City</b><hr>
-				    <input placeholder="Your City" type="text" name="city2" size="20"/></td>
-				    <td><b>Postal/ZIP Code</b><hr>
-				    <input placeholder="ZIP Code" type="text" name="postal_code2" size="20"/></td>
-				  </tr>
-				  
-				  <tr>
-				    <td><b>Province/State</b><hr>
-				    <input placeholder="Your State" type="text" name="province2" size="20"/></td>
-				    <td><b>Country</b><hr>
-				    <input placeholder="Your Country" type="text" name="country2" size="20"/></td>
-				  </tr>
-				  
-				  <tr>
-				    <td><b>Phone</b><hr>
-				    <input placeholder="Phone Number" type="text" name="phone2" size="20"/></td>
-				    <td><b>Contact Name</b><hr>
-				    <input placeholder="Contact Name" type="text" name="contact_name" size="20"/></td>
-				  </tr>
-				</table>
+				
 
 			</div>
 			<br><br>
@@ -535,7 +502,6 @@
 									<div class="form-group {{ !$errors->has('student-id') ?: 'has-error' }}">
 											<label>Student ID Card:</label>
 											<br>
-											<input type="file" name="student-id" required>
 											<input type="file" name="student_id" required>
 											<span class="help-block text-danger">{{ $errors->first('student-id') }}</span>
 									</div>

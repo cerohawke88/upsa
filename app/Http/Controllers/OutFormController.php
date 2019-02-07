@@ -15,6 +15,13 @@ use App\OutOrganization;
 use App\OutPersonalDetails;
 use App\OutStudentAward;
 use Validator;
+use DB;
+use Illuminate\View\View;
+use Illuminate\Auth\AuthManager;
+use App\File;
+use Illuminate\Http\RedirectResponse;
+use Storage;
+use Carbon\Carbon;
 
 class OutFormController extends Controller
 {
@@ -124,6 +131,28 @@ class OutFormController extends Controller
         $outPersonalDetails->outMotivationStatement()->create([
             'text'=> $request->input('motivation'),
         ]);
+
+        $id = OutPersonalDetails::max('id');
+
+        $file = [
+            'copy_ktm',
+            'form_language',
+            'form_orang_tua',
+            'photo',
+            'transcript',
+        ];
+
+        foreach ($file as $fileItem) {
+            $uploadedFile = $request->file($fileItem);        
+            $path = $uploadedFile->store('public/files');
+            
+            $personalDetails->files()->create([
+                'title' => $uploadedFile->getClientOriginalName(),
+                'filename' => $path
+            ]);
+
+        }
+
 
         return back()->with('success', 'Berhasil submit!');
     }

@@ -44,13 +44,13 @@ class OutPersonalDetails extends Model
 		return $this->hasOne('App\OutOrganization', 'nameOut_id');
 	}
 
-	public function outPersonalDetails()
-	{
-		return $this->hasOne('App\OutPersonalDetails', 'nameOut_id');
-	}
-
 	public function outStudentAward()
 	{
 		return $this->hasOne('App\outStudentAward', 'nameOut_id');
+	}
+
+	public function outFiles()
+	{
+		return $this->hasMany('App\outFile', 'nameOut_id');
 	}
 }

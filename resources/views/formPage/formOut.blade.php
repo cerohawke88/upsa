@@ -63,7 +63,7 @@
 				  <tr>
 				    <td><b>Place of Birth</b><hr>
 				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20" required="" value="{{old('place_of_birth')}}"/></td>
-				    <td><b>Date of Birth (dd/mm/yy)</b><hr>
+				    <td><b>Date of Birth</b><hr>
 				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20" required="" value="{{old('date_of_birth')}}"/></td>
 				    </tr>
 				   
@@ -390,6 +390,47 @@
 				</table>
 				
 			<br><br>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+						<h4><b>UPLOAD FILES</b></h4>
+				</div>
+				<div class="form-group">
+					<div class="form-group {{ !$errors->has('form_orang_tua') ?: 'has-error' }}">
+						<label>Form Pernyataan Orang Tua:</label>
+						<br>
+						<input type="file" name="form_orang_tua" required>
+						<span class="help-block text-danger">{{ $errors->first('form_orang_tua') }}</span>
+					</div>
+					<div class="form-group {{ !$errors->has('form_language') ?: 'has-error' }}">
+						<label>Copy of Language Profiency Certificate:</label>
+						<br>
+						<input type="file" name="form_language" required>
+						<span class="help-block text-danger">{{ $errors->first('form_language') }}</span>
+					</div>
+					<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
+							<label>Passport Photo:</label>
+							<br>
+							<input type="file" name="photo" required>
+							<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
+					</div>
+					<div class="form-group {{ !$errors->has('copy_ktm') ?: 'has-error' }}">
+						<label>Copy of Student ID Card(front&back):</label>
+						<br>
+						<input type="file" name="copy_ktm" required>
+						<span class="help-block text-danger">{{ $errors->first('copy_ktm') }}</span>
+					</div>
+					<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
+						<label>Academic Transcript:</label>
+						<br>
+						<input type="file" name="transcript" required>
+						<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
+					</div>
+				
+
+				</div>
+			</div>
+									
 
 			<div>
 				<h5><b>DECLARATION</b></h5>

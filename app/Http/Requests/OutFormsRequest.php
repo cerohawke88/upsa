@@ -97,7 +97,14 @@ class OutFormsRequest extends FormRequest
             'emergency_email' =>'required|email',
 
             //Purpose And Motivation Statement
-            'motivation' =>'required|string'
+            'motivation' =>'required|string',
+
+            //files
+            'form_orang_tua' => 'required|file|mimes:pdf|max:2048',
+            'form_language' => 'required|file|mimes:pdf|max:2048',
+            'copy_ktm' => 'required|file|mimes:pdf|max:2048',
+            'trascript' => 'required|file|mimes:pdf|max:2048',
+            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ];
     }
 
