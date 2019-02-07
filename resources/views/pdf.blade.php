@@ -186,7 +186,6 @@
 	</style>
 	
 	<title>Form UP-SA</title>
-	{{-- <link rel="stylesheet" href="css/bootstrap.min.css"> --}}
 	
 	<body>
 		<div>
@@ -211,7 +210,7 @@
 				<h4><b>PERSONAL DETAILS</b></h4>
 
 					
-				<table>
+				<table lenth="400">
 					<tr>
 						<td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
 							<span>{{$personalDetails->fullname}}</span> </td>

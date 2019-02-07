@@ -458,8 +458,7 @@
 			</div>
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-			{{-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> --}}
-			<a href="{{ route('print') }}">Print PDF</a>
+			
 		</form>
 		</div>
 	</body>
