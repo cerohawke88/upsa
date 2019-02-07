@@ -220,66 +220,68 @@
 
                     <!-- Membership and Organization Activities -->
                     <div class="box box-default collapsed-box">
-                      <div class="box-header with-border">
-                        <h3 class="box-title">Membership and Organization Activities</h3>
-
-                        <div class="box-tools pull-right">
-                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                          </button>
+                        <div class="box-header with-border">
+                          <h3 class="box-title">Membership and Organization Activities</h3>
+  
+                          <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                          <!-- /.box-tools -->
                         </div>
-                        <!-- /.box-tools -->
+                         <div class="table-responsive mailbox-messages box-body">
+                            <table class="table table-hover table-striped">
+                              <thead>
+                                  <tr>
+                                      <th class="mailbox-name text-blue">Name of Organization</th>
+                                      <th class="mailbox-name text-blue">Year</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                @foreach ($outPersonalDetails->outOrganization as $org)
+                                  <tr>
+                                      <td><b>{{ $org->name_org }}</b></td>
+                                      <td><b>{{ $org->year_org }}</b></td>
+                                  </tr>
+                                @endforeach
+                              </tbody>
+                            </table>
+                         </div>
                       </div>
-                       <div class="table-responsive mailbox-messages box-body">
-                          <table class="table table-hover table-striped">
-                            <tbody>
-                            <tr>
-                              <td class="mailbox-name text-blue">Name of Organization</td>
-                              <td class="mailbox-subject"><b>{{ $outPersonalDetails->outOrganization->type_program }}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>
-                            <tr>
-                              <td class="mailbox-name text-blue">Year</td>
-                              <td class="mailbox-subject"><b>{{ $outPersonalDetails->outOrganization->program_period }}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                  
-                            </tbody>
-                          </table>
-                       </div>
-                    </div>
 
-                    <!-- Achievment/Award -->
+
+                    <!-- Achievement/Reward -->
                     <div class="box box-default collapsed-box">
-                      <div class="box-header with-border">
-                        <h3 class="box-title">Achievment/Award</h3>
-
-                        <div class="box-tools pull-right">
-                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                          </button>
+                        <div class="box-header with-border">
+                          <h3 class="box-title">Achievement/Award</h3>
+  
+                          <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                          <!-- /.box-tools -->
                         </div>
-                        <!-- /.box-tools -->
+                         <div class="table-responsive mailbox-messages box-body">
+                            <table class="table table-hover table-striped">
+                              <thead>
+                                  <tr>
+                                      <th class="mailbox-name text-blue">Name of Award</th>
+                                      <th class="mailbox-name text-blue">Institution</th>
+                                      <th class="mailbox-name text-blue">Year</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                @foreach ($outPersonalDetails->outStudentAward as $sa)
+                                  <tr>
+                                      <td><b>{{ $sa->name_award }}</b></td>
+                                      <td><b>{{ $sa->name_institution }}</b></td>
+                                      <td><b>{{ $sa->year_award }}</b></td>
+                                  </tr>
+                                @endforeach
+                              </tbody>
+                            </table>
+                         </div>
                       </div>
-                       <div class="table-responsive mailbox-messages box-body">
-                          <table class="table table-hover table-striped">
-                            <tbody>
-                            <tr>
-                              <td class="mailbox-name text-blue">Name of Award</td>
-                              <td class="mailbox-subject"><b>{{ $outPersonalDetails->outStudentAward->type_program }}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>
-                            <tr>
-                              <td class="mailbox-name text-blue">Institution</td>
-                              <td class="mailbox-subject"><b>{{ $outPersonalDetails->outStudentAward->program_period }}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr> 
-                            <tr>
-                              <td class="mailbox-name text-blue">Year</td>
-                              <td class="mailbox-subject"><b>{{ $outPersonalDetails->outStudentAward->program_period }}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                  
-                            </tbody>
-                          </table>
-                       </div>
-                    </div>
 
                     <!-- Parent/Guardian Contact -->
                     <div class="box box-default collapsed-box">

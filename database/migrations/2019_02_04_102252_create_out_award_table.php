@@ -22,7 +22,7 @@ class CreateOutAwardTable extends Migration
         });
 
         Schema::table('out_award', function (Blueprint $table) {
-            $table->foreign('nameOut_id')->references('id')->on('out_personal_details');
+            $table->foreign('nameOut_id')->references('id')->on('out_personal_details')->onDelete('cascade');
         });
 
     }

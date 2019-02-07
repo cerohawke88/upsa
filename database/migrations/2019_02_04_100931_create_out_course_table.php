@@ -20,7 +20,7 @@ class CreateOutCourseTable extends Migration
             $table->timestamps();
         });
         Schema::table('out_course', function (Blueprint $table) {
-            $table->foreign('nameOut_id')->references('id')->on('out_personal_details');
+            $table->foreign('nameOut_id')->references('id')->on('out_personal_details')->onDelete('cascade');
         });
 
     }

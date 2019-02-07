@@ -41,16 +41,11 @@ class OutPersonalDetails extends Model
 
 	public function outOrganization()
 	{
-		return $this->hasOne('App\OutOrganization', 'nameOut_id');
-	}
-
-	public function outPersonalDetails()
-	{
-		return $this->hasOne('App\OutPersonalDetails', 'nameOut_id');
+		return $this->hasMany('App\OutOrganization', 'nameOut_id');
 	}
 
 	public function outStudentAward()
 	{
-		return $this->hasOne('App\outStudentAward', 'nameOut_id');
+		return $this->hasMany('App\outStudentAward', 'nameOut_id');
 	}
 }
