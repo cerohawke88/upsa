@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>oUTBOND Form UP-SA</title>
+	<title>OUTBOND Form UP-SA</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
 		@include('partials._messages')
-			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
+			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit.out') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
@@ -36,24 +36,24 @@
 				<table>
 				  <tr>
 				    <td><b>Student ID Number</b><hr>
-				    <input placeholder="Your Student ID Number" type="text" name="student_number" size="30" maxlength="12" required=""/></td>
+				    <input placeholder="Your Student ID Number" type="text" name="student_number" size="30" maxlength="12" required="" value="{{old('student_number')}}" /></td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Name</b><hr>
-				    	<input placeholder="Your Fullname" type="text" name="name" size="30" required=""/></td>
+				    	<input placeholder="Your Fullname" type="text" name="name" size="30" required="" value="{{old('name')}}"/></td>
 				    </tr>
 				</table>
 				
 				<table>
 					<tr>
 						<td><b>Gender</b><hr>
-						<input type="radio" name="duration" value="male"/>
+						<input type="radio" name="gender" value="Male"/>
 						<b>Male</b>
 						
-						<input type="radio" name="duration" value="female"/>
+						<input type="radio" name="gender" value="Female"/>
 						<b>Female</b>
 
 					</tr>
@@ -62,23 +62,23 @@
 				<table>
 				  <tr>
 				    <td><b>Place of Birth</b><hr>
-				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20" required=""/></td>
+				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20" required="" value="{{old('place_of_birth')}}"/></td>
 				    <td><b>Date of Birth (dd/mm/yy)</b><hr>
-				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20" required=""/></td>
+				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20" required="" value="{{old('date_of_birth')}}"/></td>
 				    </tr>
 				   
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required=""/></td>
+				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required="" value="{{old('nationality')}}"/></td>
 				    <td><b>Religion</b><hr>
-				    <input placeholder="Your Religion" type="text" name="religion" maxlength="20" size="20" required=""/></td>
+				    <input placeholder="Your Religion" type="text" name="religion" maxlength="20" size="20" required="" value="{{old('religion')}}"/></td>
 				  </tr>
 				  
 				  <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30" required=""/></td>
+				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30" required="" value="{{old('passport_number')}}"/></td>
 				    <td><b>Passport Expiration (dd/mm/yy)</b><hr>
-				    	<input type="date" name="expire_of_passport" size="20"/></td>
+				    	<input type="date" name="expire_of_passport" size="20" value="{{old('expire_of_passport')}}"/></td>
 				  </tr>
 				</table>
 			</div>
@@ -90,24 +90,24 @@
 				<table>
 				  <tr>
 				   <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20" required=""/></td>
+					    <input placeholder="Your Email Address" type="email" name="email" size="20" required="" value="{{old('email')}}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Mobile Number</b><hr>
-					    <input placeholder="Mobile" type="text" name="mobile_number" size="20" required=""/></td>
+					    <input placeholder="Mobile" type="text" name="mobile_number" size="20" required="" value="{{old('mobile_number')}}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td width="680"><b>Telphone</b><hr>
-					    <input placeholder="Telphone Number" type="text" name="telphone" size="20" required=""/></td>
+					    <input placeholder="Telphone Number" type="text" name="telphone" size="20" required="" value="{{old('telphone')}}"/></td>
 					    
-					    <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="institution_email" size="20" required=""/></td>
+					    <td><b>Mailing Address</b><hr>
+					    <input placeholder="Your Address" type="text" name="address" size="20" required="" value="{{old('address')}}"/></td>
 				  	</tr>
 				</table>
 			</div>
@@ -121,13 +121,13 @@
 					<tr>
 						<tr>
 						<td><b>Type of Program</b><hr>
-						<input type="radio" name="duration" value="male"/>
+						<input type="radio" name="program" value="Student Exchange"/>
 						<b>Student Exchange</b>
 						
-						<input type="radio" name="duration" value="internship"/>
+						<input type="radio" name="program" value="Internship"/>
 						<b>Internship</b>
 
-						<input type="radio" name="duration" value="summer_program"/>
+						<input type="radio" name="program" value="Summer Program"/>
 						<b>Summer Program</b>
 					</tr>
 				</table>
@@ -136,13 +136,13 @@
 					<tr>
 						<tr>
 						<td><b>Program Period</b><hr>
-						<input type="radio" name="duration" value="male"/>
+						<input type="radio" name="period" value="1-2 months"/>
 						<b>1-2 months</b>
 						
-						<input type="radio" name="duration" value="internship"/>
+						<input type="radio" name="period" value="1 semester(4-6 months)"/>
 						<b>1 semester(4-6 months)</b>
 
-						<input type="radio" name="duration" value="summer_program"/>
+						<input type="radio" name="period" value="2 semester(up to 12 months)"/>
 						<b>2 semester(up to 12 months)</b>
 					</tr>
 				</table>
@@ -151,13 +151,13 @@
 				<table>
 					<tr>
 						<td><b>Host University</b><hr>
-					    <input placeholder="Host University" type="text" name="host_univ" size="50" required=""/></td>
+					    <input placeholder="Host University" type="text" name="host_univ" size="50" required="" value="{{old('host_univ')}}"/></td>
 					</tr>
 				</table>
 
 				<table>
 					<tr>
-						<td><h5><b>Please specify courses you would like to take at UP:</b></h5></td>
+						<td><h5><b>Please specify courses you would like to take at Host University:</b></h5></td>
 					</tr>
 				</table>
 
@@ -172,8 +172,8 @@
 				<table>
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="course_1" placeholder="Course" required=""></td>
-						<td><input type="text" name="credit_1" placeholder="Credit" required=""></td>
+						<td><input type="text" name="course_1" placeholder="Course" required="" value="{{old('course_1')}}"></td>
+						<td><input type="text" name="credit_1" placeholder="Credit" required="" value="{{old('credit_1')}}"></td>
 					</tr>
 				
 				</table>
@@ -236,26 +236,26 @@
 				<table>
 				  <tr>
 				    <td><b>Department</b><hr>
-				    	<input placeholder="Your Department" type="text" name="department" size="30" required=""/></td>
+				    	<input placeholder="Your Department" type="text" name="department" size="30" required="" value="{{old('department')}}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
-				    <td><b>Year/Semester</b><hr>
-				    	<input placeholder="Year/Semester" type="text" name="year_sem" size="30" required=""/></td>
+				    <td width="690"><b>Year/Semester</b><hr>
+				    	<input placeholder="Year/Semester" type="text" name="year_sem" size="30" required="" value="{{old('year_sem')}}"/></td>
 				   
 				    <td><b>IPS/IPK</b><hr>
-				    	<input placeholder="IPS/IPK/GPA" type="text" name="ips_ipk" size="30" required=""/></td>
+				    	<input placeholder="IPS/IPK/GPA" type="text" name="gpa" size="30" required="" value="{{old('gpa')}}"/></td>
 				  </tr>
 				</table>
 
 				<table>
 				    <td><b>TOEFL/IELTS Score</b><hr>
-				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30" required=""/></td>
+				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30" required="" value="{{old('toefl_ielts')}}"/></td>
 				  <tr>
 				    <td><b>Test Date(dd/mm/yyyy)</b><hr>
-				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30" required=""/></td>
+				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30" required="" value="{{old('date_toefl_ielts')}}"/></td>
 				  </tr>
 
 				</table>
@@ -279,24 +279,24 @@
 				<table> 
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organzation" required=""></td>
-						<td><input type="text" name="year_org_1" placeholder="Year" required=""></td>
+						<td><input type="text" name="org_1" placeholder="Organzation" required="" value="{{old('org_1')}}"></td>
+						<td><input type="text" name="year_org_1" placeholder="Year" required="" value="{{old('year_org_1')}}"></td>
 					</tr>
 				</table>			
 
 				<table> 
 					<tr>
 						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_1" placeholder="Year"></td>
+						<td><input type="text" name="org_2" placeholder="Organzation"></td>
+						<td><input type="text" name="year_org_2" placeholder="Year"></td>
 					</tr>
 				</table>			
 
 				<table> 
 					<tr>
 						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_1" placeholder="Year"></td>
+						<td><input type="text" name="org_3" placeholder="Organzation"></td>
+						<td><input type="text" name="year_org_3" placeholder="Year"></td>
 					</tr>
 				</table>			
 
@@ -316,25 +316,25 @@
 
 				<table> 
 					<tr>
-						<td><input type="text" name="award_1" placeholder="Name of Award" required=""></td>
-						<td><input type="text" name="institut_1" placeholder="Name of Institution" required=""></td>
-						<td><input type="text" name="year_award_1" placeholder="Year"></td>
+						<td><input type="text" name="award_1" placeholder="Name of Award" required="" value="{{old('award_1')}}"></td>
+						<td><input type="text" name="institut_1" placeholder="Name of Institution" required="" value="{{old('institut_1')}}"></td>
+						<td><input type="text" name="year_award_1" placeholder="Year" value="{{old('year_award_1')}}"></td>
 					</tr>
 				</table>			
 				
 				<table> 
 					<tr>
-						<td><input type="text" name="award_1" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_1" placeholder="Name of Institution"></td>
-						<td><input type="text" name="year_award_1" placeholder="Year"></td>
+						<td><input type="text" name="award_2" placeholder="Name of Award"></td>
+						<td><input type="text" name="institut_2" placeholder="Name of Institution"></td>
+						<td><input type="text" name="year_award_2" placeholder="Year"></td>
 					</tr>
 				</table>
 
 				<table> 
 					<tr>
-						<td><input type="text" name="award_1" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_1" placeholder="Name of Institution"></td>
-						<td><input type="text" name="year_award_1" placeholder="Year"></td>
+						<td><input type="text" name="award_3" placeholder="Name of Award"></td>
+						<td><input type="text" name="institut_3" placeholder="Name of Institution"></td>
+						<td><input type="text" name="year_award_3" placeholder="Year"></td>
 					</tr>
 				</table>			
 
@@ -349,29 +349,29 @@
 				<table>
 					<tr>
 					    <td><b>Full Name</b><hr>
-					    <input placeholder="Name" type="text" name="emergency_name" size="20" required=""/></td>
+					    <input placeholder="Name" type="text" name="emergency_name" size="20" required="" value="{{old('emergency_name')}}"/></td>
 					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationship" size="20" required=""/></td>
+					    <input placeholder="Relationship" type="text" name="relationship" size="20" required="" value="{{old('relationship')}}"/></td>
 					</tr>
 				</table>
 	  				
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="emergency_address" size="50" required=""/></td>
+					    <input placeholder="Address" type="text" name="emergency_address" size="50" required="" value="{{old('emergency_address')}}"/></td>
 				  	</tr>		
 				</table>
 
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required=""/></td>
+					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required="" value="{{old('emergency_phone')}}"/></td>
 					    
 					    <td><b>Mobile</b><hr>
-					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required=""/></td>
+					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required="" value="{{old('emergency_mobile')}}"/></td>
 						
 						<td><b>Email</b><hr>
-					    <input placeholder="Email" type="email" name="emergency_email" size="20" required=""/></td>
+					    <input placeholder="Email" type="email" name="emergency_email" size="20" required="" value="{{old('emergency_email')}}"/></td>
 					</tr>
 				</table>			
 			</div>
@@ -384,7 +384,7 @@
 				<h5><b>PURPOSE AND MOTIVATION STATEMENT</b></h5>	
 				<table>
 					<tr>
-						<textarea rows="18" cols="141" placeholder="Your Purpose and Motivation Statements" type="text" name="motivation" required=""></textarea>
+						<textarea rows="18" cols="141" placeholder="Your Purpose and Motivation Statements" type="text" name="motivation" required="" value="{{old('motivation')}}"></textarea>
 						
 					</tr>
 				</table>
@@ -413,8 +413,7 @@
 			</div>
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-			{{-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> --}}
-			<a href="{{ route('print') }}">Print PDF</a>
+			
 		</form>
 		</div>
 	</body>

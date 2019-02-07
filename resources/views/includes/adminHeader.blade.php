@@ -103,7 +103,12 @@
         <li class="header">FITUR</li>
         <li>
           <a href="{{route('admin.home')}}">
-            <span>All Applicants</span>
+            <span><b>INBOUND</b> Applicants</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{route('admin.outHome')}}">
+            <span><b>OUTBOUND</b> Applicants</span>
           </a>
         </li>
         <li>

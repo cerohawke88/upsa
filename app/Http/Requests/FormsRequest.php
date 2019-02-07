@@ -55,7 +55,7 @@ class FormsRequest extends FormRequest
     		'institution_address' => 'required|string',
     		'institution_phone' => 'required|string',
     		'institution_email' => 'required|email',
-    		'institution_web' => 'required|string',
+    		'institution_web' => 'requestired|string',
     		'faculty_dept' => 'required|string',
     		'start_year' => 'required|string',
     		'gpa' => 'required|string',
