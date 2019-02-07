@@ -15,9 +15,9 @@ class CreateOutAwardTable extends Migration
     {
         Schema::create('out_award', function (Blueprint $table) {
             $table->integer('nameOut_id')->unsigned();
-            $table->string('name_award');
-            $table->string('name_institution');
-            $table->string('year_award');
+            $table->string('name_award')->nullable();
+            $table->string('name_institution')->nullable();
+            $table->string('year_award')->nullable();
             $table->timestamps();
         });
 
