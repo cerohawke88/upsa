@@ -7,13 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-<<<<<<< HEAD
+
 		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
-=======
 @include('partials._messages')
 			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
->>>>>>> 03e40dc3a26de53835b006848e25a94c49250c04
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
@@ -448,68 +446,96 @@
 							<h4><b>UPLOAD FILES</b></h4>
 					</div>
 
-					<div class="panel-body">
-
-									<div class="form-group {{ !$errors->has('certificate_of_health') ?: 'has-error' }}">
+					<div class="form-group">
+					<div class="row">
+						<div class="coloumn">
+									<div class="form-group {{ !$errors->has('certificate_of_health') ?: 'has-error' }}" id="left">
 											<label>Certificate of Health:</label>
+											<br>
 											<input type="file" name="certificate_of_health" required>
 											<span class="help-block text-danger">{{ $errors->first('certificate_of_health') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('financial_guarantee') ?: 'has-error' }}">
 											<label>Financial Guarantee Form:</label>
+											<br>
 											<input type="file" name="financial_guarantee" required>
 											<span class="help-block text-danger">{{ $errors->first('financial_guarantee') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('statement_of_legality') ?: 'has-error' }}">
 											<label>Statement of Legality Form:</label>
+											<br>
 											<input type="file" name="statement_of_legality" required>
 											<span class="help-block text-danger">{{ $errors->first('statement_of_legality') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('certificate_of_enrollment') ?: 'has-error' }}">
 											<label>Certificate of Enrollment:</label>
+											<br>
 											<input type="file" name="certificate_of_enrollment" required>
 											<span class="help-block text-danger">{{ $errors->first('certificate_of_enrollment') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('nomination_letter') ?: 'has-error' }}">
 											<label>Nomination Letter:</label>
+											<br>
 											<input type="file" name="nomination_letter" required>
 											<span class="help-block text-danger">{{ $errors->first('nomination_letter') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
 											<label>Transcript:</label>
+											<br>
 											<input type="file" name="transcript" required>
 											<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
 									</div>
-									<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}">
+								</div>
+								
+
+							<div class="coloumn">
+								<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
 											<label>Passport Photo:</label>
+											<br>
 											<input type="file" name="photo" required>
 											<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('statement_of_purpose') ?: 'has-error' }}">
 											<label>Statement of Purpose:</label>
+											<br>
 											<input type="file" name="statement_of_purpose" required>
 											<span class="help-block text-danger">{{ $errors->first('statement_of_purpose') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('bank_statement') ?: 'has-error' }}">
 											<label>Bank Statement:</label>
+											<br>
 											<input type="file" name="bank_statement" required>
 											<span class="help-block text-danger">{{ $errors->first('bank_statement') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('cv') ?: 'has-error' }}">
 											<label>CV/Resume:</label>
+											<br>
 											<input type="file" name="cv" required>
 											<span class="help-block text-danger">{{ $errors->first('cv') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('passport') ?: 'has-error' }}">
 											<label>Passport:</label>
+											<br>
 											<input type="file" name="passport" required>
 											<span class="help-block text-danger">{{ $errors->first('passport') }}</span>
 									</div>
+									<br>
 									<div class="form-group {{ !$errors->has('student-id') ?: 'has-error' }}">
 											<label>Student ID Card:</label>
+											<br>
 											<input type="file" name="student-id" required>
 											<span class="help-block text-danger">{{ $errors->first('student-id') }}</span>
 									</div>
+								</div>
 					</div>
 			</div>
 
@@ -529,11 +555,6 @@
 			<br><br>
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-<<<<<<< HEAD
-			
-=======
-			{{-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> --}}
->>>>>>> 03e40dc3a26de53835b006848e25a94c49250c04
 		</form>
 		</div>
 	</body>
