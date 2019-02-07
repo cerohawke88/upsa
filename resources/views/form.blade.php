@@ -7,13 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-<<<<<<< HEAD
-		@include('partials._messages')
-			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
-=======
 @include('partials._messages')
 			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
->>>>>>> 03e40dc3a26de53835b006848e25a94c49250c04
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
@@ -529,11 +524,7 @@
 			<br><br>
 
 			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-<<<<<<< HEAD
 			
-=======
-			{{-- <button class="btn btn-primary" form="form-up-sa" onClick="window.print()">Print PDF</button> --}}
->>>>>>> 03e40dc3a26de53835b006848e25a94c49250c04
 		</form>
 		</div>
 	</body>
