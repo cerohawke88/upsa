@@ -42,3 +42,5 @@ Route::get('/files', function() {
 Route::post('upload', 'UploadController@upload');
 
 Route::view('/form-outbond', 'formPage.formOut')->name('form.out');
+
+Route::delete('delete/{personalDetails}', 'PostController@delete')->name('delete');

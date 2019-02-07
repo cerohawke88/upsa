@@ -25,7 +25,7 @@ class CreateEmergencyContactTable extends Migration
         });
 
         Schema::table('emergency_contact', function (Blueprint $table) {
-            $table->foreign('name_id')->references('id')->on('personal_details');
+            $table->foreign('name_id')->references('id')->on('personal_details')->onDelete('cascade');
         });
     }
 

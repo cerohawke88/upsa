@@ -23,7 +23,7 @@ class CreateEnglishTestResultTable extends Migration
         });
 
         Schema::table('english_test_result', function (Blueprint $table) {
-            $table->foreign('name_id')->references('id')->on('personal_details');
+            $table->foreign('name_id')->references('id')->on('personal_details')->onDelete('cascade');
         });
     }
 

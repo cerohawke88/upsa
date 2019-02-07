@@ -14,6 +14,13 @@ use App\Insurance;
 use App\PersonalDetails;
 use App\ProposedStudy;
 use Validator;
+use DB;
+use Illuminate\View\View;
+use App\File;
+use Illuminate\Http\RedirectResponse;
+use Storage;
+use Carbon\Carbon;
+
 class FormController extends Controller
 {
 	
@@ -22,7 +29,7 @@ class FormController extends Controller
 	}
 	
 	public function pdf(Request $request, $id) {
-		$personalDetails = PersonalDetails::find($id);
+		$personalDetails = PersonalDetails::findOrFail($id);
 		$proposedStudy = ProposedStudy::where('name_id', $id)->first();
 		$insurance = Insurance::where('name_id', $id)->first();
 		$homeInstitution = HomeInstitution::where('name_id', $id)->first();
@@ -150,6 +157,19 @@ class FormController extends Controller
     		'mobile' => $request->input('emergency_mobile'),
     		'email' => $request->input('emergency_email'),
 		]);
-    return back()->with('success', 'Berhasil submit!');
+
+		// $id = DB::table('personal_details')->select('id')->orderBy('created_at', 'desc')->first();
+		$id = PersonalDetails::max('id');
+
+        $uploadedFile = $request->file('file');        
+
+        $path = $uploadedFile->store('public/files');
+
+        $file = File::create([
+            'title' => $uploadedFile->getClientOriginalName(),
+            'filename' => $path
+        ]);
+		
+	return redirect()->route('pdf', ['id' => $id])->with('success', 'Berhasil submit!');
     }
 }

@@ -9,6 +9,7 @@ use App\EnglishTestResult;
 use App\Insurance;
 use App\Accomodation;
 use App\EmergencyContact;
+use DB;
 
 class PostController extends Controller
 {
@@ -20,7 +21,7 @@ class PostController extends Controller
     public function index()
     {
     	$personalDetails = PersonalDetails::all();
-    	$homeInstitution = HomeInstitution::all();
+        $homeInstitution = HomeInstitution::all();
 
         $toefl = EnglishTestResult::where('test', 'TOEFL')->get();
     	return view ('adminPage.dashboard', [
@@ -40,8 +41,7 @@ class PostController extends Controller
 
     public function delete(PersonalDetails $personalDetails)
     {
-        $personalDetails = App\PersonalDetails::find(1);
         $personalDetails->delete();
-        return redirect()->route('adminPage.dashboard');
+        return redirect()->route('admin.home');
     }
 }
