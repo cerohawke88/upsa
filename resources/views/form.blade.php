@@ -7,9 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
+<<<<<<< HEAD
 
 		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
+=======
+>>>>>>> 2c12259c2550d857159b8c02c0f70a53169b8c32
 @include('partials._messages')
 			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 				@csrf
@@ -328,23 +331,23 @@
 
 					<tr>
 					   <td><input type="text" name="toefl" value="TOEFL" class="test"></td>
-					   <td><input type="text" name="score_toefl" size="20"/></td>
-					   <td><input type="name" name="place_toefl" size="50"/></td>
-					   <td><input type="date" name="date_toefl" size="20"/></td>
+					   <td><input type="text" name="score_toefl" value="{{ old('score_toefl') }}" size="20"/></td>
+					   <td><input type="name" name="place_toefl" value="{{ old('place_toefl') }}" size="50"/></td>
+					   <td><input type="date" name="date_toefl" value="{{ old('date_toefl') }}" size="20"/></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="ielts" value="IELTS" class="test"></td>
-					   <td><input type="text" name="score_ielts" size="20"/></td>
-					   <td><input type="name" name="place_ielts" size="50"/></td>
-					   <td><input type="date" name="date_ielts" size="20"/></td>
+					   <td><input type="text" name="score_ielts" value="{{ old('score_ielts') }}" size="20"/></td>
+					   <td><input type="name" name="place_ielts" value="{{ old('place_ielts') }}" size="50"/></td>
+					   <td><input type="date" name="date_ielts" value="{{ old('date_ielts') }}" size="20"/></td>
 					</tr>
 
 					<tr>
 					   <td><input type="text" name="others" size="20" placeholder="OTHERS" /></td>
-					   <td><input type="text" name="score_others" size="20"/></td>
-					   <td><input type="name" name="place_others" size="50"/></td>
-					   <td><input type="date" name="date_others" size="20"/></td>
+					   <td><input type="text" name="score_others" value="{{ old('score_others') }}" size="20"/></td>
+					   <td><input type="name" name="place_others" value="{{ old('place_others') }}" size="50"/></td>
+					   <td><input type="date" name="date_others" value="{{ old('date_others') }}" size="20"/></td>
 					</tr>
 				</table>
 			</div>
@@ -365,7 +368,7 @@
 					    <td><b>Validity</b><hr>
 					    <input placeholder="Valid date until" type="date" name="valid_date" size="20" required="" value="{{ old('valid_date') }}"/></td>
 					    <td width="725"><b>Cover</b><hr>
-					    <input type="text" name="cover" size="20"/></td>
+					    <input type="text" name="cover" value="{{ old('cover') }}" size="20"/></td>
 					</tr>
 				</table>			
 			</div>
@@ -533,6 +536,7 @@
 											<label>Student ID Card:</label>
 											<br>
 											<input type="file" name="student-id" required>
+											<input type="file" name="student_id" required>
 											<span class="help-block text-danger">{{ $errors->first('student-id') }}</span>
 									</div>
 								</div>

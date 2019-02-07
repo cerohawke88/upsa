@@ -45,6 +45,47 @@
                       <!-- /.row -->
                     </div>
                   
+                    <!-- Files -->
+                    <div class="box box-default collapsed-box">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Files</h3>
+
+                        <div class="box-tools pull-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                        <!-- /.box-tools -->
+                      </div>
+                       <div class="table-responsive mailbox-messages box-body">
+                          <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($files as $file)
+                                <tr>
+                                    <td>{{ $file->title }}</td>
+                                    <td>{{ $file->created_at->diffForHumans() }}</td>
+                                    <td>
+                                        <a href="{{ Storage::url($file->filename) }}" title="View file {{ $file->title }}">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                        <a href="{{ route('file.download', $file->id) }}" title="Download file {{ $file->title }}">
+                                            <i class="fa fa-download fa-fw"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                          </table>
+                       </div>
+                    </div>
+
+
                     <!-- Personal Detail -->
                     <div class="box box-default collapsed-box">
                       <div class="box-header with-border">
@@ -185,7 +226,7 @@
                        </div>
                     </div>
 
-                    <!-- Home Intitution -->
+                    <!-- Home Institution -->
                     <div class="box box-default collapsed-box">
                       <div class="box-header with-border">
                         <h3 class="box-title">Home Institution</h3>
@@ -247,7 +288,7 @@
                     <!-- PROPOSED STUDY AT UNIVERSITAS PERTAMINA (UP) -->
                     <div class="box box-default collapsed-box">
                       <div class="box-header with-border">
-                        <h3 class="box-title">PROPOSED STUDY AT UNIVERSITAS PERTAMINA (UP)</h3>
+                        <h3 class="box-title">Proposed Study at Universitas Pertamina (UP)</h3>
 
                         <div class="box-tools pull-right">
                           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
@@ -293,76 +334,83 @@
                               <td class="mailbox-subject"><b>{{$personalDetails->proposedStudy->end_date}}</b></td>
                               <td class="mailbox-attachment"></td>
                             </tr>                             
-                            <tr>
-                              <td class="mailbox-name text-blue">Courses take at UP:</td>
-                              <td class="mailbox-subject"><b></b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                             
                             </tbody>
                           </table>
                        </div>
                     </div>
 
-
-                    <!-- ENGLISH TEST RESULT -->
+                    <!-- Course -->
                     <div class="box box-default collapsed-box">
-                      <div class="box-header with-border">
-                        <h3 class="box-title">ENGLISH TEST RESULT</h3>
-
-                        <div class="box-tools pull-right">
-                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                          </button>
+                        <div class="box-header with-border">
+                          <h3 class="box-title">Course</h3>
+  
+                          <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                          <!-- /.box-tools -->
                         </div>
-                        <!-- /.box-tools -->
+                         <div class="table-responsive mailbox-messages box-body">
+                            <table class="table table-hover table-striped">
+                              <thead>
+                                  <tr>
+                                      <th class="mailbox-name text-blue">Course Title</th>
+                                      <th class="mailbox-name text-blue">Credit</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                @foreach ($personalDetails->course as $course)
+                                  <tr>
+                                      <td><b>{{ $course->course_title }}</b></td>
+                                      <td><b>{{ $course->credit }}</b></td>
+                                  </tr>
+                                @endforeach
+                              </tbody>
+                            </table>
+                         </div>
                       </div>
-                       <div class="table-responsive mailbox-messages box-body">
-                          <table class="table table-hover table-striped">
-                            <tbody>
-                            <tr>
-                              <td class="mailbox-name text-blue">TOEFL SCORE</td>
-                              <td class="mailbox-subject"><b>{{$personalDetails->englishTestResult->score}}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>
-                            <tr>
-                              <td class="mailbox-name text-blue">TOEFL TEST CENTRE</td>
-                              <td class="mailbox-subject"><b>{{$personalDetails->englishTestResult->test_center}}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                  
-                            <tr>
-                              <td class="mailbox-name text-blue">TOEFL DATE TESTED</td>
-                              <td class="mailbox-subject"><b>{{$personalDetails->englishTestResult->date_tested}}</b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                  
-                            <tr>
-                              <td class="mailbox-name text-blue">IELTS SCORE</td>
-                              <td class="mailbox-subject"><b></b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                  
-                            <tr>
-                              <td class="mailbox-name text-blue">IELTS TEST CENTRE</td>
-                              <td class="mailbox-subject"><b></b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                             
-                            <tr>
-                              <td class="mailbox-name text-blue">IELTS DATE TESTED</td>
-                              <td class="mailbox-subject"><b></b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                             
-                            <tr>
-                              <td class="mailbox-name text-blue">OTHERS </td>
-                              <td class="mailbox-subject"><b></b></td>
-                              <td class="mailbox-attachment"></td>
-                            </tr>                             
-                            </tbody>
-                          </table>
-                       </div>
-                    </div>
+
+
+                    <!-- English Test Result -->
+                    <div class="box box-default collapsed-box">
+                        <div class="box-header with-border">
+                          <h3 class="box-title">English Test Result</h3>
+  
+                          <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                          <!-- /.box-tools -->
+                        </div>
+                         <div class="table-responsive mailbox-messages box-body">
+                            <table class="table table-hover table-striped">
+                              <thead>
+                                  <tr>
+                                      <th class="mailbox-name text-blue">Test</th>
+                                      <th class="mailbox-name text-blue">Score</th>
+                                      <th class="mailbox-name text-blue">Test Center</th>
+                                      <th class="mailbox-name text-blue">Date Tested</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                @foreach ($personalDetails->englishTestResult as $et)
+                                  <tr>
+                                      <td><b>{{ $et->test }}</b></td>
+                                      <td><b>{{ $et->score }}</b></td>
+                                      <td><b>{{ $et->test_center }}</b></td>
+                                      <td><b>{{ $et->date_tested }}</b></td>
+                                  </tr>
+                                @endforeach
+                              </tbody>
+                            </table>
+                         </div>
+                      </div>
 
 
                     <!-- INSURANCE DURING STUDY AT UNIVERSITAS PERTAMINA  -->
                     <div class="box box-default collapsed-box">
                       <div class="box-header with-border">
-                        <h3 class="box-title">INSURANCE DURING STUDY AT UNIVERSITAS PERTAMINA</h3>
+                        <h3 class="box-title">Insurance during Study at Universitas Pertamina (UP)</h3>
 
                         <div class="box-tools pull-right">
                           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
@@ -432,7 +480,7 @@
                     <!--CONTACT OF EMERGENCY  -->
                     <div class="box box-default collapsed-box">
                       <div class="box-header with-border">
-                        <h3 class="box-title">CONTACT OF EMERGENCY</h3>
+                        <h3 class="box-title">Contact Of Eemergency</h3>
 
                         <div class="box-tools pull-right">
                           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>

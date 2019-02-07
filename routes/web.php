@@ -26,6 +26,27 @@ Route::get('/admin/homePage', 'PostController@index')->name('admin.home');
 Route::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
 Route::post('/admin/deletePost', 'PostController@delete')->name('admin.deletePost');
 Route::delete('delete/{personalDetails}', 'PostController@delete')->name('delete');
+Route::get('/', 'FormController@form')->name('form');
+
+Route::post('/submit', 'FormController@submit')->name('submit');
+
+Route::get('/pdf/{id}', 'FormController@pdf')->name('pdf');
+
+
+// AdminPage
+Route::get('/admin/home', 'PostController@index')->name('admin.home');
+Route::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
+Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
+Route::get('admin/file/{file}/download', 'PostController@download')->name('file.download');
+
+Auth::routes();
+
+
+Route::get('/files', function() {
+	return view('upload');
+});
+
+Route::post('upload', 'UploadController@upload');
 
 //Outbound
 Route::get('/form-outbond', 'OutFormController@form')->name('form.out');

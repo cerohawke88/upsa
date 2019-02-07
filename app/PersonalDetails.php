@@ -17,7 +17,7 @@ class PersonalDetails extends Model
 
 	public function course()
 	{
-		return $this->hasOne('App\Course', 'name_id');
+		return $this->hasMany('App\Course', 'name_id');
 	}
 
 	public function proposedStudy()
@@ -32,7 +32,7 @@ class PersonalDetails extends Model
 
 	public function englishTestResult()
 	{
-		return $this->hasOne('App\EnglishTestResult', 'name_id');
+		return $this->hasMany('App\EnglishTestResult', 'name_id');
 	}
 
 	public function homeInstitution()
