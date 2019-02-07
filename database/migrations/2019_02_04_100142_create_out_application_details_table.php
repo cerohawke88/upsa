@@ -22,7 +22,7 @@ class CreateOutApplicationDetailsTable extends Migration
         });
 
         Schema::table('out_application_details', function (Blueprint $table) {
-            $table->foreign('nameOut_id')->references('id')->on('out_personal_details');
+            $table->foreign('nameOut_id')->references('id')->on('out_personal_details')->onDelete('cascade');
         });
     }
 

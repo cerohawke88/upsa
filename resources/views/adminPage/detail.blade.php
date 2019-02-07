@@ -13,7 +13,7 @@
                       <h5 class="widget-user-desc">Laki-laki</h5>
                     </div>
                     <div class="widget-user-image">
-                      <img class="img-circle" src="{{asset('img/admin.png')}}" alt="User Avatar">
+                      <img class="img-circle" src="{{ $personalDetails->avatar }}" alt="User Avatar">
                     </div>
                     <div class="box-footer">
                       <div class="row">

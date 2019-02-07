@@ -2,12 +2,14 @@
 
 namespace App;
 
+use Storage;
 use Illuminate\Database\Eloquent\Model;
 
 class PersonalDetails extends Model
 {
     protected $table = 'personal_details';
-    protected $guarded = ['id'];
+	protected $guarded = ['id'];
+	protected $appends = ['avatar'];
     
 	
     public function accomodation()
@@ -48,5 +50,12 @@ class PersonalDetails extends Model
 	public function files()
 	{
 		return $this->hasMany('App\File', 'name_id');
+	}
+
+	public function getAvatarAttribute()
+	{
+		return Storage::url($this->files()->where('title', 'LIKE', '%.jpg')
+			->orWhere('title', 'LIKE', '%.jpeg')
+			->orWhere('title', 'LIKE', '%.png')->first()->filename);
 	}
 }
