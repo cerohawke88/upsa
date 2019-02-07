@@ -17,7 +17,7 @@ class CreateHomeInstitutionTable extends Migration
             $table->integer('name_id')->unsigned();
             $table->string('name');
             $table->string('address');
-            $table->unsignedBigInteger('phone');
+            $table->string('phone');
             $table->string('email');
             $table->string('website');
             $table->string('faculty_dep');

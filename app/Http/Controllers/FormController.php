@@ -161,15 +161,32 @@ class FormController extends Controller
 		// $id = DB::table('personal_details')->select('id')->orderBy('created_at', 'desc')->first();
 		$id = PersonalDetails::max('id');
 
-        $uploadedFile = $request->file('file');        
+		$file = [
+			'certificate_of_health',
+			'financial_guarantee',
+			'statement_of_legality',
+			'certificate_of_enrollment',
+			'nomination_letter',
+			'transcript',
+			'photo',
+			'statement_of_purpose',
+			'bank_statement',
+			'cv',
+			'passport',
+			'student_id',
+		];
 
-        $path = $uploadedFile->store('public/files');
+		foreach ($file as $fileItem) {
+			$uploadedFile = $request->file($fileItem);        
+			$path = $uploadedFile->store('public/files');
+			
+			$personalDetails->files()->create([
+				'title' => $uploadedFile->getClientOriginalName(),
+				'filename' => $path
+			]);
 
-        $file = File::create([
-            'title' => $uploadedFile->getClientOriginalName(),
-            'filename' => $path
-        ]);
-		
+		}
+	
 	return redirect()->route('pdf', ['id' => $id])->with('success', 'Berhasil submit!');
     }
 }

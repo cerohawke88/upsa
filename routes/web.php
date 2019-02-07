@@ -18,19 +18,11 @@ Route::post('/submit', 'FormController@submit')->name('submit');
 Route::get('/pdf/{id}', 'FormController@pdf')->name('pdf');
 
 
-// login,auth
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 // AdminPage
-Route::get('/admin/homePage', 'PostController@index')->name('admin.home');
+Route::get('/admin/home', 'PostController@index')->name('admin.home');
 Route::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
-Route::post('/admin/deletePost', 'PostController@delete')->name('admin.deletePost');
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
+Route::get('admin/file/{file}/download', 'PostController@download')->name('file.download');
 
 Auth::routes();
 
