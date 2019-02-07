@@ -7,12 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-<<<<<<< HEAD
 		@include('partials._messages')
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
-=======
-@include('partials._messages')
->>>>>>> 2990478f3a1902e7c334e74d4e7aef2895f4deae
+		@include('partials._messages')
 			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
