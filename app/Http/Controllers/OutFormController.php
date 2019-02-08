@@ -154,6 +154,6 @@ class OutFormController extends Controller
         }
 
 
-        return back()->with('success', 'Berhasil submit! Silakan download berkas anda <a href="'.route('pdf', ['id' => $id]).'"><b>disini</b></a>');
+        return back()->with('success', 'Berhasil submit! Silakan download berkas anda <a href="'.route('out.pdf', ['id' => $id]).'"><b>disini</b></a>');
     }
 }
