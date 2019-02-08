@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>OUTBOUND Form UP-SA</title>
+	<link rel="icon" type="image" href="{{asset('img/Logo-Up.png')}}" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
@@ -332,7 +333,7 @@
 
 				<table> 
 					<tr>
-						<td><input type="text" name="award_3" placeholder="Name of Award" value="{{old('award_3')}}">></td>
+						<td><input type="text" name="award_3" placeholder="Name of Award" value="{{old('award_3')}}"></td>
 						<td><input type="text" name="institut_3" placeholder="Name of Institution" value="{{old('institut_3')}}"></td>
 						<td><input type="text" name="year_award_3" placeholder="Year" value="{{old('year_award_3')}}"></td>
 					</tr>

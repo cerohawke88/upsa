@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="icon" type="image" href="{{asset('img/logo_icon.png')}}" />
+            <link rel="icon" type="image" href="{{asset('img/Logo-Up.png')}}" />
 
 
     <!-- CSRF Token -->
@@ -22,7 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="background-image">
+    <div class="background-image"></div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -74,6 +74,6 @@
             @yield('content')
         </main>
     </div>
-    </div>
+
 </body>
 </html>

@@ -47,7 +47,7 @@ class OutFormController extends Controller
                 'outPersonalDetails' => $outPersonalDetails,
                 'outAcademicInfo' => $outAcademicInfo,
                 'outApplicantDetails' => $outApplicantDetails,
-                'outContact' => $outApplicantDetails,
+                'outContact' => $outContact,
                 'outCourse' => $outCourse,
                 'outGuardianParent' => $outGuardianParent,
                 'outMotivationStatement' => $outMotivationStatement,

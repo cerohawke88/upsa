@@ -33,6 +33,7 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="icon" type="image" href="{{asset('img/Logo-Up.png')}}" />
 </head>
 <body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">

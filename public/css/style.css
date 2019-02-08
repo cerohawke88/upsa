@@ -63,10 +63,6 @@ hr{
 
 
 .background-image {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1;
 
   background-image: url('https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?cs=srgb&dl=backgrounds-blank-blue-953214.jpg&fm=jpg');
   height: 100%; 
@@ -75,4 +71,13 @@ hr{
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
 }
