@@ -33,7 +33,8 @@ Route::get('/admin/home', 'PostController@index')->name('admin.home');
 Route::get('/admin/detail-table/{personalDetails}', 'PostController@detail')->name('admin.tabelDetail');
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 Route::get('admin/file/{file}/download', 'PostController@download')->name('file.download');
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
+Auth::routes();
 
 
 
