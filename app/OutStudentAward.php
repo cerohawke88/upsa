@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class OutStudentAward extends Model
 {
     protected $table = 'out_award';
-    protected $fillable = ['name_id', 'name_award', 'name_institution', 'year_award'];
+    protected $fillable = ['nameOut_id', 'name_award', 'name_institution', 'year_award'];
     public $incrementing = false;
     
     public function user()

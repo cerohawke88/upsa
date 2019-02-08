@@ -28,21 +28,21 @@
 				<table>
 				  <tr>
 				    <td><b>Student ID Number</b><hr>
-				    <span>{{$outPersonalDetail->nim}}</span>></td>
+				    <span>{{$outPersonalDetails->nim}}</span>></td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Name</b><hr>
-				    	<span>{{$outPersonalDetail->fullname}}</span>/></td>
+				    	<span>{{$outPersonalDetails->fullname}}</span>/></td>
 				    </tr>
 				</table>
 				
 				<table>
 					<tr>
 						<td><b>Gender</b><hr>
-						<span>{{$outPersonalDetail->gender}}</span>
+						<span>{{$outPersonalDetails->gender}}</span>
 
 					</tr>
 				</table>
@@ -50,23 +50,23 @@
 				<table>
 				  <tr>
 				    <td><b>Place of Birth</b><hr>
-				   	 	<span>{{$outPersonalDetail->place_of_birth}}</span></td>
+				   	 	<span>{{$outPersonalDetails->place_of_birth}}</span></td>
 				    <td><b>Date of Birth</b><hr>
-				    	<span>{{$outPersonalDetail->date_of_birth}}</span></td>
+				    	<span>{{$outPersonalDetails->date_of_birth}}</span></td>
 				    </tr>
 				   
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<span>{{$outPersonalDetail->nationality}}</span></td>
+				    	<span>{{$outPersonalDetails->nationality}}</span></td>
 				    <td><b>Religion</b><hr>
-				    	<span>{{$outPersonalDetail->religion}}</span></td>
+				    	<span>{{$outPersonalDetails->religion}}</span></td>
 				  </tr>
 				  
 				  <tr>
 					<td><b>Passport Number</b><hr>
-				    	<span>{{$outPersonalDetail->passport_number}}</span></td>
+				    	<span>{{$outPersonalDetails->passport_number}}</span></td>
 				    <td><b>Passport Expiration (dd/mm/yy)</b><hr>
-				    	<span>{{$outPersonalDetail->pssport_expired}}</span></td>
+				    	<span>{{$outPersonalDetails->pssport_expired}}</span></td>
 				  </tr>
 				</table>
 			</div>
@@ -91,7 +91,7 @@
 
 				<table>
 					<tr>
-					    <td width="680"><b>Telphone</b><hr>
+					    <td width="680"><b>Telephone</b><hr>
 					    <span>{{$outContact->email}}</span></td>
 					    
 					    <td><b>Mailing Address</b><hr>
