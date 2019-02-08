@@ -28,7 +28,7 @@ class OutPersonalDetails extends Model
 
 	public function outCourse()
 	{
-		return $this->hasOne('App\OutCourse', 'nameOut_id');
+		return $this->hasMany('App\OutCourse', 'nameOut_id');
 	}
 
 	public function outGuardianParent()

@@ -35,7 +35,7 @@ class OutFormController extends Controller
         $outAcademicInfo = OutAcademicInfo::where('nameOut_id', $id)->first();
         $outApplicantDetails = OutApplicantDetails::where('nameOut_id', $id)->first();
         $outContact = OutContact::where('nameOut_id', $id)->first();
-        $outCourse = OutCourse::where('nameOut_id', $id)->first();
+        $outCourse = OutCourse::where('nameOut_id', $id)->get();
         $outGuardianParent = OutGuardianParent::where('nameOut_id', $id)->first();
         $outMotivationStatement = OutMotivationStatement::where('nameOut_id', $id)->first();
         $outOrganization = OutOrganization::where('nameOut_id', $id)->get();

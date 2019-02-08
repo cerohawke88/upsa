@@ -20,7 +20,7 @@
                         <div class="col-sm-4 border-right">
                           <div class="description-block">
                             <h5 class="description-header">{{ $outPersonalDetails->nim }}</h5>
-                            <span class="description-text">Nomor Passport</span>
+                            <span class="description-text">NIM</span>
                           </div>
                           <!-- /.description-block -->
                         </div>
