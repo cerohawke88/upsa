@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
 	
-	<title>Form UP-SA</title>
+	<title>INBOUND Form UP-SA</title>
 	
 	<body>
 		<div>
@@ -28,7 +28,7 @@
 				<h4><b>PERSONAL DETAILS</b></h4>
 
 					
-				<table lenth="400">
+				<table length="400">
 					<tr>
 						<td><b>Name in Full (as appears on passport) Mr./Mrs./Ms.</b><hr>
 							<span>{{$personalDetails->fullname}}</span> </td>

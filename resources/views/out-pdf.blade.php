@@ -2,7 +2,7 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
-	<title>OUTBOND Form UP-SA</title>
+	<title>OUTBOUND Form UP-SA</title>
 	<body>
 		<div>
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit.out') }}" >
