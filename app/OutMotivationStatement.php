@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class OutMotivationStatement extends Model
 {
     protected $table = 'out_motivation';
-    protected $fillable = ['name_id', 'text'];
+    protected $fillable = ['nameOut_id', 'text'];
     public $incrementing = false;
     
     public function user()

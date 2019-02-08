@@ -413,27 +413,6 @@
 			<br><br>
 
 			<div class="panel panel-default">
-<<<<<<< HEAD
-				<div class="panel-heading">
-					<h4><b>UPLOAD FILES</b></h4>
-						<div class="alert alert-info">
-								Upload all files with .pdf format, except photo. The photo file only allow .jpeg, .jpg, or .png format.
-						</div>
-				</div>
-
-				<div class="form-group">
-					<div class="row">
-						<div class="coloumn">
-							<div class="form-group {{ !$errors->has('certificate_of_health') ?: 'has-error' }}" id="left">
-									<label><b>Certificate of Health:</b </label>
-									<br>
-									<input type="file" name="certificate_of_health" required>
-									<span class="help-block text-danger">{{ $errors->first('certificate_of_health') }}</span>
-							</div>
-							<br>
-							<div class="form-group {{ !$errors->has('financial_guarantee') ?: 'has-error' }}">
-									<label><b>Financial Guarantee Form:</b></label>
-=======
 					<div class="panel-heading">
 							<h4><b>UPLOAD FILES</b></h4>
 							<div class="alert alert-info">
@@ -496,7 +475,6 @@
 											<input type="file" name="photo" required>
 											<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
 									</div>
->>>>>>> 7fae5380dadefa13fdb1d219dccd7bc1b5834745
 									<br>
 									<input type="file" name="financial_guarantee" required>
 									<span class="help-block text-danger">{{ $errors->first('financial_guarantee') }}</span>
@@ -526,7 +504,6 @@
 							<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
 									<label><b>Transcript:</b></label>
 									<br>
-<<<<<<< HEAD
 									<input type="file" name="transcript" required>
 									<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
 							</div>
@@ -569,22 +546,13 @@
 								<span class="help-block text-danger">{{ $errors->first('passport') }}</span>
 							</div>
 							<br>
-							<div class="form-group {{ !$errors->has('student-id') ?: 'has-error' }}">
+							<div class="form-group {{ !$errors->has('student_id') ?: 'has-error' }}">
 								<label><b>Student ID Card:</b></label>
 								<br>
 								<input type="file" name="student_id" required>
-								<span class="help-block text-danger">{{ $errors->first('student-id') }}</span>
+								<span class="help-block text-danger">{{ $errors->first('student_id') }}</span>
 							</div>
 						</div>
-=======
-									<div class="form-group {{ !$errors->has('student-id') ?: 'has-error' }}">
-											<label><b>Student ID Card:</b></label>
-											<br>
-											<input type="file" name="student_id" required>
-											<span class="help-block text-danger">{{ $errors->first('student_id') }}</span>
-									</div>
-								</div>
->>>>>>> 7fae5380dadefa13fdb1d219dccd7bc1b5834745
 					</div>
 			</div>
 

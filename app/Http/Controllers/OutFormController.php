@@ -31,15 +31,15 @@ class OutFormController extends Controller
     }
 
     public function pdf(Request $request, $id) {
-        $outPersonalDetails = OutPersonalDetails::find($id);
+        $outPersonalDetails = OutPersonalDetails::findOrFail($id);
         $outAcademicInfo = OutAcademicInfo::where('nameOut_id', $id)->first();
         $outApplicantDetails = OutApplicantDetails::where('nameOut_id', $id)->first();
         $outContact = OutContact::where('nameOut_id', $id)->first();
         $outCourse = OutCourse::where('nameOut_id', $id)->first();
         $outGuardianParent = OutGuardianParent::where('nameOut_id', $id)->first();
         $outMotivationStatement = OutMotivationStatement::where('nameOut_id', $id)->first();
-        $outOrganization = OutOrganization::where('nameOut_id', $id)->first();
-        $outStudentAward = OutStudentAward::where('nameOut_id', $id)->first();
+        $outOrganization = OutOrganization::where('nameOut_id', $id)->get();
+        $outStudentAward = OutStudentAward::where('nameOut_id', $id)->get();
 
         if ($request->id === $id) {
             $pdf = PDF::loadView('out-pdf', [
@@ -47,7 +47,7 @@ class OutFormController extends Controller
                 'outPersonalDetails' => $outPersonalDetails,
                 'outAcademicInfo' => $outAcademicInfo,
                 'outApplicantDetails' => $outApplicantDetails,
-                'outContact' => $outApplicantDetails,
+                'outContact' => $outContact,
                 'outCourse' => $outCourse,
                 'outGuardianParent' => $outGuardianParent,
                 'outMotivationStatement' => $outMotivationStatement,
