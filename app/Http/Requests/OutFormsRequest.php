@@ -27,7 +27,7 @@ class OutFormsRequest extends FormRequest
             //Personal Information
             'student_number' => 'required|string',
             'name' => 'required|string',
-            'gender' => 'required|in:Male, Female',
+            'gender' => 'required|in:Male,Female',
             'place_of_birth' => 'required|string',
             'date_of_birth' => 'required|date',
             'nationality' => 'required|string',
@@ -102,8 +102,8 @@ class OutFormsRequest extends FormRequest
             //files
             'form_orang_tua' => 'required|file|mimes:pdf|max:2048',
             'form_language' => 'required|file|mimes:pdf|max:2048',
-            'copy_ktm' => 'required|file|mimes:pdf|max:2048',
-            'trascript' => 'required|file|mimes:pdf|max:2048',
+            'copy_ktm' => 'required|file|mimes:zip|max:2048',
+            'transcript' => 'required|file|mimes:pdf|max:2048',
             'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ];
     }

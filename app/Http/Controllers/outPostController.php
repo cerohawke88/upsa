@@ -12,7 +12,12 @@ use App\OutMotivationStatement;
 use App\OutOrganization;
 use App\OutPersonalDetails;
 use App\OutStudentAward;
+use App\outFile;
 use DB;
+use Illuminate\Http\RedirectResponse;
+use Storage;
+use Carbon\Carbon;
+use App\Http\Requests\FileRequest;
 
 class outPostController extends Controller
 {
@@ -34,8 +39,10 @@ class outPostController extends Controller
 
     public function detail(OutPersonalDetails $outPersonalDetails)
     {
+        $files = outFile::ofPersonalDetails($outPersonalDetails)->orderBy('title', 'ASC')->paginate(30);
         return view('adminPage.outDetail', [
             'outPersonalDetails' => $outPersonalDetails,
+            'files' => $files,
         ]);
     }
 
@@ -43,5 +50,16 @@ class outPostController extends Controller
     {
         $outPersonalDetails->delete();
         return redirect()->route('admin.outHome');
+    }
+
+    /**
+     * Download file directly.
+     *
+     * @param File $file
+     * @return void
+     */
+    public function download(File $file, FileRequest $request)
+    {
+        return Storage::download($file->filename, $file->title);
     }
 }

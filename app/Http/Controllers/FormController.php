@@ -21,6 +21,7 @@ use App\File;
 use Illuminate\Http\RedirectResponse;
 use Storage;
 use Carbon\Carbon;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class FormController extends Controller
 {
@@ -81,13 +82,13 @@ class FormController extends Controller
     		'phone' => $request->input('phone'),
     		'mobile' => $request->input('mobile'),
     		'email' => $request->input('email'),
-    		'address2' => $request->input('address2'),
-    		'city2' => $request->input('city2'),
-    		'postal_code2' => $request->input('postal_code2'),
-    		'province2' => $request->input('province2'),
-    		'country2' => $request->input('country2'),
-    		'phone2' => $request->input('phone2'),
-    		'contact_name' => $request->input('contact_name'),
+    		// 'address2' => $request->input('address2'),
+    		// 'city2' => $request->input('city2'),
+    		// 'postal_code2' => $request->input('postal_code2'),
+    		// 'province2' => $request->input('province2'),
+    		// 'country2' => $request->input('country2'),
+    		// 'phone2' => $request->input('phone2'),
+    		// 'contact_name' => $request->input('contact_name'),
 		]);
 		
 		$personalDetails->homeInstitution()->create([
@@ -189,6 +190,6 @@ class FormController extends Controller
 
 		}
 	
-	return redirect()->route('pdf', ['id' => $id])->with('success', 'Berhasil submit!');
+	return back()->with('success', 'Berhasil submit! Silakan download berkas anda <a href="'.route('pdf', ['id' => $id]).'"><b>disini</b></a>');
     }
 }

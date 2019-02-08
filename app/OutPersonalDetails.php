@@ -2,12 +2,14 @@
 
 namespace App;
 
+use Storage;
 use Illuminate\Database\Eloquent\Model;
 
 class OutPersonalDetails extends Model
 {
-  protected $table = 'out_personal_details';
-    protected $guarded = ['id'];
+	protected $table = 'out_personal_details';
+	protected $guarded = ['id'];
+	protected $appends = ['avatar'];
 
 	public function outAcademic()
 	{
@@ -41,24 +43,23 @@ class OutPersonalDetails extends Model
 
 	public function outOrganization()
 	{
-<<<<<<< HEAD
-		return $this->hasOne('App\OutOrganization', 'nameOut_id');
+		return $this->hasMany('App\OutOrganization', 'nameOut_id');
 	}
 
 	public function outStudentAward()
 	{
-		return $this->hasOne('App\outStudentAward', 'nameOut_id');
-=======
-		return $this->hasMany('App\OutOrganization', 'nameOut_id');
->>>>>>> 2990478f3a1902e7c334e74d4e7aef2895f4deae
+		return $this->hasMany('App\outStudentAward', 'nameOut_id');
 	}
 
-	public function outFiles()
+	public function outFile()
 	{
-<<<<<<< HEAD
 		return $this->hasMany('App\outFile', 'nameOut_id');
-=======
-		return $this->hasMany('App\outStudentAward', 'nameOut_id');
->>>>>>> 2990478f3a1902e7c334e74d4e7aef2895f4deae
+	}
+
+	public function getAvatarAttribute()
+	{
+		return Storage::url($this->outFile()->where('title', 'LIKE', '%.jpg')
+			->orWhere('title', 'LIKE', '%.jpeg')
+			->orWhere('title', 'LIKE', '%.png')->first()->filename);
 	}
 }

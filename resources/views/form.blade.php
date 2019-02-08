@@ -7,12 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-<<<<<<< HEAD
-		@include('partials._messages')
-			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
-=======
 @include('partials._messages')
->>>>>>> 2990478f3a1902e7c334e74d4e7aef2895f4deae
 			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
@@ -34,7 +29,7 @@
 			@if (session('success'))
 			<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					{{ session('success') }}
+					{!! session('success') !!}
 			</div>
 			@endif
 				<h4><b>PERSONAL DETAILS</b></h4>
@@ -419,16 +414,16 @@
 					<div class="panel-heading">
 							<h4><b>UPLOAD FILES</b></h4>
 							<div class="alert alert-info">
-									Upload all files with .pdf format, except photo. The photo file only allow .jpeg, .jpg, or .png format.
+									Upload all files with .pdf format, except photo. <br> The photo file only allow .jpeg, .jpg, or .png format. <br>
+									Maximum file size is 2 MB.
 							</div>
-							
 					</div>
 
-					<div class="form-group">
+				<div class="form-group">
 					<div class="row">
-						<div class="coloumn">
+							<div class="coloumn">
 									<div class="form-group {{ !$errors->has('certificate_of_health') ?: 'has-error' }}" id="left">
-											<label><b>Certificate of Health:</b </label>
+											<label><b>Certificate of Health:</b> </label>
 											<br>
 											<input type="file" name="certificate_of_health" required>
 											<span class="help-block text-danger">{{ $errors->first('certificate_of_health') }}</span>
@@ -468,7 +463,7 @@
 											<input type="file" name="transcript" required>
 											<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
 									</div>
-								</div>
+							</div>
 								
 
 							<div class="coloumn">
@@ -510,12 +505,8 @@
 									<div class="form-group {{ !$errors->has('student-id') ?: 'has-error' }}">
 											<label><b>Student ID Card:</b></label>
 											<br>
-<<<<<<< HEAD
 											<input type="file" name="student_id" required>
-=======
-											<input type="file" name="student-id" required>
->>>>>>> 2990478f3a1902e7c334e74d4e7aef2895f4deae
-											<span class="help-block text-danger">{{ $errors->first('student-id') }}</span>
+											<span class="help-block text-danger">{{ $errors->first('student_id') }}</span>
 									</div>
 								</div>
 					</div>

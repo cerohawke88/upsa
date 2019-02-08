@@ -10,13 +10,13 @@
                     <!-- Add the bg color to the header using any of the bg-* classes -->
                     <div class="widget-user-header bg-green-active">
                       <h3 class="widget-user-username">{{$personalDetails->fullname}}</h3>
-                      <h5 class="widget-user-desc">Laki-laki</h5>
+                      {{-- <h5 class="widget-user-desc">Laki-laki</h5> --}}
                     </div>
                     <div class="widget-user-image">
                       <img class="img-circle" src="{{ $personalDetails->avatar }}" alt="User Avatar">
                     </div>
                     <div class="box-footer">
-                      <div class="row">
+                      <div class="row" style="margin-top: 30px">
                         <div class="col-sm-4 border-right">
                           <div class="description-block">
                             <h5 class="description-header">{{ $personalDetails->passport_number }}</h5>

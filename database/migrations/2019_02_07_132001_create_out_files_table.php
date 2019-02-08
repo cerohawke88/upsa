@@ -17,7 +17,7 @@ class CreateOutFilesTable extends Migration
             $table->increments('id');
             $table->integer('nameOut_id')->unsigned();
             $table->string('title', 100);
-            $table->string('filname', 100);
+            $table->string('filename', 100);
             $table->timestamps();
         });
 
