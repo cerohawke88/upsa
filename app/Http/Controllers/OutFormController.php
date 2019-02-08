@@ -42,7 +42,7 @@ class OutFormController extends Controller
         $outStudentAward = OutStudentAward::where('nameOut_id', $id)->first();
 
         if ($request->id === $id) {
-            $pdf = PDF::loadView('pdf', [
+            $pdf = PDF::loadView('out-pdf', [
                 'id' => $id,
                 'outPersonalDetails' => $outPersonalDetails,
                 'outAcademicInfo' => $outAcademicInfo,
@@ -54,7 +54,7 @@ class OutFormController extends Controller
                 'outOrganization' => $outOrganization,
                 'outStudentAward' => $outStudentAward,
             ]);
-            return $pdf->setPaper('a4', 'landscape')-> setWarnings(false)->download('Form UP-SA (OUTBOUND).pdf');
+            return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA (OUTBOUND).pdf');
         }
     }
 
