@@ -10,7 +10,7 @@
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
 			<div class="pos">
-				<img class="logo" src="{{asset('img/logo.png')}}">
+				<img class="logo" src="{{public_path('img/logo.png')}}">
 			</div>
 				<br>
 			<div class="pos">
@@ -23,36 +23,26 @@
 				<p>Please read The Guidelines of The Student Exchange Program prior to completing this form. Type or print in block letters in English.</p>
 				
 				
-			@if (session('success'))
-			<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					{{ session('success') }}
-			</div>
-			@endif
 				<h5><b>PERSONAL INFORMATION</b></h5><h6><b>(Please complete this part as it is written on your passport)</b></h6>
 
 				<table>
 				  <tr>
 				    <td><b>Student ID Number</b><hr>
-				    <input placeholder="Your Student ID Number" type="text" name="student_number" size="30" maxlength="12" required="" value="{{old('student_number')}}" /></td>
+				    <span>{{$outPersonalDetail->nim}}</span>></td>
 				  </tr>
 				</table>
 				  
 				<table>
 				  <tr>
 				    <td><b>Name</b><hr>
-				    	<input placeholder="Your Fullname" type="text" name="name" size="30" required="" value="{{old('name')}}"/></td>
+				    	<span>{{$outPersonalDetail->fullname}}</span>/></td>
 				    </tr>
 				</table>
 				
 				<table>
 					<tr>
 						<td><b>Gender</b><hr>
-						<input type="radio" name="gender" value="Male"/>
-						<b>Male</b>
-						
-						<input type="radio" name="gender" value="Female"/>
-						<b>Female</b>
+						<span>{{$outPersonalDetail->gender}}</span>
 
 					</tr>
 				</table>
@@ -60,23 +50,23 @@
 				<table>
 				  <tr>
 				    <td><b>Place of Birth</b><hr>
-				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20" required="" value="{{old('place_of_birth')}}"/></td>
+				   	 	<span>{{$outPersonalDetail->place_of_birth}}</span></td>
 				    <td><b>Date of Birth</b><hr>
-				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20" required="" value="{{old('date_of_birth')}}"/></td>
+				    	<span>{{$outPersonalDetail->date_of_birth}}</span></td>
 				    </tr>
 				   
 				  <tr>
 				    <td><b>Nationality</b><hr>
-				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required="" value="{{old('nationality')}}"/></td>
+				    	<span>{{$outPersonalDetail->nationality}}</span></td>
 				    <td><b>Religion</b><hr>
-				    <input placeholder="Your Religion" type="text" name="religion" maxlength="20" size="20" required="" value="{{old('religion')}}"/></td>
+				    	<span>{{$outPersonalDetail->religion}}</span></td>
 				  </tr>
 				  
 				  <tr>
 					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30" required="" value="{{old('passport_number')}}"/></td>
+				    	<span>{{$outPersonalDetail->passport_number}}</span></td>
 				    <td><b>Passport Expiration (dd/mm/yy)</b><hr>
-				    	<input type="date" name="expire_of_passport" size="20" value="{{old('expire_of_passport')}}"/></td>
+				    	<span>{{$outPersonalDetail->pssport_expired}}</span></td>
 				  </tr>
 				</table>
 			</div>
@@ -88,24 +78,24 @@
 				<table>
 				  <tr>
 				   <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="email" size="20" required="" value="{{old('email')}}"/></td>
+					    <span>{{$outContact->email}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td><b>Mobile Number</b><hr>
-					    <input placeholder="Mobile" type="text" name="mobile_number" size="20" required="" value="{{old('mobile_number')}}"/></td>
+					   <span>{{$outContact->mobile}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 					<tr>
 					    <td width="680"><b>Telphone</b><hr>
-					    <input placeholder="Telphone Number" type="text" name="telphone" size="20" required="" value="{{old('telphone')}}"/></td>
+					    <span>{{$outContact->email}}</span></td>
 					    
 					    <td><b>Mailing Address</b><hr>
-					    <input placeholder="Your Address" type="text" name="address" size="20" required="" value="{{old('address')}}"/></td>
+					    <span>{{$outContact->email}}</span></td>
 				  	</tr>
 				</table>
 			</div>
@@ -119,14 +109,8 @@
 					<tr>
 						<tr>
 						<td><b>Type of Program</b><hr>
-						<input type="radio" name="program" value="Student Exchange"/>
-						<b>Student Exchange</b>
+						<span>{{$outApplicantDetails->type_program}}</span>
 						
-						<input type="radio" name="program" value="Internship"/>
-						<b>Internship</b>
-
-						<input type="radio" name="program" value="Summer Program"/>
-						<b>Summer Program</b>
 					</tr>
 				</table>
 
@@ -134,14 +118,7 @@
 					<tr>
 						<tr>
 						<td><b>Program Period</b><hr>
-						<input type="radio" name="period" value="1-2 months"/>
-						<b>1-2 months</b>
-						
-						<input type="radio" name="period" value="1 semester(4-6 months)"/>
-						<b>1 semester(4-6 months)</b>
-
-						<input type="radio" name="period" value="2 semester(up to 12 months)"/>
-						<b>2 semester(up to 12 months)</b>
+						<span>{{$outApplicantDetails->program_period}}</span>
 					</tr>
 				</table>
 
@@ -149,7 +126,7 @@
 				<table>
 					<tr>
 						<td><b>Host University</b><hr>
-					    <input placeholder="Host University" type="text" name="host_univ" size="50" required="" value="{{old('host_univ')}}"/></td>
+					    <span>{{$outApplicantDetails->host_univ}}</span>
 					</tr>
 				</table>
 
@@ -167,63 +144,14 @@
 					</tr>
 				</table>
 
+				@foreach($outCourse as $c)
 				<table>
 					<tr>
-						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="course_1" placeholder="Course" required="" value="{{old('course_1')}}"></td>
-						<td><input type="text" name="credit_1" placeholder="Credit" required="" value="{{old('credit_1')}}"></td>
-					</tr>
-				
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="course_2" placeholder="Course"></td>
-						<td><input type="text" name="credit_2" placeholder="Credit"></td>
+						<td><span>{{$c->course_title}}</span></td>
+							<td><span>{{$c->credit}}</span></td>
 					</tr>
 				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="course_3" placeholder="Course"></td>
-						<td><input type="text" name="credit_3" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>4.</b></h6></td>
-						<td><input type="text" name="course_4" placeholder="Course"></td>
-						<td><input type="text" name="credit_4" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>5.</b></h6></td>
-						<td><input type="text" name="course_5" placeholder="Course"></td>
-						<td><input type="text" name="credit_5" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>6.</b></h6></td>
-						<td><input type="text" name="course_6" placeholder="Course"></td>
-						<td><input type="text" name="credit_6" placeholder="Credit"></td>
-					</tr>
-				</table>
-				
-				<table>
-					<tr>
-						<td><h6><b>7.</b></h6></td>
-						<td><input type="text" name="course_7" placeholder="Course"></td>
-						<td><input type="text" name="credit_7" placeholder="Credit"></td>
-					</tr>
-				</table>
-			
+				@endforeach
 			</div>
 
 			<br><br>
@@ -234,26 +162,26 @@
 				<table>
 				  <tr>
 				    <td><b>Department</b><hr>
-				    	<input placeholder="Your Department" type="text" name="department" size="30" required="" value="{{old('department')}}"/></td>
+				    	<span>{{$outAcademicInfo->department}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				  <tr>
 				    <td width="690"><b>Year/Semester</b><hr>
-				    	<input placeholder="Year/Semester" type="text" name="year_sem" size="30" required="" value="{{old('year_sem')}}"/></td>
+				    	<span>{{$outAcademicInfo->semester}}</span></td>
 				   
 				    <td><b>IPS/IPK</b><hr>
-				    	<input placeholder="IPS/IPK/GPA" type="text" name="gpa" size="30" required="" value="{{old('gpa')}}"/></td>
+				    	<span>{{$outAcademicInfo->gpa}}</span></td>
 				  </tr>
 				</table>
 
 				<table>
 				    <td><b>TOEFL/IELTS Score</b><hr>
-				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30" required="" value="{{old('toefl_ielts')}}"/></td>
+				    	<span>{{$outAcademicInfo->english_score}}</span></td>
 				  <tr>
 				    <td><b>Test Date(dd/mm/yyyy)</b><hr>
-				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30" required="" value="{{old('date_toefl_ielts')}}"/></td>
+				    	<span>{{$outAcademicInfo->date_test_english}}</span></td>
 				  </tr>
 
 				</table>
@@ -276,26 +204,12 @@
 
 				<table> 
 					<tr>
-						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organzation" required="" value="{{old('org_1')}}"></td>
-						<td><input type="text" name="year_org_1" placeholder="Year" required="" value="{{old('year_org_1')}}"></td>
+						@foreach{{$outOrganization as $o}}
+					
+						<td><span>{{$o->name_org}} </span></td>
+						<td><span>{{$o->year_org}} </span></td>
 					</tr>
-				</table>			
-
-				<table> 
-					<tr>
-						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="org_2" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_2" placeholder="Year"></td>
-					</tr>
-				</table>			
-
-				<table> 
-					<tr>
-						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="org_3" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_3" placeholder="Year"></td>
-					</tr>
+						@endforeach
 				</table>			
 
 			</div>
@@ -314,28 +228,14 @@
 
 				<table> 
 					<tr>
-						<td><input type="text" name="award_1" placeholder="Name of Award" required="" value="{{old('award_1')}}"></td>
-						<td><input type="text" name="institut_1" placeholder="Name of Institution" required="" value="{{old('institut_1')}}"></td>
-						<td><input type="text" name="year_award_1" placeholder="Year" value="{{old('year_award_1')}}"></td>
+						@foreach($outStudentAward->$s)
+						<td><span>{{$s->name_award}} </span></td>
+						<td><span>{{$s->name_institution}} </span></td>
+						<td><span>{{$s->year_award}} </span></td>
 					</tr>
+						@endforeach
 				</table>			
 				
-				<table> 
-					<tr>
-						<td><input type="text" name="award_2" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_2" placeholder="Name of Institution"></td>
-						<td><input type="text" name="year_award_2" placeholder="Year"></td>
-					</tr>
-				</table>
-
-				<table> 
-					<tr>
-						<td><input type="text" name="award_3" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_3" placeholder="Name of Institution"></td>
-						<td><input type="text" name="year_award_3" placeholder="Year"></td>
-					</tr>
-				</table>			
-
 				
 			</div>
 
@@ -347,29 +247,29 @@
 				<table>
 					<tr>
 					    <td><b>Full Name</b><hr>
-					    <input placeholder="Name" type="text" name="emergency_name" size="20" required="" value="{{old('emergency_name')}}"/></td>
+					    <span>{{$outGuardianParent->fullname}}</span>
 					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationship" size="20" required="" value="{{old('relationship')}}"/></td>
+					    <span>{{$outGuardianParent->relationship}}</span></td>
 					</tr>
 				</table>
 	  				
 	  			<table>
 	  				<tr>
 					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="emergency_address" size="50" required="" value="{{old('emergency_address')}}"/></td>
+					    <span>{{$outGuardianParent->address}}</span></td>
 				  	</tr>		
 				</table>
 
 				<table>	
 				  	<tr>
 					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required="" value="{{old('emergency_phone')}}"/></td>
+					   <span>{{$outGuardianParent->phone}}</span></td>
 					    
 					    <td><b>Mobile</b><hr>
-					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required="" value="{{old('emergency_mobile')}}"/></td>
+					    <span>{{$outGuardianParent->mobile}}</span></td>
 						
 						<td><b>Email</b><hr>
-					    <input placeholder="Email" type="email" name="emergency_email" size="20" required="" value="{{old('emergency_email')}}"/></td>
+					    <span>{{$outGuardianParent->email}}</span></td>
 					</tr>
 				</table>			
 			</div>
@@ -387,48 +287,7 @@
 					</tr>
 				</table>
 				
-			<br><br>
-
-			<div class="panel panel-default">
-				<div class="panel-heading">
-						<h4><b>UPLOAD FILES</b></h4>
-				</div>
-				<div class="form-group">
-					<div class="form-group {{ !$errors->has('form_orang_tua') ?: 'has-error' }}">
-						<label>Form Pernyataan Orang Tua:</label>
-						<br>
-						<input type="file" name="form_orang_tua" required>
-						<span class="help-block text-danger">{{ $errors->first('form_orang_tua') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('form_language') ?: 'has-error' }}">
-						<label>Copy of Language Profiency Certificate:</label>
-						<br>
-						<input type="file" name="form_language" required>
-						<span class="help-block text-danger">{{ $errors->first('form_language') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
-							<label>Passport Photo:</label>
-							<br>
-							<input type="file" name="photo" required>
-							<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('copy_ktm') ?: 'has-error' }}">
-						<label>Copy of Student ID Card(front&back):</label>
-						<br>
-						<input type="file" name="copy_ktm" required>
-						<span class="help-block text-danger">{{ $errors->first('copy_ktm') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
-						<label>Academic Transcript:</label>
-						<br>
-						<input type="file" name="transcript" required>
-						<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
-					</div>
-				
-
-				</div>
-			</div>
-									
+			<br><br>						
 
 			<div>
 				<h5><b>DECLARATION</b></h5>
@@ -451,8 +310,10 @@
 				<h5>Date: </h5>
 			</div>
 
-			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-			
+			<div class="x">
+					<h5 style="text-align:right">Date: {{$outPersonalDetails->created_at}}</h5>
+			</div>
+
 		</form>
 		</div>
 	</body>

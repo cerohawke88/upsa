@@ -58,3 +58,4 @@ Route::delete('out-delete/{personalDetails}', 'outPostController@delete')->name(
 
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 
+
