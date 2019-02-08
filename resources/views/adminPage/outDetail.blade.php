@@ -10,13 +10,13 @@
                     <!-- Add the bg color to the header using any of the bg-* classes -->
                     <div class="widget-user-header bg-green-active">
                       <h3 class="widget-user-username">{{$outPersonalDetails->fullname}}</h3>
-                      <h5 class="widget-user-desc">Laki-laki</h5>
+                      <h5 class="widget-user-desc">{{$outPersonalDetails->gender}}</h5>
                     </div>
                     <div class="widget-user-image">
-                      <img class="img-circle" src="{{asset('img/admin.png')}}" alt="User Avatar">
+                      <img class="img-circle" src="{{ $outPersonalDetails->avatar }}" alt="User Avatar">
                     </div>
                     <div class="box-footer">
-                      <div class="row">
+                      <div class="row" style="margin-top: 30px">
                         <div class="col-sm-4 border-right">
                           <div class="description-block">
                             <h5 class="description-header">{{ $outPersonalDetails->nim }}</h5>
@@ -44,6 +44,46 @@
                       </div>
                       <!-- /.row -->
                     </div>
+
+                    <!-- Files -->
+                    <div class="box box-default collapsed-box">
+                        <div class="box-header with-border">
+                          <h3 class="box-title">Files</h3>
+  
+                          <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                          <!-- /.box-tools -->
+                        </div>
+                         <div class="table-responsive mailbox-messages box-body">
+                            <table class="table table-hover table-striped">
+                              <thead>
+                                  <tr>
+                                      <th>Title</th>
+                                      <th>Created</th>
+                                      <th>Actions</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  @foreach($files as $file)
+                                  <tr>
+                                      <td>{{ $file->title }}</td>
+                                      <td>{{ $file->created_at->diffForHumans() }}</td>
+                                      <td>
+                                          <a href="{{ Storage::url($file->filename) }}" title="View file {{ $file->title }}">
+                                              <i class="fa fa-eye"></i>
+                                          </a>
+                                          <a href="{{ route('file.download', $file->id) }}" title="Download file {{ $file->title }}">
+                                              <i class="fa fa-download fa-fw"></i>
+                                          </a>
+                                      </td>
+                                  </tr>
+                                  @endforeach
+                              </tbody>
+                            </table>
+                         </div>
+                      </div>
                   
                     <!-- Personal Detail -->
                     <div class="box box-default collapsed-box">

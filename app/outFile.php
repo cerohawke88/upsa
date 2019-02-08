@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class outFile extends Model
 {
- 	 protected $fillable = ['nameOut_id', 'title', 'filename'];
+ 	protected $fillable = ['nameOut_id', 'title', 'filename'];
 
     public function user()
 	{

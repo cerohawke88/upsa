@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>OUTBOND Form UP-SA</title>
+	<title>OUTBOUND Form UP-SA</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
 		@include('partials._messages')
-			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit.out') }}" >
+			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit.out') }}" >
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
 			
@@ -28,7 +28,7 @@
 			@if (session('success'))
 			<div class="alert alert-success alert-dismissable">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					{{ session('success') }}
+					{!! session('success') !!}
 			</div>
 			@endif
 				<h5><b>PERSONAL INFORMATION</b></h5><h6><b>(Please complete this part as it is written on your passport)</b></h6>
@@ -77,7 +77,7 @@
 				  <tr>
 					<td><b>Passport Number</b><hr>
 				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30" required="" value="{{old('passport_number')}}"/></td>
-				    <td><b>Passport Expiration (dd/mm/yy)</b><hr>
+				    <td><b>Passport Expiration</b><hr>
 				    	<input type="date" name="expire_of_passport" size="20" value="{{old('expire_of_passport')}}"/></td>
 				  </tr>
 				</table>
@@ -254,7 +254,7 @@
 				    <td><b>TOEFL/IELTS Score</b><hr>
 				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30" required="" value="{{old('toefl_ielts')}}"/></td>
 				  <tr>
-				    <td><b>Test Date(dd/mm/yyyy)</b><hr>
+				    <td><b>Test Date</b><hr>
 				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30" required="" value="{{old('date_toefl_ielts')}}"/></td>
 				  </tr>
 
@@ -279,7 +279,7 @@
 				<table> 
 					<tr>
 						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organzation" required="" value="{{old('org_1')}}"></td>
+						<td><input type="text" name="org_1" placeholder="Organization" required="" value="{{old('org_1')}}"></td>
 						<td><input type="text" name="year_org_1" placeholder="Year" required="" value="{{old('year_org_1')}}"></td>
 					</tr>
 				</table>			
@@ -287,16 +287,16 @@
 				<table> 
 					<tr>
 						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="org_2" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_2" placeholder="Year"></td>
+						<td><input type="text" name="org_2" placeholder="Organization" value="{{old('org_2')}}"></td>
+						<td><input type="text" name="year_org_2" placeholder="Year" value="{{old('year_org_2')}}"></td>
 					</tr>
 				</table>			
 
 				<table> 
 					<tr>
 						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="org_3" placeholder="Organzation"></td>
-						<td><input type="text" name="year_org_3" placeholder="Year"></td>
+						<td><input type="text" name="org_3" placeholder="Organization" value="{{old('org_3')}}"></td>
+						<td><input type="text" name="year_org_3" placeholder="Year" value="{{old('year_org_3')}}"></td>
 					</tr>
 				</table>			
 
@@ -324,17 +324,17 @@
 				
 				<table> 
 					<tr>
-						<td><input type="text" name="award_2" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_2" placeholder="Name of Institution"></td>
-						<td><input type="text" name="year_award_2" placeholder="Year"></td>
+						<td><input type="text" name="award_2" placeholder="Name of Award" value="{{old('award_2')}}"></td>
+						<td><input type="text" name="institut_2" placeholder="Name of Institution" value="{{old('institut_2')}}"></td>
+						<td><input type="text" name="year_award_2" placeholder="Year" value="{{old('year_award_2')}}"></td>
 					</tr>
 				</table>
 
 				<table> 
 					<tr>
-						<td><input type="text" name="award_3" placeholder="Name of Award"></td>
-						<td><input type="text" name="institut_3" placeholder="Name of Institution"></td>
-						<td><input type="text" name="year_award_3" placeholder="Year"></td>
+						<td><input type="text" name="award_3" placeholder="Name of Award" value="{{old('award_3')}}">></td>
+						<td><input type="text" name="institut_3" placeholder="Name of Institution" value="{{old('institut_3')}}"></td>
+						<td><input type="text" name="year_award_3" placeholder="Year" value="{{old('year_award_3')}}"></td>
 					</tr>
 				</table>			
 
@@ -394,34 +394,38 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 						<h4><b>UPLOAD FILES</b></h4>
+						<div class="alert alert-info">
+								Upload all files with .pdf format, except photo and Student ID Card. <br> The photo file only allow .jpeg, .jpg, or .png format. <br> The Student ID Card file only allow .zip format.
+								<br> Maximum file size is 2 MB.
+						</div>
 				</div>
 				<div class="form-group">
 					<div class="form-group {{ !$errors->has('form_orang_tua') ?: 'has-error' }}">
-						<label>Form Pernyataan Orang Tua:</label>
+						<label><b>Form Pernyataan Orang Tua:</b></label>
 						<br>
 						<input type="file" name="form_orang_tua" required>
 						<span class="help-block text-danger">{{ $errors->first('form_orang_tua') }}</span>
 					</div>
 					<div class="form-group {{ !$errors->has('form_language') ?: 'has-error' }}">
-						<label>Copy of Language Profiency Certificate:</label>
+						<label><b>Copy of Language Proficiency Certificate:</b></label>
 						<br>
 						<input type="file" name="form_language" required>
 						<span class="help-block text-danger">{{ $errors->first('form_language') }}</span>
 					</div>
 					<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
-							<label>Passport Photo:</label>
+							<label><b>Passport Photo:</b></label>
 							<br>
 							<input type="file" name="photo" required>
 							<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
 					</div>
 					<div class="form-group {{ !$errors->has('copy_ktm') ?: 'has-error' }}">
-						<label>Copy of Student ID Card(front&back):</label>
+						<label><b>Copy of Student ID Card (front&back):</b></label>
 						<br>
 						<input type="file" name="copy_ktm" required>
 						<span class="help-block text-danger">{{ $errors->first('copy_ktm') }}</span>
 					</div>
 					<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
-						<label>Academic Transcript:</label>
+						<label><b>Academic Transcript:</b></label>
 						<br>
 						<input type="file" name="transcript" required>
 						<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>

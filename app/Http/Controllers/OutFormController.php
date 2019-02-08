@@ -54,7 +54,7 @@ class OutFormController extends Controller
                 'outOrganization' => $outOrganization,
                 'outStudentAward' => $outStudentAward,
             ]);
-            return $pdf->setPaper('a4', 'landscape')-> setWarnings(false)->download('Form UP-SA(OUTBOUND).pdf');
+            return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA (OUTBOUND).pdf');
         }
     }
 
@@ -135,18 +135,18 @@ class OutFormController extends Controller
         $id = OutPersonalDetails::max('id');
 
         $file = [
-            'copy_ktm',
-            'form_language',
             'form_orang_tua',
-            'photo',
+            'form_language',
+            'copy_ktm',
             'transcript',
+            'photo'
         ];
 
         foreach ($file as $fileItem) {
             $uploadedFile = $request->file($fileItem);        
             $path = $uploadedFile->store('public/files');
             
-            $personalDetails->files()->create([
+            $outPersonalDetails->outFile()->create([
                 'title' => $uploadedFile->getClientOriginalName(),
                 'filename' => $path
             ]);
@@ -154,6 +154,6 @@ class OutFormController extends Controller
         }
 
 
-        return back()->with('success', 'Berhasil submit!');
+        return back()->with('success', 'Berhasil submit! Silakan download berkas anda <a href="'.route('out.pdf', ['id' => $id]).'"><b>disini</b></a>');
     }
 }

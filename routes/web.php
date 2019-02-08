@@ -53,7 +53,7 @@ Route::get('/out-pdf/{id}', 'OutFormController@pdf')->name('out.pdf');
 Route::get('/admin/out-home', 'outPostController@index')->name('admin.outHome');
 Route::get('/admin/out-detail/{outPersonalDetails}', 'outPostController@detail')->name('admin.outDetail');
 
-Route::delete('out-delete/{personalDetails}', 'outPostController@delete')->name('outDelete');
+Route::delete('out-delete/{outPersonalDetails}', 'outPostController@delete')->name('outDelete');
 
 
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');

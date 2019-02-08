@@ -48,32 +48,6 @@
                       </tr>
                       @endforeach
                 </table>
-
-                      {{-- Modal Delete --}}
-                      <div class="modal modal-danger fade" id="modal-danger">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title">Delete Data</h4>
-                            </div>
-                            <div class="modal-body">
-                            <p>This will be erased the #@{{ id }} data. Are you sure to proceed?</p>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-                              <form method="post" :action="urlToDelete">
-                                @method('delete')
-                                @csrf
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                              </form>
-                            </div>
-                          </div>
-                          <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                      </div>
                       <!-- /.modal -->
                       {{-- Modal Delete --}}
                       <div class="modal modal-danger fade" id="modal-danger">
@@ -90,7 +64,7 @@
                             <div class="modal-footer">
                               <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
                               <form method="post" :action="urlToDelete">
-                                @method('outDelete')
+                                @method('delete')
                                 @csrf
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                               </form>
