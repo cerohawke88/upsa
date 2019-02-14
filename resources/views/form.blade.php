@@ -466,51 +466,56 @@
 											<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
 									</div>
 							</div>
+								
+							<div class="coloumn">
+								<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
+									<label><b>Passport Photo:</b></label>
+									<br>
+									<input type="file" name="photo" required>
+									<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
+								</div>
+								<br>
+								<div class="form-group {{ !$errors->has('statement_of_purpose') ?: 'has-error' }}">
+									<label><b>Statement of Purpose:</b></label>
+									<br>
+									<input type="file" name="statement_of_purpose" required>
+									<span class="help-block text-danger">{{ $errors->first('statement_of_purpose') }}</span>
+								</div>
+								<br>
+								<div class="form-group {{ !$errors->has('bank_statement') ?: 'has-error' }}">
+									<label><b>Bank Statement:</b></label>
+									<br>
+									<input type="file" name="bank_statement" required>
+									<span class="help-block text-danger">{{ $errors->first('bank_statement') }}</span>
+								</div>
+								<br>
+								<div class="form-group {{ !$errors->has('cv') ?: 'has-error' }}">
+									<label><b>CV/Resume:</b></label>
+									<br>
+									<input type="file" name="cv" required>
+									<span class="help-block text-danger">{{ $errors->first('cv') }}</span>
+								</div>
+								<br>
+								<div class="form-group {{ !$errors->has('passport') ?: 'has-error' }}">
+									<label><b>Passport:</b></label>
+									<br>
+									<input type="file" name="passport" required>
+									<span class="help-block text-danger">{{ $errors->first('passport') }}</span>
+								</div>
+								<br>
+								<div class="form-group {{ !$errors->has('student_id') ?: 'has-error' }}">
+									<label><b>Student ID Card:</b></label>
+									<br>
+									<input type="file" name="student_id" required>
+									<span class="help-block text-danger">{{ $errors->first('student_id') }}</span>
+								</div>
+							</div>
+							
+						
+						</div>
 						
 
-						<div class="coloumn">
-							<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
-								<label><b>Passport Photo:</b></label>
-								<br>
-								<input type="file" name="photo" required>
-								<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
-							</div>
-							<br>
-							<div class="form-group {{ !$errors->has('statement_of_purpose') ?: 'has-error' }}">
-								<label><b>Statement of Purpose:</b></label>
-								<br>
-								<input type="file" name="statement_of_purpose" required>
-								<span class="help-block text-danger">{{ $errors->first('statement_of_purpose') }}</span>
-							</div>
-							<br>
-							<div class="form-group {{ !$errors->has('bank_statement') ?: 'has-error' }}">
-								<label><b>Bank Statement:</b></label>
-								<br>
-								<input type="file" name="bank_statement" required>
-								<span class="help-block text-danger">{{ $errors->first('bank_statement') }}</span>
-							</div>
-							<br>
-							<div class="form-group {{ !$errors->has('cv') ?: 'has-error' }}">
-								<label><b>CV/Resume:</b></label>
-								<br>
-								<input type="file" name="cv" required>
-								<span class="help-block text-danger">{{ $errors->first('cv') }}</span>
-							</div>
-							<br>
-							<div class="form-group {{ !$errors->has('passport') ?: 'has-error' }}">
-								<label><b>Passport:</b></label>
-								<br>
-								<input type="file" name="passport" required>
-								<span class="help-block text-danger">{{ $errors->first('passport') }}</span>
-							</div>
-							<br>
-							<div class="form-group {{ !$errors->has('student_id') ?: 'has-error' }}">
-								<label><b>Student ID Card:</b></label>
-								<br>
-								<input type="file" name="student_id" required>
-								<span class="help-block text-danger">{{ $errors->first('student_id') }}</span>
-							</div>
-						</div>
+						
 					</div>
 			</div>
 
