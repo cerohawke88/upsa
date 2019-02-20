@@ -2,12 +2,9 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
-	
 	<title>INBOUND Form UP-SA</title>
-	
 	<body>
 		<div>
-
 			<form class="form-vertical" id="form-up-sa" method="POST" action="{{ route('submit') }}">
 				@csrf
 			<h6>Student Exchange Form – Universitas Pertamina</h6>
