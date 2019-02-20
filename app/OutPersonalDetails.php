@@ -48,7 +48,7 @@ class OutPersonalDetails extends Model
 
 	public function outStudentAward()
 	{
-		return $this->hasMany('App\outStudentAward', 'nameOut_id');
+		return $this->hasMany('App\OutStudentAward', 'nameOut_id');
 	}
 
 	public function outFile()

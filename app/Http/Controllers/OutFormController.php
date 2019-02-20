@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\OutFormsRequest;
 use PDF;
-use App\outAcademicInfo;
+use App\OutAcademicInfo;
 use App\OutApplicantDetails;
 use App\OutContact;
 use App\OutCourse;

@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<body>
 		<div>
-		@include('partials._messages')
 		<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit') }}" >
 		@include('partials._messages')
 			
