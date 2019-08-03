@@ -26,80 +26,6 @@
 
                 @csrf
 
-
-              <!-- STEP3 -->
-                <h3>
-                    <span class="title_text"></span>
-                </h3>
-                <fieldset>
-                    <div class="fieldset-content">
-                            <div class="form-group">
-                                <label for="" class="form-label">Type of Program</label>
-                                <input type="radio" name="host_univ" id=""/>
-                                <input type="radio" name="host_univ" id=""/>
-                                <input type="radio" name="host_univ" id=""/>
-                                
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-label">Host University</label>
-                                <input type="name" name="host_univ" id="" placeholder="Host University" />
-                            </div>
-
-                            <div style="padding-left: 50px;">
-                                <h4>Please specify courses you would like to take at Host University: </h4>
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_1" id="" placeholder="course 1 " />
-                                <input type="text" name="credit_1" id="" placeholder="Credit 1 " />
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_2" id="" placeholder="course 2 " />
-                                <input type="text" name="credit_2" id="" placeholder="Credit 2 " />
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_3" id="" placeholder="course 3 " />
-                                <input type="text" name="credit_3" id="" placeholder="Credit 3 " />
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_4" id="" placeholder="course 4 " />
-                                <input type="text" name="credit_4" id="" placeholder="Credit 4 " />
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_5" id="" placeholder="course 5 " />
-                                <input type="text" name="credit_5" id="" placeholder="Credit 5 " />
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_6" id="" placeholder="course 6 " />
-                                <input type="text" name="credit_6" id="" placeholder="Credit 6 " />
-                            </div> 
-
-                            <div class="form-group">
-                                <label for="" class="form-label"></label>
-                                <input type="text" name="course_7" id="" placeholder="course 7 " />
-                                <input type="text" name="credit_7" id="" placeholder="Credit 7 " />
-                            </div> 
-                        </div>
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-                 
-                    <div class="fieldset-footer">
-                        <span>Step 3 of 9 | Applicant Details</span>
-                    </div>
-                </fieldset>
-
-
                 <!-- STEP1 -->
                 <h3>
                     <span class="title_text"></span>
@@ -186,6 +112,105 @@
                     </div>
                 </fieldset>
 
+                <!-- STEP3 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                            <div>
+                                <label for="" class="form-label">Type of Program</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="program" value="Student Exchange"/><b>Student Exchanges</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="program" value="Internship"/><b>Internship</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="program" value="Summer Program"/><b>Summer Program</b>
+                            </div>
+
+                            
+                            <div>
+                                <label for="" class="form-label">Program Period</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="period" value="1-2 months"/><b>1-2 months</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="period" value="1 semester(4-6 months)"/><b>1 Semester(4-6months)</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="period" value="2 semester(up to 12 months)" /><b>2 Semester (up to 12 months)</b>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label for="" class="form-label">Host University</label>
+                                <input type="name" name="host_univ" id="" placeholder="Host University" />
+                            </div>
+
+                            <div style="padding-left: 50px;">
+                                <h4>Please specify courses you would like to take at Host University: </h4>
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_1" id="" placeholder="course 1 " />
+                                <input type="text" name="credit_1" id="" placeholder="Credit 1 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_2" id="" placeholder="course 2 " />
+                                <input type="text" name="credit_2" id="" placeholder="Credit 2 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_3" id="" placeholder="course 3 " />
+                                <input type="text" name="credit_3" id="" placeholder="Credit 3 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_4" id="" placeholder="course 4 " />
+                                <input type="text" name="credit_4" id="" placeholder="Credit 4 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_5" id="" placeholder="course 5 " />
+                                <input type="text" name="credit_5" id="" placeholder="Credit 5 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_6" id="" placeholder="course 6 " />
+                                <input type="text" name="credit_6" id="" placeholder="Credit 6 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_7" id="" placeholder="course 7 " />
+                                <input type="text" name="credit_7" id="" placeholder="Credit 7 " />
+                            </div> 
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                 
+                    <div class="fieldset-footer">
+                        <span>Step 3 of 9 | Applicant Details</span>
+                    </div>
+                </fieldset>
 
 
                 <!-- STEP4 -->
