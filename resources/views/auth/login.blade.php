@@ -55,6 +55,6 @@
       </form>  
     </div>
     <!-- /.login-box-body -->
-  </div>
+</div>
   <!-- /.login-box -->
 @endsection

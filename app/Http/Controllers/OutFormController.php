@@ -41,8 +41,23 @@ class OutFormController extends Controller
         $outOrganization = OutOrganization::where('nameOut_id', $id)->get();
         $outStudentAward = OutStudentAward::where('nameOut_id', $id)->get();
 
-        if ($request->id === $id) {
-            $pdf = PDF::loadView('out-pdf', [
+        // if ($request->id === $id) {
+        //     $pdf = PDF::loadView('out-pdf', [
+        //         'id' => $id,
+        //         'outPersonalDetails' => $outPersonalDetails,
+        //         'outAcademicInfo' => $outAcademicInfo,
+        //         'outApplicantDetails' => $outApplicantDetails,
+        //         'outContact' => $outContact,
+        //         'outCourse' => $outCourse,
+        //         'outGuardianParent' => $outGuardianParent,
+        //         'outMotivationStatement' => $outMotivationStatement,
+        //         'outOrganization' => $outOrganization,
+        //         'outStudentAward' => $outStudentAward,
+        //     ]);
+        //     return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA (OUTBOUND).pdf');
+        // }
+
+        return view('out-pdf', [
                 'id' => $id,
                 'outPersonalDetails' => $outPersonalDetails,
                 'outAcademicInfo' => $outAcademicInfo,
@@ -53,9 +68,7 @@ class OutFormController extends Controller
                 'outMotivationStatement' => $outMotivationStatement,
                 'outOrganization' => $outOrganization,
                 'outStudentAward' => $outStudentAward,
-            ]);
-            return $pdf->setPaper('a4', 'landscape')->setWarnings(false)->download('Form UP-SA (OUTBOUND).pdf');
-        }
+        ]);
     }
 
 
