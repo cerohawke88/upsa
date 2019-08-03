@@ -1,466 +1,474 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>OUTBOUND Form UP-SA</title>
-	<link rel="icon" type="image" href="{{asset('img/Logo-Up.png')}}" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
-	<body>
-		<div>
-		@include('partials._messages')
-			<form class="form-vertical" enctype="multipart/form-data" id="form-up-sa" method="POST" action="{{ route('submit.out') }}" >
-				@csrf
-			<h6>Student Exchange Form – Universitas Pertamina</h6>
-			
-			<div class="pos">
-				<img class="logo" src="{{asset('img/logo.png')}}">
-			</div>
-				<br>
-			<div class="pos">
-				<h5><b>UNIVERSITAS PERTAMINA-STUDY ABROAD(UP-SA)</h5>
-				<br>
-				<h5>APPLICATION FORM</b></h5>
-			</div>	
-				<br>
-			<div>
-				<p>Please read The Guidelines of The Student Exchange Program prior to completing this form. Type or print in block letters in English.</p>
-				
-				
-			@if (session('success'))
-			<div class="alert alert-success alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					{!! session('success') !!}
-			</div>
-			@endif
-				<h5><b>PERSONAL INFORMATION</b></h5><h6><b>(Please complete this part as it is written on your passport)</b></h6>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UPSA Form</title>
+    <link rel="icon" type="image" href="{{asset('img/Logo-Up.png')}}" />
+    
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{asset('fonts/material-icon/css/material-design-iconic-font.min.css')}}">
 
-				<table>
-				  <tr>
-				    <td><b>Student ID Number</b><hr>
-				    <input placeholder="Your Student ID Number" type="text" name="student_number" size="30" maxlength="12" required="" value="{{old('student_number')}}" /></td>
-				  </tr>
-				</table>
-				  
-				<table>
-				  <tr>
-				    <td><b>Name</b><hr>
-				    	<input placeholder="Your Fullname" type="text" name="name" size="30" required="" value="{{old('name')}}"/></td>
-				    </tr>
-				</table>
-				
-				<table>
-					<tr>
-						<td><b>Gender</b><hr>
-						<input type="radio" name="gender" value="Male"/>
-						<b>Male</b>
-						
-						<input type="radio" name="gender" value="Female"/>
-						<b>Female</b>
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+</head>
 
-					</tr>
-				</table>
+<body>
 
-				<table>
-				  <tr>
-				    <td><b>Place of Birth</b><hr>
-				   	 	<input placeholder="Your City" type="text" name="place_of_birth" size="20" required="" value="{{old('place_of_birth')}}"/></td>
-				    <td><b>Date of Birth</b><hr>
-				    	<input placeholder="Date of Birth" type="date" name="date_of_birth" size="20" required="" value="{{old('date_of_birth')}}"/></td>
-				    </tr>
-				   
-				  <tr>
-				    <td><b>Nationality</b><hr>
-				    	<input placeholder="Your Nationality" type="text" name="nationality" size="20" required="" value="{{old('nationality')}}"/></td>
-				    <td><b>Religion</b><hr>
-				    <input placeholder="Your Religion" type="text" name="religion" maxlength="20" size="20" required="" value="{{old('religion')}}"/></td>
-				  </tr>
-				  
-				  <tr>
-					<td><b>Passport Number</b><hr>
-				    	<input placeholder="Your Passport Number" type="text" name="passport_number" size="30" required="" value="{{old('passport_number')}}"/></td>
-				    <td><b>Passport Expiration</b><hr>
-				    	<input type="date" name="expire_of_passport" size="20" value="{{old('expire_of_passport')}}"/></td>
-				  </tr>
-				</table>
-			</div>
-			<br><br>
+    <div class="main">
 
-			<div>
-				<h5><b>CONTACT INFORMATION</b></h5>
-			
-				<table>
-				  <tr>
-				   <td><b>Email</b><hr>
-					    <input placeholder="Your Email Address" type="email" name="email" size="20" required="" value="{{old('email')}}"/></td>
-				  </tr>
-				</table>
+        <div class="container">
+            <h2>Universitas Pertamina Student Exchange - OUTBOUND</h2>
+            <form method="POST" id="signup-form" class="signup-form" action="{{ route('submit.out') }}">
 
-				<table>
-				  <tr>
-				    <td><b>Mobile Number</b><hr>
-					    <input placeholder="Mobile" type="text" name="mobile_number" size="20" required="" value="{{old('mobile_number')}}"/></td>
-				  </tr>
-				</table>
+                @csrf
 
-				<table>
-					<tr>
-					    <td width="680"><b>Telphone</b><hr>
-					    <input placeholder="Telphone Number" type="text" name="telphone" size="20" required="" value="{{old('telphone')}}"/></td>
-					    
-					    <td><b>Mailing Address</b><hr>
-					    <input placeholder="Your Address" type="text" name="address" size="20" required="" value="{{old('address')}}"/></td>
-				  	</tr>
-				</table>
-			</div>
+                <!-- STEP1 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Student ID Number</label>
+                            <input type="text" name="student_number" placeholder="Student ID Number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="form-label">Name in Full(as appears on passport)</label>
+                            <input type="text" name="name" placeholder="Name" />
+                        </div>
+                        <div class="form-radio">
+                            <label for="" class="form-label">Gender</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" value="Male" id="male" checked="checked" />
+                                <label for="male">Male</label>
 
-			<br><br>
+                                <input type="radio" name="gender" value="Female" id="female" />
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
 
-			<div>
-				<h5><b>APPLICATION DETAILS</b></h5>
-				
-				<table>
-					<tr>
-						<tr>
-						<td><b>Type of Program</b><hr>
-						<input type="radio" name="program" value="Student Exchange"/>
-						<b>Student Exchange</b>
-						
-						<input type="radio" name="program" value="Internship"/>
-						<b>Internship</b>
-
-						<input type="radio" name="program" value="Summer Program"/>
-						<b>Summer Program</b>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<tr>
-						<td><b>Program Period</b><hr>
-						<input type="radio" name="period" value="1-2 months"/>
-						<b>1-2 months</b>
-						
-						<input type="radio" name="period" value="1 semester(4-6 months)"/>
-						<b>1 semester(4-6 months)</b>
-
-						<input type="radio" name="period" value="2 semester(up to 12 months)"/>
-						<b>2 semester(up to 12 months)</b>
-					</tr>
-				</table>
-
-				
-				<table>
-					<tr>
-						<td><b>Host University</b><hr>
-					    <input placeholder="Host University" type="text" name="host_univ" size="50" required="" value="{{old('host_univ')}}"/></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h5><b>Please specify courses you would like to take at Host University:</b></h5></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td class="tr_no"><h6><b>No.</b></h6></td>
-						<td class="tr_nos"><h6><b>Course Title</b></h6></td>
-						<td><h6><b>Credit</b></h6></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="course_1" placeholder="Course" required="" value="{{old('course_1')}}"></td>
-						<td><input type="text" name="credit_1" placeholder="Credit" required="" value="{{old('credit_1')}}"></td>
-					</tr>
-				
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="course_2" placeholder="Course"></td>
-						<td><input type="text" name="credit_2" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="course_3" placeholder="Course"></td>
-						<td><input type="text" name="credit_3" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>4.</b></h6></td>
-						<td><input type="text" name="course_4" placeholder="Course"></td>
-						<td><input type="text" name="credit_4" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>5.</b></h6></td>
-						<td><input type="text" name="course_5" placeholder="Course"></td>
-						<td><input type="text" name="credit_5" placeholder="Credit"></td>
-					</tr>
-				</table>
-
-				<table>
-					<tr>
-						<td><h6><b>6.</b></h6></td>
-						<td><input type="text" name="course_6" placeholder="Course"></td>
-						<td><input type="text" name="credit_6" placeholder="Credit"></td>
-					</tr>
-				</table>
-				
-				<table>
-					<tr>
-						<td><h6><b>7.</b></h6></td>
-						<td><input type="text" name="course_7" placeholder="Course"></td>
-						<td><input type="text" name="credit_7" placeholder="Credit"></td>
-					</tr>
-				</table>
-			
-			</div>
-
-			<br><br>
-
-			<div>
-				<h5><b>ACADEMIC INFORMATION</b></h5>	
-				
-				<table>
-				  <tr>
-				    <td><b>Department</b><hr>
-				    	<input placeholder="Your Department" type="text" name="department" size="30" required="" value="{{old('department')}}"/></td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td width="690"><b>Year/Semester</b><hr>
-				    	<input placeholder="Year/Semester" type="text" name="year_sem" size="30" required="" value="{{old('year_sem')}}"/></td>
-				   
-				    <td><b>IPS/IPK</b><hr>
-				    	<input placeholder="IPS/IPK/GPA" type="text" name="gpa" size="30" required="" value="{{old('gpa')}}"/></td>
-				  </tr>
-				</table>
-
-				<table>
-				    <td><b>TOEFL/IELTS Score</b><hr>
-				    	<input placeholder="Your score TOEFL/Score" type="text" name="toefl_ielts" size="30" required="" value="{{old('toefl_ielts')}}"/></td>
-				  <tr>
-				    <td><b>Test Date</b><hr>
-				    	<input placeholder="Test Date of TOEFL/IELTS" type="date" name="date_toefl_ielts" size="30" required="" value="{{old('date_toefl_ielts')}}"/></td>
-				  </tr>
-
-				</table>
-
-				
-				
-			</div>
-
-			<br><br>
-
-			<div>
-				<h4><b>MEMBERSHIP AND ORGANIZATION ACTIVITIES</b></h4>	
-				<table>
-					<tr>
-						<td class="tr_no"><h6><b>No.</b></h6></td>
-						<td class="tr_nos"><h6><b>Name of Organization</b></h6></td>
-						<td><h6><b>year</b></h6></td>
-					</tr>
-				</table>
-
-				<table> 
-					<tr>
-						<td><h6><b>1.</b></h6></td>
-						<td><input type="text" name="org_1" placeholder="Organization" required="" value="{{old('org_1')}}"></td>
-						<td><input type="text" name="year_org_1" placeholder="Year" required="" value="{{old('year_org_1')}}"></td>
-					</tr>
-				</table>			
-
-				<table> 
-					<tr>
-						<td><h6><b>2.</b></h6></td>
-						<td><input type="text" name="org_2" placeholder="Organization" value="{{old('org_2')}}"></td>
-						<td><input type="text" name="year_org_2" placeholder="Year" value="{{old('year_org_2')}}"></td>
-					</tr>
-				</table>			
-
-				<table> 
-					<tr>
-						<td><h6><b>3.</b></h6></td>
-						<td><input type="text" name="org_3" placeholder="Organization" value="{{old('org_3')}}"></td>
-						<td><input type="text" name="year_org_3" placeholder="Year" value="{{old('year_org_3')}}"></td>
-					</tr>
-				</table>			
-
-			</div>
-
-			<br><br>
-	
-			<div>
-				<h5><b>ACHIEVEMENT/AWARD</b></h5>	
-				<table>
-					<tr>
-						<td width="423"><h6><b>Name of Award</b></h6></td>
-						<td width="422"><h6><b>Institution</b></h6></td>
-						<td><h6><b>Year</b></h6></td>
-					</tr>
-				</table>
-
-				<table> 
-					<tr>
-						<td><input type="text" name="award_1" placeholder="Name of Award" required="" value="{{old('award_1')}}"></td>
-						<td><input type="text" name="institut_1" placeholder="Name of Institution" required="" value="{{old('institut_1')}}"></td>
-						<td><input type="text" name="year_award_1" placeholder="Year" value="{{old('year_award_1')}}"></td>
-					</tr>
-				</table>			
-				
-				<table> 
-					<tr>
-						<td><input type="text" name="award_2" placeholder="Name of Award" value="{{old('award_2')}}"></td>
-						<td><input type="text" name="institut_2" placeholder="Name of Institution" value="{{old('institut_2')}}"></td>
-						<td><input type="text" name="year_award_2" placeholder="Year" value="{{old('year_award_2')}}"></td>
-					</tr>
-				</table>
-
-				<table> 
-					<tr>
-						<td><input type="text" name="award_3" placeholder="Name of Award" value="{{old('award_3')}}"></td>
-						<td><input type="text" name="institut_3" placeholder="Name of Institution" value="{{old('institut_3')}}"></td>
-						<td><input type="text" name="year_award_3" placeholder="Year" value="{{old('year_award_3')}}"></td>
-					</tr>
-				</table>			
-
-				
-			</div>
-
-			<br><br>
-
-			<div>
-				<h5><b>PARENT/GUARDIAN CONTACT</b></h5>	
-
-				<table>
-					<tr>
-					    <td><b>Full Name</b><hr>
-					    <input placeholder="Name" type="text" name="emergency_name" size="20" required="" value="{{old('emergency_name')}}"/></td>
-					    <td><b>Relationship</b><hr>
-					    <input placeholder="Relationship" type="text" name="relationship" size="20" required="" value="{{old('relationship')}}"/></td>
-					</tr>
-				</table>
-	  				
-	  			<table>
-	  				<tr>
-					    <td><b>Address</b><hr>
-					    <input placeholder="Address" type="text" name="emergency_address" size="50" required="" value="{{old('emergency_address')}}"/></td>
-				  	</tr>		
-				</table>
-
-				<table>	
-				  	<tr>
-					    <td><b>Phone</b><hr>
-					    <input placeholder="Phone" type="text" name="emergency_phone" size="20" required="" value="{{old('emergency_phone')}}"/></td>
-					    
-					    <td><b>Mobile</b><hr>
-					    <input placeholder="Mobile" type="text" name="emergency_mobile" size="20" required="" value="{{old('emergency_mobile')}}"/></td>
-						
-						<td><b>Email</b><hr>
-					    <input placeholder="Email" type="email" name="emergency_email" size="20" required="" value="{{old('emergency_email')}}"/></td>
-					</tr>
-				</table>			
-			</div>
-
-			<br><br>			
-
-			<br><br>
-
-			<div>
-				<h5><b>PURPOSE AND MOTIVATION STATEMENT</b></h5>	
-				<table>
-					<tr>
-						<textarea rows="18" cols="141" placeholder="Your Purpose and Motivation Statements" type="text" name="motivation" required="" value="{{old('motivation')}}"></textarea>
-						
-					</tr>
-				</table>
-				
-			<br><br>
-
-			<div class="panel panel-default">
-				<div class="panel-heading">
-						<h4><b>UPLOAD FILES</b></h4>
-						<div class="alert alert-info">
-								Upload all files with .pdf format, except photo and Student ID Card. <br> The photo file only allow .jpeg, .jpg, or .png format. <br> The Student ID Card file only allow .zip format.
-								<br> Maximum file size is 2 MB.
-						</div>
-				</div>
-				<div class="form-group">
-					<div class="form-group {{ !$errors->has('form_orang_tua') ?: 'has-error' }}">
-						<label><b>Form Pernyataan Orang Tua:</b></label>
-						<br>
-						<input type="file" name="form_orang_tua" required>
-						<span class="help-block text-danger">{{ $errors->first('form_orang_tua') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('form_language') ?: 'has-error' }}">
-						<label><b>Copy of Language Proficiency Certificate:</b></label>
-						<br>
-						<input type="file" name="form_language" required>
-						<span class="help-block text-danger">{{ $errors->first('form_language') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('photo') ?: 'has-error' }}" id="right">
-							<label><b>Passport Photo:</b></label>
-							<br>
-							<input type="file" name="photo" required>
-							<span class="help-block text-danger">{{ $errors->first('photo') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('copy_ktm') ?: 'has-error' }}">
-						<label><b>Copy of Student ID Card (front&back):</b></label>
-						<br>
-						<input type="file" name="copy_ktm" required>
-						<span class="help-block text-danger">{{ $errors->first('copy_ktm') }}</span>
-					</div>
-					<div class="form-group {{ !$errors->has('transcript') ?: 'has-error' }}">
-						<label><b>Academic Transcript:</b></label>
-						<br>
-						<input type="file" name="transcript" required>
-						<span class="help-block text-danger">{{ $errors->first('transcript') }}</span>
-					</div>
-				
-
-				</div>
-			</div>
-									
-
-			<div>
-				<h5><b>DECLARATION</b></h5>
-
-				<h6><b>
-					I hereby certify that all the statements  made on this application and in the attached documents are true and correct. I fully understand all the conditions of joining this prgramm and agree to:<br/>
-					1.	follow the course of study and abide the rules of Institutions in which I undertake to study<br>
-					2.	act in such a manner that will not bring disrepute to my self, Universitas Pertamina, home-university or my country of citizenship during my study abroad program <br>
-					3.	abide the rules and regulations governing my visa <br>
-					4.	provide funding and expenses in the cost that occur during my participation in the program<br>
-					5. the use of documentation of myself which relate to this prgram, taken by Universitas Pertamina or shared by me - the likely uses include but not limited to promotional materials (e.g. brochures, posters, newspaper articles, website, communication with educational agents, and advertising).
-				</b></h5>
-			</div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Place of Birth</label>
+                            <input type="text" name="place_of_birth" placeholder="Place of birth" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Date of Birth</label>
+                            <input type="Date" name="date_of_birth" id="" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Nationality</label>
+                            <input type="text" name="nationality" placeholder="Nationality" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Religion</label>
+                            <input type="name" name="religion" id="" placeholder="Religion" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Passport Number</label>
+                            <input type="text" name="passport_number" id="" placeholder="Passport Number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Passport Expiration</label>
+                            <input type="Date" name="expire_of_passport" id="" placeholder="" />
+                        </div>
+                    </div>
+                    
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    
+                    <div class="fieldset-footer">
+                        <span>Step 1 of 9 | Personal Information</span>
+                    </div>
+                </fieldset>
 
 
-			<br><br>
+                  <!-- STEP2 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" name="email" id="" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Mobile</label>
+                            <input type="email" name="mobile_number" id="" placeholder="Your Phone number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Telephone</label>
+                            <input type="text" name="telphone" id="" placeholder="Your Phone number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Mailing Address</label>
+                            <input type="link" name="address" id="" placeholder="Your Address" />
+                        </div>
+                    <div class="fieldset-footer">
+                        <span>Step 2 of 9 | Contact Information</span>
 
-			<div class="x">
-				<h5>Applicant Signature: </h5>
-				<h5>Date: </h5>
-			</div>
+                    </div>
+                </fieldset>
 
-			<button class="btn btn-primary" form="form-up-sa" type="submit">Submit</button>
-			
-		</form>
-		</div>
-	</body>
+                <!-- STEP3 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                            <div>
+                                <label for="" class="form-label">Type of Program</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="program" value="Student Exchange"/><b>Student Exchanges</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="program" value="Internship"/><b>Internship</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="program" value="Summer Program"/><b>Summer Program</b>
+                            </div>
+
+                            
+                            <div>
+                                <label for="" class="form-label">Program Period</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="period" value="1-2 months"/><b>1-2 months</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="period" value="1 semester(4-6 months)"/><b>1 Semester(4-6months)</b>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="radio" name="period" value="2 semester(up to 12 months)" /><b>2 Semester (up to 12 months)</b>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label for="" class="form-label">Host University</label>
+                                <input type="name" name="host_univ" id="" placeholder="Host University" />
+                            </div>
+
+                            <div style="padding-left: 50px;">
+                                <h4>Please specify courses you would like to take at Host University: </h4>
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_1" id="" placeholder="course 1 " />
+                                <input type="text" name="credit_1" id="" placeholder="Credit 1 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_2" id="" placeholder="course 2 " />
+                                <input type="text" name="credit_2" id="" placeholder="Credit 2 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_3" id="" placeholder="course 3 " />
+                                <input type="text" name="credit_3" id="" placeholder="Credit 3 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_4" id="" placeholder="course 4 " />
+                                <input type="text" name="credit_4" id="" placeholder="Credit 4 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_5" id="" placeholder="course 5 " />
+                                <input type="text" name="credit_5" id="" placeholder="Credit 5 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_6" id="" placeholder="course 6 " />
+                                <input type="text" name="credit_6" id="" placeholder="Credit 6 " />
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="" class="form-label"></label>
+                                <input type="text" name="course_7" id="" placeholder="course 7 " />
+                                <input type="text" name="credit_7" id="" placeholder="Credit 7 " />
+                            </div> 
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                 
+                    <div class="fieldset-footer">
+                        <span>Step 3 of 9 | Applicant Details</span>
+                    </div>
+                </fieldset>
+
+
+                <!-- STEP4 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Department</label>
+                            <input type="text" name="department" placeholder="Your Department" />
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="form-label">Year/Semester</label>
+                            <input type="text" name="year_sem" placeholder="ex: 2019" />
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="form-label">IPS/IPK</label>
+                            <input type="text" name="gpa" placeholder="ex: 3.48" />
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="form-label">TOEFL/IELTS Score</label>
+                            <input type="text" name="toefl_ielts" placeholder="Score of TOEFL/IELTS" />
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="form-label">Test Date</label>
+                            <input type="date" name="date_toefl_ielts" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="fieldset-footer">
+                        <span>Step 4 of 9 | Academic Information</span>
+                    </div>
+                </fieldset>
+
+                <!-- STEP5 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                            <!-- Org 1 -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Name of Organization(1)</label>
+                            <input type="text" name="org_1" id="" placeholder="Organization" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="text" name="year_org_1" id="" placeholder="Year" />
+                        </div>
+                            <!-- Org 2 -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Name of Organization(2)</label>
+                            <input type="text" name="org_2" id="" placeholder="Organization" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="text" name="year_org_2" id="" placeholder="Year" />
+                        </div>
+                            <!-- Org 1 -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Name of Organization(3)</label>
+                            <input type="text" name="org_3" id="" placeholder="Organization" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="text" name="year_org_3" id="" placeholder="Year" />
+                        </div>
+                    </div>
+                            
+                    <div class="fieldset-footer">
+                        <span>Step 5 of 9 | Membership and Organization Activities</span>
+                    </div>
+                </fieldset>
+
+                <!-- STEP6 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <!-- Award 1 -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Achievment / Award(1)</label>
+                            <input type="text" name="award_1" id="" placeholder="Name of Award" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="text" name="institut_1" id="" placeholder="Name of Institution" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="Date" name="year_award_1" id="" placeholder="Year" />
+                        </div>
+                        <!-- Award 2 -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Achievment / Award(2)</label>
+                            <input type="text" name="award_2" id="" placeholder="Name of Award" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="text" name="institut_2" id="" placeholder="Name of Institution" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="Date" name="year_award_2" id="" placeholder="Year" />
+                        </div>
+                        <!-- Award 1 -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Achievment / Award(3)</label>
+                            <input type="text" name="award_3" id="" placeholder="Name of Award" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="text" name="institut_3" id="" placeholder="Name of Institution" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label"></label>
+                            <input type="Date" name="year_award_3" id="" placeholder="Year" />
+                        </div>
+                    </div>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    
+                    <div class="fieldset-footer">
+                        <span>Step 6 of 9 | Accomodation Arrangement </span>
+                    </div>
+                </fieldset>
+
+
+                <!-- STEP7 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <label for="" class="form-label">Full name</label>
+                            <input type="text" name="emergency_name" id="" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Relationship</label>
+                            <input type="text" name="relationship" id="" placeholder="Relationship" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Address</label>
+                            <input type="text" name="emergency_address" id="" placeholder="Address" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Phone Number</label>
+                            <input type="text" name="emergency_phone" id="" placeholder="Phone Number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Mobile</label>
+                            <input type="text" name="emergency_mobile" id="" placeholder="Mobile" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" name="emergency_email" id="" placeholder="Email" />
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="fieldset-footer">
+                        <span>Step 7 of 9 | Parent/Guardian Contact</span>
+                    </div>
+                </fieldset>
+
+                <!-- STEP8 -->
+                 <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <textarea style="height: 300px; width: 700px; margin-left: 40px;" type="text" name="emergency_name" id="" placeholder="Purpose and Motivation Statement"></textarea>  
+                        </div>
+                    </div>
+
+                    <div class="fieldset-footer">
+                        <span>Step 8 of 9 | Purpose and Motivation Statement</span>
+                    </div>
+                </fieldset>
+
+
+
+                <!-- STEP9 -->
+                <h3>
+                    <span class="title_text"></span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <label for="your_avatar" class="form-label">Form Pernyataan Orang Tua</label>
+                            <div class="form-file">
+                                <input type="file" name="form_orang_tua" id="" class="custom-file-input" />
+                                <span id='val'></span>
+                                <span id='button'>Select File</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="your_avatar" class="form-label">Copy of Language Proficiency Certificate:</label>
+                            <div class="form-file">
+                                <input type="file" name="form_language" id="" class="custom-file-input" />
+                                <span id='val'></span>
+                                <span id='button'>Select File</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="your_avatar" class="form-label">Passport Photo:</label>
+                            <div class="form-file">
+                                <input type="file" name="photo" id="" class="custom-file-input" />
+                                <span id='val'></span>
+                                <span id='button'>Select File</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="your_avatar" class="form-label">Copy of Student ID Card (front&back):</label>
+                            <div class="form-file">
+                                <input type="file" name="copy_ktm" id="" class="custom-file-input" />
+                                <span id='val'></span>
+                                <span id='button'>Select File</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="your_avatar" class="form-label">Academic Transcript:</label>
+                            <div class="form-file">
+                                <input type="file" name="transcript" id="" class="custom-file-input" />
+                                <span id='val'></span>
+                                <span id='button'>Select File</span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="fieldset-footer">
+                        <span>Step 9 of 9 | Upload Files</span>
+                    </div>
+                </fieldset>
+
+ 
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('vendor/jquery-validation/dist/additional-methods.min.js')}}"></script>
+    <script src="{{asset('vendor/jquery-steps/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('vendor/minimalist-picker/dobpicker.js')}}"></script>
+    <script src="{{asset('vendor/jquery.pwstrength/jquery.pwstrength.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
+</body>
+
 </html>
