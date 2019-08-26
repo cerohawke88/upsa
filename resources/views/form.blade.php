@@ -25,6 +25,7 @@
             <form method="POST" id="signup-form" class="signup-form" action="{{ route('submit') }}">
 
                 @csrf
+ 
                 <!-- STEP1 -->
                 <h3>
                     <span class="title_text"></span>
@@ -101,7 +102,7 @@
                         </div>
                     </div>
                     
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br>
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     
                     <div class="fieldset-footer">
@@ -436,131 +437,80 @@
                     </div>
                 </fieldset>
 
-
-                <!-- STEP8 -->
+                                <!-- STEP8 -->
                 <h3>
                     <span class="title_text"></span>
                 </h3>
                 <fieldset>
                     <div class="fieldset-content">
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Certificate of Health</label>
-                            <div class="form-file">
-                                <input type="file" name="certificate_of_health" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Certificate of Health:</b></label>
+                            <br>
+                            <input type="file" name="certificate_of_health" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Passport Photo</label>
-                            <div class="form-file">
-                                <input type="file" name="photo" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Financial Guarantee Form:</b></label>
+                            <br>
+                            <input type="file" name="financial_guarantee" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Financial Guarantee Form</label>
-                            <div class="form-file">
-                                <input type="file" name="financial_guarantee" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Statement of Legality Form:</b></label>
+                            <br>
+                            <input type="file" name="statement_of_legality" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Statement Purpose</label>
-                            <div class="form-file">
-                                <input type="file" name="statement_of_purpose" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Certificate of Enrollment:</b></label>
+                            <br>
+                            <input type="file" name="certificate_of_enrollment" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Statement of Legality Form</label>
-                            <div class="form-file">
-                                <input type="file" name="statement_of_legality" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Nomination Letter:</b></label>
+                            <br>
+                            <input type="file" name="nomination_letter" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Bank Statement</label>
-                            <div class="form-file">
-                                <input type="file" name="bank_statement" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Transcript:</b></label>
+                            <br>
+                            <input type="file" name="Transcript" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Certificate of Enrollment</label>
-                            <div class="form-file">
-                                <input type="file" name="certificate_of_enrollment" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Passport Photo:</b></label>
+                            <br>
+                            <input type="file" name="photo" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">CV/Resume</label>
-                            <div class="form-file">
-                                <input type="file" name="cv" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Statement of Purpose:</b></label>
+                            <br>
+                            <input type="file" name="statement_of_purpose" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Nomination Letter</label>
-                            <div class="form-file">
-                                <input type="file" name="nomination_letter" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Bank Statement:</b></label>
+                            <br>
+                            <input type="file" name="bank_statement" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Passport</label>
-                            <div class="form-file">
-                                <input type="file" name="passport" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>CV/Resume:</b></label>
+                            <br>
+                            <input type="file" name="cv" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Transcript</label>
-                            <div class="form-file">
-                                <input type="file" name="transcript" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Passport:</b></label>
+                            <br>
+                            <input type="file" name="passport" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Student ID Card</label>
-                            <div class="form-file">
-                                <input type="file" name="student_id" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Student ID Card:</b></label>
+                            <br>
+                            <input type="file" name="student_id" required>
                         </div>
-
-
+                        
                     </div>
-
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     <div class="fieldset-footer">
                         <span>Step 8 of 8 | Upload Files</span>
                     </div>
                 </fieldset>
-
- 
 
             </form>
         </div>

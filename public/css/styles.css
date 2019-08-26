@@ -370,12 +370,14 @@ select {
   visibility: hidden; }
 
 input[type='file'] {
-  height: 50px;
-  opacity: 0; }
+  height: 60px;
+  padding-bottom: 65px;
+  opacity: 20;
+  color: black; }
 
 #val {
   width: 345px;
-  height: 50px;
+  height: 60px;
   position: absolute;
   top: 0;
   left: 0;

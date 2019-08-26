@@ -26,6 +26,9 @@
 
                 @csrf
 
+
+
+                
                 <!-- STEP1 -->
                 <h3>
                     <span class="title_text"></span>
@@ -396,7 +399,6 @@
                 </fieldset>
 
 
-
                 <!-- STEP9 -->
                 <h3>
                     <span class="title_text"></span>
@@ -404,51 +406,34 @@
                 <fieldset>
                     <div class="fieldset-content">
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Form Pernyataan Orang Tua</label>
-                            <div class="form-file">
-                                <input type="file" name="form_orang_tua" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Form Pernyataan Orang Tua:</b></label>
+                            <br>
+                            <input type="file" name="form_orang_tua" required>
                         </div>
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Copy of Language Proficiency Certificate:</label>
-                            <div class="form-file">
-                                <input type="file" name="form_language" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Copy of Language Proficiency Certificate:</b></label>
+                            <br>
+                            <input type="file" name="form_language" required>
                         </div>
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Passport Photo:</label>
-                            <div class="form-file">
-                                <input type="file" name="photo" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Passport Photo:</b></label>
+                            <br>
+                            <input type="file" name="photo" required>
                         </div>
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Copy of Student ID Card (front&back):</label>
-                            <div class="form-file">
-                                <input type="file" name="copy_ktm" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Copy of Student ID Card (front&back):</b></label>
+                            <br>
+                            <input type="file" name="copy_ktm" required>
                         </div>
                         <div class="form-group">
-                            <label for="your_avatar" class="form-label">Academic Transcript:</label>
-                            <div class="form-file">
-                                <input type="file" name="transcript" id="" class="custom-file-input" />
-                                <span id='val'></span>
-                                <span id='button'>Select File</span>
-                            </div>
+                            <label><b>Academic Transcript:</b></label>
+                            <br>
+                            <input type="file" name="transcript" required>
                         </div>
-
-
 
                     </div>
 
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+               <br><br><br><br><br><br>
                     <div class="fieldset-footer">
                         <span>Step 9 of 9 | Upload Files</span>
                     </div>
