@@ -103,7 +103,7 @@
                     </div>
                     
                     <br>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     
                     <div class="fieldset-footer">
                         <span>Step 1 of 8 | Personal Details</span>

@@ -49,6 +49,5 @@ Route::get('/out-pdf/{id}', 'OutFormController@pdf')->name('out.pdf');
 Route::delete('out-delete/{outPersonalDetails}', 'outPostController@delete')->name('outDelete');
 Route::view('/admin/summary', 'adminPage.summary')->name('admin.summary');
 
-Route::view('/form-out', 'skin')->name('new.skin');
 
 
