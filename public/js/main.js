@@ -1,6 +1,6 @@
 (function($) {
 
-    var form = $("#signup-form");
+    var  form = $("#signup-form");
     form.validate({
         errorPlacement: function errorPlacement(error, element) {
             element.before(error);
@@ -79,6 +79,10 @@
 
     $('#button').click(function () {
         $("input[type='file']").trigger('click');
+    })
+
+    $('#finish').click(function () {
+        $("input[type='submit']").trigger('click');
     })
     
     $("input[type='file']").change(function () {
